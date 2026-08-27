@@ -1,0 +1,71 @@
+{
+  "exported_at": "2026-08-27T10:29:32.646Z",
+  "course": {
+    "id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+    "slug": "full-stack-open-graphql",
+    "name": "Full Stack Open: GraphQL"
+  },
+  "chapters": [
+    {
+      "title": "Chapter 1: Getting Started",
+      "url_path": "/chapter-1",
+      "file": "chapter-01-getting-started.md",
+      "updated_at": "2026-04-23T13:32:16.464637Z"
+    },
+    {
+      "title": "Chapter 2: GraphQL server",
+      "url_path": "/chapter-2",
+      "file": "chapter-02-graphql-server.md",
+      "updated_at": "2026-08-06T10:18:19.633148Z"
+    },
+    {
+      "title": "Chapter 3: React and GraphQL",
+      "url_path": "/chapter-3",
+      "file": "chapter-03-react-and-graphql.md",
+      "updated_at": "2026-05-06T12:33:24.315267Z"
+    },
+    {
+      "title": "Chapter 4: Database and user administration",
+      "url_path": "/chapter-4",
+      "file": "chapter-04-database-and-user-administration.md",
+      "updated_at": "2026-05-05T08:04:07.614143Z"
+    },
+    {
+      "title": "Chapter 5: Login and updating the cache",
+      "url_path": "/chapter-5",
+      "file": "chapter-05-login-and-updating-the-cache.md",
+      "updated_at": "2026-05-05T07:27:33.817579Z"
+    },
+    {
+      "title": "Chapter 6: Fragments and subscriptions",
+      "url_path": "/chapter-6",
+      "file": "chapter-06-fragments-and-subscriptions.md",
+      "updated_at": "2026-06-09T15:20:13.788009Z"
+    }
+  ],
+  "images": {
+    "https://courses.mooc.fi/api/v0/files/course/789089e5-7425-4a5d-9c40-6ae915de7ee5/images/DPXe3SFeStGBmVSLraxQBTH0MLFN4k.png": "assets/image-001.png",
+    "https://courses.mooc.fi/api/v0/files/course/99e12118-87d6-4620-b278-8deb041d81ca/images/EtAeelSUYdNTJWrOY1pv2DiEJsMr9q.png": "assets/image-002.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/4OFxYWpceluRumhVnUStjRtLpraQYj.png": "assets/image-003.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/7AzO2wyeuClCr8WorAyBQifvG3B5cN.png": "assets/image-004.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/7pM9hhZuT6yGmzK2uwL3M6afJnEEvr.png": "assets/image-005.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/8sSj3NmOm6EGRtzLpHmwt13PZghlz2.png": "assets/image-006.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/9twl1D6AO6LptsuatHzBcQk85UXvsA.png": "assets/image-007.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/CxHusIeojqoTzY0Onr41vPstZQXFHs.png": "assets/image-008.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/F3aL68DiSUl67ZLmG1gwwmiBZghdQm.png": "assets/image-009.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/FjiXrwIcJ20FMa4F8t34RJRbk3H2hi.png": "assets/image-010.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/JJSzdEPSc5KL2XCTcvS6iuIRgRHKao.png": "assets/image-011.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/O6QXLmuKLufLpttlI8NhB0sOSSPu9Q.png": "assets/image-012.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/YF98yTMx7aFcmVpgFdWUhXaK1dGAqV.png": "assets/image-013.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/ZQbnvbMFK3My4gmSxkb0b6BIXrSbkd.png": "assets/image-014.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/aBZ32bUtAbEOLcx45LSbd8ZhBJ8RgD.png": "assets/image-015.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/glPfl6I4dTUmzTqeY53cBpzC5sBCFs.png": "assets/image-016.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/iFWQLhDJAHTgSxFffVIolLbyo0Bvn9.png": "assets/image-017.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/mD67dBQkw8zAialvOqqVhiXgbeFw5w.png": "assets/image-018.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/mYTHYbVMHOJey2HrC7QdjMe6ZoCQip.png": "assets/image-019.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/p6sBBMsSjaiSGxRWzQD1hw1h3ruKgZ.png": "assets/image-020.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/s81rewScK9S67GuIJukowpZn8HJ7pZ.png": "assets/image-021.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/tI5HOb8i5Pj92hg9dyg4268TvqADcU.png": "assets/image-022.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/wqi8pJhWHargSYChK04eREhRsC9ZNM.png": "assets/image-023.png"
+  }
+}

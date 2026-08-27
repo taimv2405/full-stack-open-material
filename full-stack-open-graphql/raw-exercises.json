@@ -1,0 +1,3729 @@
+{
+  "63f2bbaf-5ba7-4f1f-82cd-68c5efd619dc": {
+    "exercise": {
+      "id": "63f2bbaf-5ba7-4f1f-82cd-68c5efd619dc",
+      "created_at": "2026-04-23T08:21:39.106336Z",
+      "updated_at": "2026-08-06T10:18:19.633148Z",
+      "name": "1. The number of books and authors",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "cf3d1bbf-e999-4887-a509-fccdfec6771a",
+      "chapter_id": "de9d36da-3d0a-4618-8f8e-f50ef551687d",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 0,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "8e9a7745-ffb9-4314-8bfb-4df2b8889a0a",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "2e4018ea-5670-436a-8711-7ccea9700929",
+      "exercise_tasks": [
+        {
+          "id": "dc184f70-fe19-4ade-8149-e34fe09de062",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "2e4018ea-5670-436a-8711-7ccea9700929",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "<strong>Initial setup</strong>",
+                "dropCap": false
+              },
+              "clientId": "a3053509-57ba-4856-ae29-45f26a88cf04",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Create a new GitHub repository for the part8 exercises. If you are using a private repository, add the GitHub user&nbsp;<em>mluukkai</em>&nbsp;as a collaborator.",
+                "dropCap": false
+              },
+              "clientId": "d82ff1b9-b7b3-4b90-995c-00ab83bf2506",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Next, copy the contents of the repository&nbsp;<a href=\"https://github.com/fullstack-hy2020/fs-graphql\" target=\"_blank\" rel=\"noreferrer noopener\">https://github.com/fullstack-hy2020/fs-graphql</a>&nbsp;to your repository root. After this, your repository's folder structure should look like this:",
+                "dropCap": false
+              },
+              "clientId": "2f3352ae-7926-480d-9f26-3e53c71a9093",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "├── .github/\n├── library-backend/\n├── library-frontend/\n├── tests-chapter4/\n├── tests-chapter5/"
+              },
+              "clientId": "3e9733c9-12ff-4979-be0c-5c0e033e1413",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "<strong>You should not alter this directory structure</strong>, so there should be these directories in the root of your submission repository.",
+                "dropCap": false
+              },
+              "clientId": "551aa93d-c0d9-47c8-9cf8-570f3ad7751c",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "In this chapter’s exercises, we will implement a GraphQL backend for a small library. The application base can be found in the&nbsp;<em>library-backend</em>&nbsp;folder. Remember to install the dependencies with the command&nbsp;<code>npm install</code>.",
+                "dropCap": false
+              },
+              "clientId": "ff503e15-268f-4a17-b1bd-3042e6590bba",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "<strong>Task</strong>",
+                "dropCap": false
+              },
+              "clientId": "17aecdba-2d08-46dc-9bbb-78ab6ba49241",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Implement queries&nbsp;<code>bookCount</code>&nbsp;and&nbsp;<code>authorCount</code>&nbsp;which return the number of books and the number of authors.",
+                "dropCap": false
+              },
+              "clientId": "0c8f4f87-8de4-4be8-ae10-e8c357e90e21",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The query",
+                "dropCap": false
+              },
+              "clientId": "04e95533-db4e-4304-bd11-a17085d04ff1",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "query {\n  bookCount\n  authorCount\n}"
+              },
+              "clientId": "e955a2fc-2bd6-4d08-a734-7f66d7357350",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "should return",
+                "dropCap": false
+              },
+              "clientId": "1a19cba1-3daf-49b6-a5fd-c99585cf71e3",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "{\n  \"data\": {\n    \"bookCount\": 7,\n    \"authorCount\": 5\n  }\n}"
+              },
+              "clientId": "8e60f64a-22a8-461c-8769-c0170c8aa2ac",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "b1e39825-6bcb-49bb-a044-50c9968d7399",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "b3adac92-f2f2-418c-9bc4-988932b62573": {
+    "exercise": {
+      "id": "b3adac92-f2f2-418c-9bc4-988932b62573",
+      "created_at": "2026-04-23T08:21:39.106336Z",
+      "updated_at": "2026-08-06T10:18:19.633148Z",
+      "name": "2. All books",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "cf3d1bbf-e999-4887-a509-fccdfec6771a",
+      "chapter_id": "de9d36da-3d0a-4618-8f8e-f50ef551687d",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 1,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "6c827e38-d5ba-4bcc-956b-4dfd4f60627d",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "2f1a5268-1ab9-4bce-b593-b723a9f811ce",
+      "exercise_tasks": [
+        {
+          "id": "8c44303b-4736-483e-b82f-84a50f2d9d9d",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "2f1a5268-1ab9-4bce-b593-b723a9f811ce",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement query&nbsp;<code>allBooks</code>, which returns the details of all books.",
+                "dropCap": false
+              },
+              "clientId": "66a8f9bd-141b-42ba-9335-c13eababee23",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "In the end, the user should be able to do the following query:",
+                "dropCap": false
+              },
+              "clientId": "54719d07-17ce-4c77-8733-6df6e2087528",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "query {\n  allBooks { \n    title \n    author\n    published \n    genres\n  }\n}"
+              },
+              "clientId": "2a13b8bb-65d9-4dd9-a0fb-c21a67feacb2",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "3fb24ac6-58a7-4f35-a42d-208bb4f46167",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "355fb8e6-d887-4f07-a964-1339ced23077": {
+    "exercise": {
+      "id": "355fb8e6-d887-4f07-a964-1339ced23077",
+      "created_at": "2026-04-23T08:21:39.106336Z",
+      "updated_at": "2026-08-06T10:18:19.633148Z",
+      "name": "3. All authors",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "cf3d1bbf-e999-4887-a509-fccdfec6771a",
+      "chapter_id": "de9d36da-3d0a-4618-8f8e-f50ef551687d",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 2,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "41c15350-8fa2-4996-8f82-bcbc201a3303",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "746d0a6d-01d1-49ce-a7b2-14e480724f34",
+      "exercise_tasks": [
+        {
+          "id": "db925704-ba80-428c-a356-4f67b601566c",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "746d0a6d-01d1-49ce-a7b2-14e480724f34",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement query&nbsp;<code>allAuthors</code>, which returns the details of all authors. The response should include a field&nbsp;<code>bookCount</code>&nbsp;containing the number of books the author has written.",
+                "dropCap": false
+              },
+              "clientId": "b2979879-cea2-4f8b-88b3-adeec4248fd3",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "For example the query",
+                "dropCap": false
+              },
+              "clientId": "8788f2d0-31c4-4f48-8ccd-fa93bde30faa",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "query {\n  allAuthors {\n    name\n    bookCount\n  }\n}"
+              },
+              "clientId": "eca962c5-51d0-4fc1-a1ee-cba21e54b7d0",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "should return",
+                "dropCap": false
+              },
+              "clientId": "a2539c7e-3137-46c5-ac04-69e6dd0bf829",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "{\n  \"data\": {\n    \"allAuthors\": [\n      {\n        \"name\": \"Robert Martin\",\n        \"bookCount\": 2\n      },\n      {\n        \"name\": \"Martin Fowler\",\n        \"bookCount\": 1\n      },\n      {\n        \"name\": \"Fyodor Dostoevsky\",\n        \"bookCount\": 2\n      },\n      {\n        \"name\": \"Joshua Kerievsky\",\n        \"bookCount\": 1\n      },\n      {\n        \"name\": \"Sandi Metz\",\n        \"bookCount\": 1\n      }\n    ]\n  }\n}"
+              },
+              "clientId": "4f36f810-5a83-44f2-be6f-445617dcdd6f",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "d85b587b-aed4-4c2f-946a-d1518db7f2e5",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "1f37b4a0-f25d-492c-8bbb-3f7520a259e6": {
+    "exercise": {
+      "id": "1f37b4a0-f25d-492c-8bbb-3f7520a259e6",
+      "created_at": "2026-04-23T08:21:39.106336Z",
+      "updated_at": "2026-08-06T10:18:19.633148Z",
+      "name": "4. Books of an author",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "cf3d1bbf-e999-4887-a509-fccdfec6771a",
+      "chapter_id": "de9d36da-3d0a-4618-8f8e-f50ef551687d",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 3,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "7962405d-2b72-4f72-9651-ae6b88d4e62a",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "e6661f4e-0439-4dcf-90a3-e71771847817",
+      "exercise_tasks": [
+        {
+          "id": "ec5419a6-f387-4d51-afd3-e2dd9c498567",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "e6661f4e-0439-4dcf-90a3-e71771847817",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Modify the&nbsp;<code>allBooks</code>&nbsp;query so that a user can give an optional parameter&nbsp;<em>author</em>. The response should include only books written by that author.",
+                "dropCap": false
+              },
+              "clientId": "50cb24fe-ec99-448a-9412-32bfabc49c9d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "For example query",
+                "dropCap": false
+              },
+              "clientId": "df4a593b-92d2-48a8-baa4-cf85079228c2",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "query {\n  allBooks(author: \"Robert Martin\") {\n    title\n  }\n}"
+              },
+              "clientId": "dafabb57-a9f2-4396-807e-5db835300d80",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "should return",
+                "dropCap": false
+              },
+              "clientId": "287655b8-5385-4e2c-bb74-ea4bf78f5341",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "{\n  \"data\": {\n    \"allBooks\": [\n      {\n        \"title\": \"Clean Code\"\n      },\n      {\n        \"title\": \"Agile software development\"\n      }\n    ]\n  }\n}"
+              },
+              "clientId": "78bb7cde-ddda-4b6a-9042-1ef287a59788",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "2fa87e4d-eb36-48e2-89c1-d3cf14fe0979",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "7ff0728a-3950-4aef-979e-a14f6b7602eb": {
+    "exercise": {
+      "id": "7ff0728a-3950-4aef-979e-a14f6b7602eb",
+      "created_at": "2026-04-23T08:21:39.106336Z",
+      "updated_at": "2026-08-06T10:18:19.633148Z",
+      "name": "5. Books by genre",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "cf3d1bbf-e999-4887-a509-fccdfec6771a",
+      "chapter_id": "de9d36da-3d0a-4618-8f8e-f50ef551687d",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 4,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "226c0243-2295-4b75-ac72-478fad358fc4",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "dba5725e-7ca3-43bc-aeb4-49246cb917b4",
+      "exercise_tasks": [
+        {
+          "id": "13558fa7-f654-485a-bd8b-7472633e788b",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "dba5725e-7ca3-43bc-aeb4-49246cb917b4",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Modify the query&nbsp;<code>allBooks</code>&nbsp;so that a user can give an optional parameter&nbsp;<em>genre</em>. The response should include only books of that genre.",
+                "dropCap": false
+              },
+              "clientId": "f1d2756c-f8ad-404a-bfee-80499a213731",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "For example query",
+                "dropCap": false
+              },
+              "clientId": "0bdcefbc-5e0b-46b2-9c28-e8e1a76fae09",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "query {\n  allBooks(genre: \"refactoring\") {\n    title\n    author\n  }\n}"
+              },
+              "clientId": "51d47854-b28c-45f2-b7aa-617716691665",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "should return",
+                "dropCap": false
+              },
+              "clientId": "50c74091-c6d7-4f96-b726-9eeaf056919e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "{\n  \"data\": {\n    \"allBooks\": [\n      {\n        \"title\": \"Clean Code\",\n        \"author\": \"Robert Martin\"\n      },\n      {\n        \"title\": \"Refactoring, edition 2\",\n        \"author\": \"Martin Fowler\"\n      },\n      {\n        \"title\": \"Refactoring to patterns\",\n        \"author\": \"Joshua Kerievsky\"\n      },\n      {\n        \"title\": \"Practical Object-Oriented Design, An Agile Primer Using Ruby\",\n        \"author\": \"Sandi Metz\"\n      }\n    ]\n  }\n}"
+              },
+              "clientId": "124424ce-80e1-4171-8516-2859433bb634",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "The query must work when both optional parameters are given:",
+                "dropCap": false
+              },
+              "clientId": "dfeeb894-753b-4e4c-91af-bbdb089862cb",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "query {\n  allBooks(author: \"Robert Martin\", genre: \"refactoring\") {\n    title\n    author\n  }\n}"
+              },
+              "clientId": "bb9a3848-9c47-4329-acf7-9898139fbb9a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "ff52b9eb-3aa6-4cb5-ad45-39da730ca793",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "fdc88e71-0805-4949-ac15-9d48d152ed85": {
+    "exercise": {
+      "id": "fdc88e71-0805-4949-ac15-9d48d152ed85",
+      "created_at": "2026-04-23T08:21:39.106336Z",
+      "updated_at": "2026-08-06T10:18:19.633148Z",
+      "name": "6. Adding a book",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "cf3d1bbf-e999-4887-a509-fccdfec6771a",
+      "chapter_id": "de9d36da-3d0a-4618-8f8e-f50ef551687d",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 5,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "44bb6605-7d47-415c-8276-433d45d7637f",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "5e14b0bb-fab1-4ef7-96d4-3da8c5bd3ede",
+      "exercise_tasks": [
+        {
+          "id": "906d4e4c-1788-439b-ab44-1b88a0d43295",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "5e14b0bb-fab1-4ef7-96d4-3da8c5bd3ede",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement mutation&nbsp;<code>addBook</code>, which can be used like this:",
+                "dropCap": false
+              },
+              "clientId": "cce1babf-7e6a-43af-b059-fb5f8b10639d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "mutation {\n  addBook(\n    title: \"NoSQL Distilled\",\n    author: \"Martin Fowler\",\n    published: 2012,\n    genres: [\"database\", \"nosql\"]\n  ) {\n    title,\n    author\n  }\n}"
+              },
+              "clientId": "cfadb482-d5b4-4f4c-a8c2-da3ea49dcc66",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "The mutation works even if the author is not already saved to the server:",
+                "dropCap": false
+              },
+              "clientId": "0b8b748a-3283-4668-adca-7a1ab51aaa35",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "mutation {\n  addBook(\n    title: \"Pimeyden tango\",\n    author: \"Reijo Mäki\",\n    published: 1997,\n    genres: [\"crime\"]\n  ) {\n    title,\n    author\n  }\n}"
+              },
+              "clientId": "6cab21ad-074f-443e-82da-ec723297deae",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "If the author is not yet saved to the server, a new author is added to the system. The birth years of authors are not saved to the server yet, so the query",
+                "dropCap": false
+              },
+              "clientId": "755cf071-57d1-4617-be3b-6eb8e9c6d7d2",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "query {\n  allAuthors {\n    name\n    born\n    bookCount\n  }\n}"
+              },
+              "clientId": "44ff2a1b-100d-4def-b451-b9c0b655160d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "returns",
+                "dropCap": false
+              },
+              "clientId": "025990d4-4da3-4cf8-adec-1ae82b2e568c",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "{\n  \"data\": {\n    \"allAuthors\": [\n      // ...\n      {\n        \"name\": \"Reijo Mäki\",\n        \"born\": null,\n        \"bookCount\": 1\n      }\n    ]\n  }\n}"
+              },
+              "clientId": "843a77a0-924b-4ebf-81da-787172404db9",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "ede78936-94b8-4865-bb37-1fca51f83df9",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "6e836c0f-3e7a-4bde-bfb5-88c75a0d6455": {
+    "exercise": {
+      "id": "6e836c0f-3e7a-4bde-bfb5-88c75a0d6455",
+      "created_at": "2026-04-23T08:21:39.106336Z",
+      "updated_at": "2026-08-06T10:18:19.633148Z",
+      "name": "7. Updating the birth year of an author",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "cf3d1bbf-e999-4887-a509-fccdfec6771a",
+      "chapter_id": "de9d36da-3d0a-4618-8f8e-f50ef551687d",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 6,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "bba06b22-a519-4667-9d14-2d54394fae5a",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "704939a1-a7d7-4b04-8a66-3ef87405769b",
+      "exercise_tasks": [
+        {
+          "id": "e081053c-4661-4ebd-b4d7-b51390f85029",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "704939a1-a7d7-4b04-8a66-3ef87405769b",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement mutation&nbsp;<code>editAuthor</code>, which can be used to set a birth year for an author. The mutation is used like so:",
+                "dropCap": false
+              },
+              "clientId": "749e1eac-0ebb-44e9-b5ad-0e82c5b7fafa",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "mutation {\n  editAuthor(name: \"Reijo Mäki\", setBornTo: 1958) {\n    name\n    born\n  }\n}"
+              },
+              "clientId": "3a31041f-934a-43d2-ac44-bc14f11755cd",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "If the correct author is found, the operation returns the edited author:",
+                "dropCap": false
+              },
+              "clientId": "e05756b0-8fd8-42bd-89d0-346b15e6348d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "{\n  \"data\": {\n    \"editAuthor\": {\n      \"name\": \"Reijo Mäki\",\n      \"born\": 1958\n    }\n  }\n}"
+              },
+              "clientId": "2db9dbd9-0b10-49d3-bf51-22c9ae07fc0f",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "If the author is not in the system,&nbsp;<em>null</em>&nbsp;is returned:",
+                "dropCap": false
+              },
+              "clientId": "da4a80ab-7668-4e1c-8525-6c4f997a63e9",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "{\n  \"data\": {\n    \"editAuthor\": null\n  }\n}"
+              },
+              "clientId": "cbbf454c-54bb-4f68-b834-eae174c034de",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "ab129cfd-af78-46be-bcc2-ae6f73ab80d9",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "be23a471-1184-4015-ab92-e49a57224e3e": {
+    "exercise": {
+      "id": "be23a471-1184-4015-ab92-e49a57224e3e",
+      "created_at": "2026-04-23T11:09:58.771339Z",
+      "updated_at": "2026-05-05T08:04:07.614143Z",
+      "name": "13. Database, part 1",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "8a280dcc-5a57-474e-9a23-7836ebe82806",
+      "chapter_id": "ae5d1dec-d213-4422-b30e-8fb2ac26c277",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 0,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "c957805a-4ac8-4689-afe4-8d7ae2f73d83",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "cd4ed528-6941-49d4-99d1-356fce2afb79",
+      "exercise_tasks": [
+        {
+          "id": "8d68c379-3ca6-4746-b928-e4536aa4fe37",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "cd4ed528-6941-49d4-99d1-356fce2afb79",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "<em>The following exercises are quite likely to break your frontend. Do not worry about it yet; the frontend shall be fixed and expanded in the next chapter.</em>",
+                "dropCap": false
+              },
+              "clientId": "34f4ea47-8f4e-4eee-acdd-807f6e7f79b8",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Refactor the library application code into multiple files in the same way as at the beginning of this chapter. Proceed in small steps and keep the application working at all times. You can, for example, use the frontend to verify that all features still work after the refactoring.",
+                "dropCap": false
+              },
+              "clientId": "b0aa0a1e-697c-4dfe-9b6d-a45267f86178",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Then modify the application so that it stores the data in a database. You can find the&nbsp;<em>mongoose schema</em>&nbsp;for books and authors from&nbsp;<a href=\"https://github.com/fullstack-hy2020/misc/blob/master/library-schema.md\" target=\"_blank\" rel=\"noreferrer noopener\">here</a>.",
+                "dropCap": false
+              },
+              "clientId": "d27e74f7-3df3-45a4-880f-c14b799daff9",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Let's change the book graphql schema a little",
+                "dropCap": false
+              },
+              "clientId": "74020ca1-2973-458c-a99d-c9a4551b3f71",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "type Book {\n  title: String!\n  published: Int!\n  author: Author! // HIGHLIGHT LINE\n  genres: [String!]!\n  id: ID!\n}"
+              },
+              "clientId": "c65031af-f15a-4cdf-bead-29b5475e1a35",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "so that instead of just the author's name, the book object contains all the details of the author.",
+                "dropCap": false
+              },
+              "clientId": "731d7d63-4317-4922-9891-95cf4db35c38",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "You can assume that the user will not try to add faulty books or authors, so you don't have to care about validation errors.",
+                "dropCap": false
+              },
+              "clientId": "fcadbaba-8c5e-4538-9491-8c1da06c415e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The following things do&nbsp;<em>not</em>&nbsp;have to work just yet:",
+                "dropCap": false
+              },
+              "clientId": "8b2e69e0-6f8a-4765-9a71-b77325169584",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "ordered": false,
+                "values": ""
+              },
+              "clientId": "b10f65a2-f464-4de7-bc03-eb703de56b2d",
+              "innerBlocks": [
+                {
+                  "attributes": {
+                    "content": "<code>allBooks</code> query with parameters"
+                  },
+                  "clientId": "acc84b55-e676-4cca-919e-40766ac609da",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                },
+                {
+                  "attributes": {
+                    "content": "<code>bookCount</code> field of an author object"
+                  },
+                  "clientId": "93eb1539-5a03-4b4a-abb2-a216ec56b33f",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                },
+                {
+                  "attributes": {
+                    "content": "<code>author</code> field of a book"
+                  },
+                  "clientId": "472cf9d7-5420-4f8e-a509-cb43d9f62acb",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                },
+                {
+                  "attributes": {
+                    "content": "<code>editAuthor</code> mutation"
+                  },
+                  "clientId": "e65d1edc-e285-41ea-8f39-862a339c5ea9",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                }
+              ],
+              "isValid": true,
+              "name": "core/list"
+            },
+            {
+              "attributes": {
+                "content": "<strong>Note</strong>: despite the fact that author is now an&nbsp;<em>object&nbsp;</em>within a book, the schema for adding a book can remain same, only the&nbsp;<em>name</em>&nbsp;of the author is given as a parameter",
+                "dropCap": false
+              },
+              "clientId": "6165cac8-917d-43ad-90b4-cbec2a35737b",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "type Mutation {\n  addBook(\n    title: String!\n    author: String! // HIGHLIGHT LINE\n    published: Int!\n    genres: [String!]!\n  ): Book!\n  editAuthor(name: String!, setBornTo: Int!): Author\n}"
+              },
+              "clientId": "ece1e418-2847-4050-9f4f-58901044953e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "4eb41973-dd6f-4fc5-9a89-eb3084be4cf9",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "54a91234-4ab7-45f4-9dee-3843d5fe63bc": {
+    "exercise": {
+      "id": "54a91234-4ab7-45f4-9dee-3843d5fe63bc",
+      "created_at": "2026-04-23T11:09:58.771339Z",
+      "updated_at": "2026-05-05T08:04:07.614143Z",
+      "name": "14. Database, part 2",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "8a280dcc-5a57-474e-9a23-7836ebe82806",
+      "chapter_id": "ae5d1dec-d213-4422-b30e-8fb2ac26c277",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 1,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "2dbc428c-0788-4e96-bfe7-e0e90572675b",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "53ed80bc-69c6-497e-b478-27d120657430",
+      "exercise_tasks": [
+        {
+          "id": "8aa2b78a-78c4-4d7b-9a32-1f6156adca88",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "53ed80bc-69c6-497e-b478-27d120657430",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Complete the program so that all queries (to get&nbsp;<code>allBooks</code>&nbsp;working with the parameter&nbsp;<code>author</code>&nbsp;and&nbsp;<code>bookCount</code>&nbsp;field of an author object is not required) and mutations work.",
+                "dropCap": false
+              },
+              "clientId": "9ff91412-bbe1-4ba8-976d-8c3fcecd03c5",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Regarding the&nbsp;<em>genre</em>&nbsp;parameter of the all books query, the situation is a bit more challenging. The solution is simple, but finding it can be a headache. You might benefit from&nbsp;<a href=\"https://www.mongodb.com/docs/manual/tutorial/query-arrays/\" target=\"_blank\" rel=\"noreferrer noopener\">this</a>.",
+                "dropCap": false
+              },
+              "clientId": "b78b7eb8-0707-405b-9190-54186142646a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "c0861def-4f80-4e43-a464-322360e7b08d",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "35bd63d2-d047-447d-a3e7-a3297242f1ca": {
+    "exercise": {
+      "id": "35bd63d2-d047-447d-a3e7-a3297242f1ca",
+      "created_at": "2026-04-23T11:09:58.771339Z",
+      "updated_at": "2026-05-05T08:04:07.614143Z",
+      "name": "15. Database, part 3",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "8a280dcc-5a57-474e-9a23-7836ebe82806",
+      "chapter_id": "ae5d1dec-d213-4422-b30e-8fb2ac26c277",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 2,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "7cbb036e-4cd3-4b38-adaf-63cfd5e63195",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "c94d1a1e-e683-486e-a9bc-39a9f9a74cfd",
+      "exercise_tasks": [
+        {
+          "id": "b3e2ffba-2cef-49cc-86a0-c31780f61c21",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "c94d1a1e-e683-486e-a9bc-39a9f9a74cfd",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Complete the program so that database validation errors (e.g. book title or author name being too short) are handled sensibly. This means that they cause <a href=\"https://www.apollographql.com/docs/apollo-server/data/errors/#custom-errors\" target=\"_blank\" rel=\"noreferrer noopener\">GraphQLError</a> with a suitable error message to be thrown.",
+                "dropCap": false
+              },
+              "clientId": "eb901ba6-6819-47ca-8e8d-b309e1f57f34",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "645ff2e4-a688-459a-977f-bcdc7ca96dc1",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "b3d08725-5cfc-4237-b975-1c8517a60e92": {
+    "exercise": {
+      "id": "b3d08725-5cfc-4237-b975-1c8517a60e92",
+      "created_at": "2026-04-23T11:09:58.771339Z",
+      "updated_at": "2026-05-05T08:04:07.614143Z",
+      "name": "16. User and logging in",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "8a280dcc-5a57-474e-9a23-7836ebe82806",
+      "chapter_id": "ae5d1dec-d213-4422-b30e-8fb2ac26c277",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 3,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "569efadb-d665-4e9c-99e9-faf0508fb4ff",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "99179b5f-deff-4755-a67c-5025af7d4704",
+      "exercise_tasks": [
+        {
+          "id": "5a44dc4f-6cce-4c6e-922a-67fc0b23c6f3",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "99179b5f-deff-4755-a67c-5025af7d4704",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Add user management to your application. Expand the schema like so:",
+                "dropCap": false
+              },
+              "clientId": "41dd1ee5-9152-42c4-bb48-7346c8821604",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "type User {\n  username: String!\n  favoriteGenre: String!\n  id: ID!\n}\n\ntype Token {\n  value: String!\n}\n\ntype Query {\n  // ..\n  me: User\n}\n\ntype Mutation {\n  // ...\n  createUser(\n    username: String!\n    favoriteGenre: String!\n  ): User\n  login(\n    username: String!\n    password: String!\n  ): Token\n}"
+              },
+              "clientId": "9c59ca89-b5a8-40fc-9cda-9971f222bb84",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Create resolvers for query&nbsp;<code>me</code>&nbsp;and the new mutations&nbsp;<code>createUser</code>&nbsp;and&nbsp;<code>login</code>. Like in the course material, you can assume all users have the same hardcoded password.",
+                "dropCap": false
+              },
+              "clientId": "c7e76297-eae3-4fc3-841a-760b184cb7cf",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Make the mutations&nbsp;<code>addBook</code>&nbsp;and&nbsp;<code>editAuthor</code>&nbsp;possible only if the request includes a valid token.",
+                "dropCap": false
+              },
+              "clientId": "866c7f4b-e33d-44e8-85e8-1060a1c045ca",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "(Don't worry about fixing the frontend for the moment.)",
+                "dropCap": false
+              },
+              "clientId": "81b813e2-30ff-4caa-a816-65d7b3bc870b",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "4b357764-837b-4364-98d0-7cf121255230",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "2812cdb5-321b-4b12-8285-4c2a29a265fe": {
+    "exercise": {
+      "id": "2812cdb5-321b-4b12-8285-4c2a29a265fe",
+      "created_at": "2026-04-23T11:09:58.771339Z",
+      "updated_at": "2026-05-05T08:04:07.614143Z",
+      "name": "17. Checkup",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "8a280dcc-5a57-474e-9a23-7836ebe82806",
+      "chapter_id": "ae5d1dec-d213-4422-b30e-8fb2ac26c277",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 4,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "c330505f-a396-44b1-8486-589fb689df17",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "3378de59-c347-480d-b5fd-238b9ff4e308",
+      "exercise_tasks": [
+        {
+          "id": "77aec59c-c715-4245-ac27-ef5a227cd772",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "3378de59-c347-480d-b5fd-238b9ff4e308",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "In this exercise, you will run automated tests that ensure your application works as expected and implements the requirements from previous exercises.",
+                "dropCap": false
+              },
+              "clientId": "97a52a6e-74a2-4c96-b74d-f4876aefb4a9",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "<strong>Preliminary Steps</strong>",
+                "dropCap": false
+              },
+              "clientId": "d30a39fe-fd41-4abe-b08a-d86b0250d157",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Let's add a&nbsp;<code>_resetDatabase</code>&nbsp;mutation to the backend so the database can be initialized before tests. Add a new mutation to the&nbsp;<em>schema.js</em>&nbsp;file:",
+                "dropCap": false
+              },
+              "clientId": "371b3181-43bf-4b9b-97f6-799742889551",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "  type Mutation {\n    // ...\n    _resetDatabase: Boolean  // HIGHLIGHT LINE\n  }"
+              },
+              "clientId": "97c71c8c-3d66-47ed-842b-caf62ccdd808",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Then add the corresponding resolver to the&nbsp;<em>resolvers.js</em>&nbsp;file:",
+                "dropCap": false
+              },
+              "clientId": "aed40a93-42e1-47e8-9338-d5ea971a0f10",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "const resolvers = {\n  // ...\n  Mutation: {\n    // ...\n    // BEGIN HIGHLIGHT\n    _resetDatabase: async () =&gt; {\n      if (process.env.NODE_ENV !== 'test') {\n        throw new GraphQLError('_resetDatabase is only available in test mode')\n      }\n      await Author.deleteMany({})\n      await Book.deleteMany({})\n      await User.deleteMany({})\n      return true\n    },\n    // END HIGHLIGHT\n  },\n}\n\nmodule.exports = resolvers"
+              },
+              "clientId": "d1309b2a-e861-4744-98ad-50e84e3bcfe0",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "The resolver's operations are executed only if the&nbsp;<code>NODE_ENV</code>&nbsp;environment variable is set to&nbsp;<code>test</code>. If not, a&nbsp;<code>GraphQLError</code>&nbsp;is thrown. This ensures that the&nbsp;<code>_resetDatabase</code>&nbsp;mutation is available only in the test environment.",
+                "dropCap": false
+              },
+              "clientId": "51b4c083-7ff3-4108-9091-e2fe2e5d56c7",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The tests are configured to use a separate in-memory database, so they will never delete or modify data in your own database under any circumstances.",
+                "dropCap": false
+              },
+              "clientId": "f7bd3790-54bd-45a8-9e63-0b6fd8ccd9a6",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "<strong>Running Tests Locally</strong>",
+                "dropCap": false
+              },
+              "clientId": "9edd3d59-2aac-45cd-9e60-91eb217722b9",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "ordered": false,
+                "values": ""
+              },
+              "clientId": "fa670f8e-73d4-4e83-8828-52351b7f4014",
+              "innerBlocks": [
+                {
+                  "attributes": {
+                    "content": "Navigate to the <em>tests-chapter4</em> folder (you copied the folder to the root of your repository in exercise 1.)"
+                  },
+                  "clientId": "40f38daa-7c52-4336-a3e0-992cc2a13e4b",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                },
+                {
+                  "attributes": {
+                    "content": "Before running tests for the first time, install the dependencies required by the test project using the <code>npm install</code> command."
+                  },
+                  "clientId": "98c6f741-0b3b-45a8-b809-bfe12d8c17e3",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                },
+                {
+                  "attributes": {
+                    "content": "Run the tests with the <code>npm test</code> command and verify that they pass."
+                  },
+                  "clientId": "ad0ee128-8bd0-4fb3-be7f-b45a5f7473d7",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                }
+              ],
+              "isValid": true,
+              "name": "core/list"
+            },
+            {
+              "attributes": {
+                "content": "<strong>Running Tests in GitHub Actions</strong>",
+                "dropCap": false
+              },
+              "clientId": "d06a0520-4e8e-4000-b48c-5b94ee967bf9",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The&nbsp;<em>.github/workflows/test-chapter4.yml</em>&nbsp;file defines a GitHub Actions workflow that runs the backend tests on GitHub whenever you push a new commit.",
+                "dropCap": false
+              },
+              "clientId": "659efc76-7748-4c9f-870e-7bb0badf0a03",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The workflow is currently disabled. Enable the workflow by uncommenting the lines at the beginning of the file so that the configuration looks like this:",
+                "dropCap": false
+              },
+              "clientId": "3c699694-5371-4b7f-bf4f-8f55465c2d19",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "on:\n  push:\n    branches: [main, master]\n  workflow_dispatch:"
+              },
+              "clientId": "812a0984-de8f-4133-b6d0-2300f7bae74a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Verify that the tests pass in GitHub Actions:",
+                "dropCap": false
+              },
+              "clientId": "89e2f46b-cf44-4246-b1e2-1325f3bd7904",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "GitHub Actions shows that Test library-backend workflow has passed",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/cZsFYoMCwd4C4tJV0mhoj8KXzaAw6B.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/cZsFYoMCwd4C4tJV0mhoj8KXzaAw6B.png"
+              },
+              "clientId": "572a84b3-0b58-416d-a771-808cdb32a6d6",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "0854f7e7-afa6-44af-9945-ce81c98bd609",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "820dcf8d-e3c0-4af6-b271-35bec785e856": {
+    "exercise": {
+      "id": "820dcf8d-e3c0-4af6-b271-35bec785e856",
+      "created_at": "2026-04-23T11:29:37.771733Z",
+      "updated_at": "2026-05-05T07:27:33.817579Z",
+      "name": "18. Listing books",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "5142303e-b71b-4cdb-b56f-449fa09ceecb",
+      "chapter_id": "2e76d68c-f590-494f-907d-f90e72958362",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 0,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "5a954508-e77f-4af4-9e13-8e1eb27735d4",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "91cb7086-8d0a-4b28-b7c8-cc53cd51bce3",
+      "exercise_tasks": [
+        {
+          "id": "7dbfe705-5be5-493f-bbf4-bedf1d5ccc02",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "91cb7086-8d0a-4b28-b7c8-cc53cd51bce3",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "After the backend changes, the list of books does not work anymore. Fix it.",
+                "dropCap": false
+              },
+              "clientId": "cdf9663c-b374-4257-bc3d-99bf0a6fe4d6",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "ca58b066-749f-4aba-bb26-a9899d0cbc5a",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "95b14fbb-658d-480c-9314-15d5e78f039e": {
+    "exercise": {
+      "id": "95b14fbb-658d-480c-9314-15d5e78f039e",
+      "created_at": "2026-04-23T11:29:37.771733Z",
+      "updated_at": "2026-05-05T07:27:33.817579Z",
+      "name": "19. Log in",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "5142303e-b71b-4cdb-b56f-449fa09ceecb",
+      "chapter_id": "2e76d68c-f590-494f-907d-f90e72958362",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 1,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "715fa3d7-ad6c-46bd-aea8-07f7b839aff1",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "eba3730f-4b83-4ec1-b986-c02a3f7cd2c2",
+      "exercise_tasks": [
+        {
+          "id": "6d60fda4-02f6-48e3-9276-9d5d09b94bb1",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "eba3730f-4b83-4ec1-b986-c02a3f7cd2c2",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Adding new books and changing the birth year of an author do not work because they require a user to be logged in.",
+                "dropCap": false
+              },
+              "clientId": "92752dcd-d4ca-4c22-a292-d77b714670c8",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Implement login functionality and fix the mutations.",
+                "dropCap": false
+              },
+              "clientId": "d1c6c901-9c32-41d7-b130-535d2cea8006",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "It is not necessary yet to handle validation errors.",
+                "dropCap": false
+              },
+              "clientId": "d6e38ffb-8924-4750-af89-c4eec2dd2868",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Make the login form into a separate view which can be accessed through a navigation menu:",
+                "dropCap": false
+              },
+              "clientId": "4197dd53-41f4-4518-87ef-9d88d34abb30",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "browser books showing login button highlighted",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/VgH3PFMe1FWmYNRwcIRToXF58M2BIX.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/VgH3PFMe1FWmYNRwcIRToXF58M2BIX.png"
+              },
+              "clientId": "1f0e7982-8e04-457e-8036-6d4c98275f6d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "The login form:",
+                "dropCap": false
+              },
+              "clientId": "06c4ff0b-b7ee-4542-a371-c4b5f48b1301",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "browser showing login form",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/fZvwJpQ24mV6PXgitCyRalzYCW5ET2.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/fZvwJpQ24mV6PXgitCyRalzYCW5ET2.png"
+              },
+              "clientId": "3105da25-c1b8-49ea-af59-21a8404c5bc2",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "When a user is logged in, the navigation changes to show the functionalities which can only be done by a logged-in user:",
+                "dropCap": false
+              },
+              "clientId": "7322ad78-a2b5-4dd9-89c3-9bb297ade787",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "browser showing addbook and logout buttons",
+                "aspectRatio": "3.317200507972344",
+                "blurDataUrl": "",
+                "caption": "",
+                "height": "auto",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/fXkEOyldwHyBKJ0lX4btiDee9IPYsu.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/fXkEOyldwHyBKJ0lX4btiDee9IPYsu.png",
+                "width": "735px"
+              },
+              "clientId": "dbbf9873-012c-4acb-9795-cbe6db241bcf",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "Also make sure that the <em>Set birthyear</em> form is only rendered when the user is logged in.",
+                "dropCap": false
+              },
+              "clientId": "3d90bc7d-e9ff-465f-a64e-3267467067d4",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "7c1e4156-b2b4-4f5f-8939-a2b4d70edc78",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "8fec18f6-a837-4efd-a395-1f4d590d8730": {
+    "exercise": {
+      "id": "8fec18f6-a837-4efd-a395-1f4d590d8730",
+      "created_at": "2026-04-23T11:29:37.771733Z",
+      "updated_at": "2026-05-05T07:27:33.817579Z",
+      "name": "20. Books by genre, part 1",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "5142303e-b71b-4cdb-b56f-449fa09ceecb",
+      "chapter_id": "2e76d68c-f590-494f-907d-f90e72958362",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 2,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "6d2e7049-28f5-482c-b9d8-0aa9d3ecc2df",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "5c578560-fed3-49f2-af99-da7bcd98979a",
+      "exercise_tasks": [
+        {
+          "id": "c4ae09e3-240a-4299-9ae7-d96a601b5f66",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "5c578560-fed3-49f2-af99-da7bcd98979a",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Complete your application to filter the book list by genre. Your solution might look something like this:",
+                "dropCap": false
+              },
+              "clientId": "19351207-da72-43e9-b63b-7814c82bacd1",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "browser showing books buttons down at the bottom",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/oQT45I3Z5C9LkHPyot4QESJtyjmQvf.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/oQT45I3Z5C9LkHPyot4QESJtyjmQvf.png"
+              },
+              "clientId": "60bcdf2d-7b76-453d-9661-167545008eb4",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "In this exercise, the filtering can be done using just React.",
+                "dropCap": false
+              },
+              "clientId": "2b0b4f6c-3555-4cc1-9798-68d7cbf2f27a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "05bbd5ae-81c7-40ee-b0a8-205812b4d1fb",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "cf5c6142-2d9a-40a1-8fc2-306e08eb89e4": {
+    "exercise": {
+      "id": "cf5c6142-2d9a-40a1-8fc2-306e08eb89e4",
+      "created_at": "2026-04-23T11:29:37.771733Z",
+      "updated_at": "2026-05-05T07:27:33.817579Z",
+      "name": "21. Books by genre, part 2",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "5142303e-b71b-4cdb-b56f-449fa09ceecb",
+      "chapter_id": "2e76d68c-f590-494f-907d-f90e72958362",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 3,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "bee16c4e-c7f6-4134-ab93-f073174b5950",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "3b897b1d-e851-413d-9418-d8bbf7e3122a",
+      "exercise_tasks": [
+        {
+          "id": "118c6049-5895-4402-aa7d-3ce2ef39bacc",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "3b897b1d-e851-413d-9418-d8bbf7e3122a",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement a view which shows all the books based on the logged-in user's favourite genre.",
+                "dropCap": false
+              },
+              "clientId": "7d3c509c-3413-40f2-bf87-a58d061e285a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "browser showing two books via patterns",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/JuCJ6z2Y8kN8EE1gV65jVvPXUtfYUo.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/JuCJ6z2Y8kN8EE1gV65jVvPXUtfYUo.png"
+              },
+              "clientId": "c60f42b8-1db8-42e1-9832-794e913b2467",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "",
+                "dropCap": false
+              },
+              "clientId": "c5fed895-9133-40fd-9b9a-81ea1674cfd0",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "82bb314c-8313-4bee-806c-92144c1149ae",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "280a9bd5-7f3a-4f99-9361-d354d4b61fe4": {
+    "exercise": {
+      "id": "280a9bd5-7f3a-4f99-9361-d354d4b61fe4",
+      "created_at": "2026-04-23T11:29:37.771733Z",
+      "updated_at": "2026-05-05T07:27:33.817579Z",
+      "name": "22. Books by genre with GraphQL",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "5142303e-b71b-4cdb-b56f-449fa09ceecb",
+      "chapter_id": "2e76d68c-f590-494f-907d-f90e72958362",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 4,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "a42b7325-f6da-4128-ba16-c6ce28aeff1e",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "85e8d1b3-dd18-4d34-b226-a0efd1b2512f",
+      "exercise_tasks": [
+        {
+          "id": "32ba3ffa-e2c8-4cd5-bc27-cc9a435d0bf0",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "85e8d1b3-dd18-4d34-b226-a0efd1b2512f",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "In the previous two exercises, the filtering could have been done using just React. To complete this exercise, you should redo the filtering of the books based on a selected genre (that was done in exercise 8.20) using a GraphQL query to the server. If you already did so then you do not have to do anything.",
+                "dropCap": false
+              },
+              "clientId": "e9622d8c-068a-4aef-88f3-bb771bb8c5ef",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "This and the next exercise are quite <strong>challenging</strong>, like they should be this late in the course. It may help you to complete the easier exercises in the <a href=\"https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-6\" target=\"_blank\" rel=\"noreferrer noopener\">next chapter</a> before doing 8.22 and 8.23.",
+                "dropCap": false
+              },
+              "clientId": "2f3be785-9248-40fd-8e68-cfd0515861eb",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "bf1387a7-daec-44a0-a484-728ae254fc0c",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "e686a0f0-c035-4835-9775-8074420940e8": {
+    "exercise": {
+      "id": "e686a0f0-c035-4835-9775-8074420940e8",
+      "created_at": "2026-04-23T11:29:37.771733Z",
+      "updated_at": "2026-05-05T07:27:33.817579Z",
+      "name": "23. Up-to-date cache and book recommendations",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "5142303e-b71b-4cdb-b56f-449fa09ceecb",
+      "chapter_id": "2e76d68c-f590-494f-907d-f90e72958362",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 5,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "b8c59a6a-8a72-4152-8910-c9a41b7fa407",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "893a8f6b-b399-4111-8ba8-ac3764aabd76",
+      "exercise_tasks": [
+        {
+          "id": "7934c413-d3de-46b7-8fa8-61f4bd5d6902",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "893a8f6b-b399-4111-8ba8-ac3764aabd76",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Ensure somehow that the books view is kept up to date. So when a new book is added, the books view is updated&nbsp;<strong>at least</strong>&nbsp;when a genre selection button is pressed.",
+                "dropCap": false
+              },
+              "clientId": "4084a51a-6887-4b50-8399-f826f14d8fde",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "<em>When new genre selection is not done, the view does not have to be updated.</em>",
+                "dropCap": false
+              },
+              "clientId": "ca476a86-4ae2-4fdf-b3fa-c330f1c8773d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "d20e1b5c-6cc9-433b-8735-834db1ffd648",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "3d8c6f80-ff92-4048-b51f-b31e6f1a5f31": {
+    "exercise": {
+      "id": "3d8c6f80-ff92-4048-b51f-b31e6f1a5f31",
+      "created_at": "2026-04-23T11:29:37.771733Z",
+      "updated_at": "2026-05-05T07:27:33.817579Z",
+      "name": "24. Checkup",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "5142303e-b71b-4cdb-b56f-449fa09ceecb",
+      "chapter_id": "2e76d68c-f590-494f-907d-f90e72958362",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 6,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "fc4dcc5c-dc4c-4b0a-881f-2a695f39b503",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "3bd29dbe-5ffb-490f-bd4e-a82c4e71615a",
+      "exercise_tasks": [
+        {
+          "id": "4db4c45a-96f8-406e-affd-03e269255a81",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "3bd29dbe-5ffb-490f-bd4e-a82c4e71615a",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "In this exercise you will run automated tests just like in exercise 17. The tests in this chapter test the frontend and its interaction with the backend.",
+                "dropCap": false
+              },
+              "clientId": "7c88ba54-6b97-4e97-b304-ada08338455b",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "<strong>Running the tests locally</strong>",
+                "dropCap": false
+              },
+              "clientId": "714045c8-f541-4b72-92a5-f091fde1ee32",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Navigate to the directory&nbsp;<em>tests-chapter5</em>. Before running the tests for the first time, install the dependencies required by the test project with the command:",
+                "dropCap": false
+              },
+              "clientId": "127ededd-90a6-4e5f-8ac5-2165467869c5",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "npm install &amp;&amp; npx playwright install chromium"
+              },
+              "clientId": "31b7b08f-0ecb-4971-bd32-77ae53553ac2",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Run the tests with the command&nbsp;<code>npm test</code>&nbsp;and make sure they pass.",
+                "dropCap": false
+              },
+              "clientId": "baaa0502-a2d9-4cb3-9df8-de4fe761f4df",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "<strong>Running the tests in GitHub Actions</strong>",
+                "dropCap": false
+              },
+              "clientId": "8409d4c9-e6b2-4978-b27c-db8a59f3fbdd",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The file&nbsp;<em>.github/workflows/test-chapter5.yml</em>&nbsp;defines another GitHub Actions workflow that runs the tests in this chapter on GitHub whenever you push a new commit.",
+                "dropCap": false
+              },
+              "clientId": "8af0f430-b34a-44c7-a540-6f264c90129c",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The workflow is currently disabled. Activate it by uncommenting the lines at the beginning of the file, so that the definition looks as follows:",
+                "dropCap": false
+              },
+              "clientId": "1fe5554d-ed33-4334-a5a3-e05e31cf87ec",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "on:\n  push:\n    branches: [main, master]\n  workflow_dispatch:"
+              },
+              "clientId": "58f285ec-5218-4ffd-ba11-6a160f3dbd9c",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "The workflow is run whenever you push a new commit to GitHub. Make sure that both workflows run successfully in GitHub Actions:",
+                "dropCap": false
+              },
+              "clientId": "245a7d7e-5ae1-4395-be91-cdfd15ac35f8",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "GitHub Actions shows that Test library-backend workflow has passed",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/3VEfswqYcZseu5C33MaGI92xjBMSDk.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/3VEfswqYcZseu5C33MaGI92xjBMSDk.png"
+              },
+              "clientId": "762bb214-0c32-4c5d-9d06-c166e9a7d83f",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "5b8ceb20-2b0a-409b-b766-8b5ebde9610d",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "50de5ea5-9e8c-422b-add4-c89529341632": {
+    "exercise": {
+      "id": "50de5ea5-9e8c-422b-add4-c89529341632",
+      "created_at": "2026-04-23T12:56:31.642349Z",
+      "updated_at": "2026-06-09T15:20:13.788009Z",
+      "name": "25. OPTIONAL: Subscriptions - server",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "f28b065e-a940-4e8c-a75f-8fdbecb88dc0",
+      "chapter_id": "04c4da07-f2a9-4735-b3a0-d3456dec5f3d",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 0,
+      "order_number": 0,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "9d8fe8d3-1e5f-4f71-b8e0-482daa5b3578",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "caa0da5c-e615-46f7-9084-50f45efbdeff",
+      "exercise_tasks": [
+        {
+          "id": "e9b3ea21-15a5-423f-9301-8030ecf92ad3",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "caa0da5c-e615-46f7-9084-50f45efbdeff",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "<em><strong>Note:</strong> This is an optional exercise, and no points are awarded for it.</em>",
+                "dropCap": false
+              },
+              "clientId": "753d57c5-850c-48ab-b361-3544942caff4",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Do a backend implementation for subscription <code>bookAdded</code>, which returns the details of all new books to its subscribers.",
+                "dropCap": false
+              },
+              "clientId": "5491c26b-9e68-4409-ad66-dafe1303b272",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "1539b9c6-dca6-408e-808a-fcd9ce74907d",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": {
+            "awardPointsEvenIfWrong": false,
+            "body": null,
+            "grantPointsPolicy": "grant_whenever_possible",
+            "items": [
+              {
+                "body": null,
+                "failureMessage": null,
+                "id": "1539b9c6-dca6-408e-808a-fcd9ce74907d",
+                "order": 0,
+                "successMessage": null,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "submitMessage": null,
+            "title": null,
+            "version": "2"
+          },
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "e169b7a4-b6c8-4ddf-8369-849b997afd73": {
+    "exercise": {
+      "id": "e169b7a4-b6c8-4ddf-8369-849b997afd73",
+      "created_at": "2026-04-23T12:56:31.642349Z",
+      "updated_at": "2026-06-09T15:20:13.788009Z",
+      "name": "26. OPTIONAL: Subscriptions - client, part 1",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "f28b065e-a940-4e8c-a75f-8fdbecb88dc0",
+      "chapter_id": "04c4da07-f2a9-4735-b3a0-d3456dec5f3d",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 0,
+      "order_number": 1,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "4b36ee4e-7306-4140-a1ce-0c8f95c9081a",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "c30d15f3-8d39-4292-9f98-077d5adf3e9f",
+      "exercise_tasks": [
+        {
+          "id": "d7508afc-4d9a-41a1-945c-48bfecad7d2f",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "c30d15f3-8d39-4292-9f98-077d5adf3e9f",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "<em><strong>Note:</strong> This is an optional exercise, and no points are awarded for it.</em>",
+                "dropCap": false
+              },
+              "clientId": "74105ca6-5f80-4362-b91c-62caf31a92d8",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Start using subscriptions in the client, and subscribe to <code>bookAdded</code>. When new books are added, notify the user. Any method works. For example, you can use the <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Window/alert\" target=\"_blank\" rel=\"noreferrer noopener\">window.alert</a> function.",
+                "dropCap": false
+              },
+              "clientId": "9288071f-ef2c-4193-b18d-900e6b3e6cfe",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "9726b8a4-ac11-4d41-8a18-5e545594320e",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": {
+            "awardPointsEvenIfWrong": false,
+            "body": null,
+            "grantPointsPolicy": "grant_whenever_possible",
+            "items": [
+              {
+                "body": null,
+                "failureMessage": null,
+                "id": "9726b8a4-ac11-4d41-8a18-5e545594320e",
+                "order": 0,
+                "successMessage": null,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "submitMessage": null,
+            "title": null,
+            "version": "2"
+          },
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "ecbf964c-c6fc-44fc-8ab2-5913bce8f9c1": {
+    "exercise": {
+      "id": "ecbf964c-c6fc-44fc-8ab2-5913bce8f9c1",
+      "created_at": "2026-04-23T12:56:31.642349Z",
+      "updated_at": "2026-06-09T15:20:13.788009Z",
+      "name": "27. OPTIONAL: Subscriptions - client, part 2",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "f28b065e-a940-4e8c-a75f-8fdbecb88dc0",
+      "chapter_id": "04c4da07-f2a9-4735-b3a0-d3456dec5f3d",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 0,
+      "order_number": 2,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "9b193e92-af8d-4304-aa03-7627ac7e6e30",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "ebcfdf1c-4ce6-42d7-846b-4db888dc3be5",
+      "exercise_tasks": [
+        {
+          "id": "ab0e9685-dbdf-44b8-a879-b9661219324d",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "ebcfdf1c-4ce6-42d7-846b-4db888dc3be5",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "<em><strong>Note:</strong> This is an optional exercise, and no points are awarded for it.</em>",
+                "dropCap": false
+              },
+              "clientId": "8c6b9bdc-31c5-495f-b230-08671b8e3ee5",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Keep the application's book view updated when the server notifies about new books (you can ignore the author view!). You can test your implementation by opening the app in two browser tabs and adding a new book in one tab. Adding the new book should update the view in both tabs.",
+                "dropCap": false
+              },
+              "clientId": "b071582b-50dc-4f70-9342-c13277b9be25",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "baf56e2e-cec1-4aba-ba5b-329e17a98b55",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": {
+            "awardPointsEvenIfWrong": false,
+            "body": null,
+            "grantPointsPolicy": "grant_whenever_possible",
+            "items": [
+              {
+                "body": null,
+                "failureMessage": null,
+                "id": "baf56e2e-cec1-4aba-ba5b-329e17a98b55",
+                "order": 0,
+                "successMessage": null,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "submitMessage": null,
+            "title": null,
+            "version": "2"
+          },
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "568ebf98-d785-4afd-a78b-aacc9c88dc31": {
+    "exercise": {
+      "id": "568ebf98-d785-4afd-a78b-aacc9c88dc31",
+      "created_at": "2026-04-23T12:56:31.642349Z",
+      "updated_at": "2026-06-09T15:20:13.788009Z",
+      "name": "28. OPTIONAL: n+1",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "f28b065e-a940-4e8c-a75f-8fdbecb88dc0",
+      "chapter_id": "04c4da07-f2a9-4735-b3a0-d3456dec5f3d",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 0,
+      "order_number": 3,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "c967bdbd-f49b-4c52-8793-6ad80b463452",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "b0e5a0f1-f918-4651-87c8-301bf9f072df",
+      "exercise_tasks": [
+        {
+          "id": "fc37e9dc-95ac-46cd-b27c-96fb2f6712f3",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "b0e5a0f1-f918-4651-87c8-301bf9f072df",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "<em><strong>Note:</strong> This is an optional exercise, and no points are awarded for it.</em>",
+                "dropCap": false
+              },
+              "clientId": "81a879f4-9b14-4706-877e-fffdfd10fbe5",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Solve the n+1 problem of the following query using any method you like.",
+                "dropCap": false
+              },
+              "clientId": "d13fad83-3ce9-4141-bb3e-874f32d89548",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "query {\n  allAuthors {\n    name \n    bookCount\n  }\n}"
+              },
+              "clientId": "40badd73-c8a5-47c1-ba61-2fe55e0d3ed5",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "a3c8d3e9-e548-4073-8c64-795ca870158b",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": {
+            "awardPointsEvenIfWrong": false,
+            "body": null,
+            "grantPointsPolicy": "grant_whenever_possible",
+            "items": [
+              {
+                "body": null,
+                "failureMessage": null,
+                "id": "a3c8d3e9-e548-4073-8c64-795ca870158b",
+                "order": 0,
+                "successMessage": null,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "submitMessage": null,
+            "title": null,
+            "version": "2"
+          },
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "f6926cac-492d-4caf-a97f-5c2c8e776c19": {
+    "exercise": {
+      "id": "f6926cac-492d-4caf-a97f-5c2c8e776c19",
+      "created_at": "2026-04-23T13:08:32.571048Z",
+      "updated_at": "2026-06-09T15:20:13.788009Z",
+      "name": "29. Your GitHub repository",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "f28b065e-a940-4e8c-a75f-8fdbecb88dc0",
+      "chapter_id": "04c4da07-f2a9-4735-b3a0-d3456dec5f3d",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 4,
+      "copied_from": null,
+      "max_tries_per_slide": 3,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "b3a7f9ed-8e6f-4b6b-90a1-113f7e0a86a7",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "4ab279e7-7472-4c91-a1e3-8b29210c1c77",
+      "exercise_tasks": [
+        {
+          "id": "4dda06ed-4cd6-415c-911f-d12bad63335e",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "4ab279e7-7472-4c91-a1e3-8b29210c1c77",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "<strong><em>If the tests do not pass, your submission will be rejected, and you will fail the course.</em></strong>",
+                "level": 2
+              },
+              "clientId": "423fb1df-ba64-4711-b6b5-250b93f4214c",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/heading"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "03c45e19-b72d-48f4-9f57-3fee58da327f",
+                "order": 0,
+                "title": "I have read and understood the above",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 1,
+          "deleted_at": null
+        },
+        {
+          "id": "431c5205-b06c-4936-80b1-84e00782b6c6",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "4ab279e7-7472-4c91-a1e3-8b29210c1c77",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "In this exercise, you should only tell us what your exercise repository is.",
+                "dropCap": false
+              },
+              "clientId": "c80638fd-fd7d-4ff4-81d5-f7b0a5234813",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "<strong>Note</strong>",
+                "dropCap": false
+              },
+              "clientId": "f351362f-03e7-4b48-b1eb-3f56801d1b0f",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "ordered": false,
+                "values": ""
+              },
+              "clientId": "77bf6c15-d002-454a-9598-4d5be4f249e7",
+              "innerBlocks": [
+                {
+                  "attributes": {
+                    "content": " If you are using a private repository, add the GitHub user <em>mluukkai</em> as a collaborator. If the repository can not be accessed, your course is not graded."
+                  },
+                  "clientId": "75497fea-60e1-451b-8018-666cfa8f2db9",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                }
+              ],
+              "isValid": true,
+              "name": "core/list"
+            },
+            {
+              "attributes": {
+                "ordered": false,
+                "values": ""
+              },
+              "clientId": "605e7a5e-e674-458e-a9fb-a43a3aa352d1",
+              "innerBlocks": [
+                {
+                  "attributes": {
+                    "content": "All the tests added in the earlier exercises must pass in your GitHub repository. If tests do not pass, your submission will be rejected."
+                  },
+                  "clientId": "1a32d774-8d91-47d1-bc5b-154af1a784bc",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                }
+              ],
+              "isValid": true,
+              "name": "core/list"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "formatRegex": "github.com/.+/.+",
+                "id": "387a4fed-2514-429a-bb6e-f82404f4c780",
+                "order": 0,
+                "title": null,
+                "type": "closed-ended-question"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "e2be519d-7e99-404f-9434-12e49c78a7a6": {
+    "exercise": {
+      "id": "e2be519d-7e99-404f-9434-12e49c78a7a6",
+      "created_at": "2026-04-23T10:46:34.686826Z",
+      "updated_at": "2026-05-06T12:33:24.315267Z",
+      "name": "8. Authors view",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "ef9d53de-613e-4e03-b8af-6768e85edf5d",
+      "chapter_id": "3da19a48-b3e3-4404-896e-2c6327d27600",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 0,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "218c3f63-1cfa-4aeb-84d8-b6488ccad96b",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "f2eb3e73-5c15-40a0-969c-225f21bfd528",
+      "exercise_tasks": [
+        {
+          "id": "00453cd8-042f-4f2d-a6d2-9351c4c14b01",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "f2eb3e73-5c15-40a0-969c-225f21bfd528",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Through these exercises, we'll implement a frontend for the GraphQL library. The application base can be found in the <em>library-frontend</em> folder. Remember to install the dependencies with the command <code>npm install</code>.",
+                "dropCap": false
+              },
+              "clientId": "0e5a64fb-08c7-44bb-85e0-db9dfe837a4d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Implement an Authors view to show the details of all authors on a page as follows:",
+                "dropCap": false
+              },
+              "clientId": "95be9f34-ecc5-4604-a2a9-d6b84e94bff6",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "browser showing 5 authors with the buttons",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/IYEDc2GHRSMJS6uGME2IpMn8ItSwEF.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/IYEDc2GHRSMJS6uGME2IpMn8ItSwEF.png"
+              },
+              "clientId": "8631d3ba-bff8-4f6d-836d-61a82bf63195",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "57f87c82-f112-474c-9865-6929922ad047",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "49454d1f-571d-4297-8ff6-8c5e318e489e": {
+    "exercise": {
+      "id": "49454d1f-571d-4297-8ff6-8c5e318e489e",
+      "created_at": "2026-04-23T10:46:34.686826Z",
+      "updated_at": "2026-05-06T12:33:24.315267Z",
+      "name": "9. Books view",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "ef9d53de-613e-4e03-b8af-6768e85edf5d",
+      "chapter_id": "3da19a48-b3e3-4404-896e-2c6327d27600",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 1,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "03400f47-1a93-4ab5-ab27-594a8e0c505b",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "fe228956-3a5e-4161-9c3f-21de6b782bc4",
+      "exercise_tasks": [
+        {
+          "id": "59185a7e-00c9-4c66-8273-0e510d7636d4",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "fe228956-3a5e-4161-9c3f-21de6b782bc4",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement a Books view that shows the details of all books except their genres.",
+                "dropCap": false
+              },
+              "clientId": "9cbf68c4-fa6d-49da-8e1e-faabebf008cc",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "browser showing 7 books with the button",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/IWpkbtzPYYZ5fG4SsrwZc8bMSc7iCi.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/IWpkbtzPYYZ5fG4SsrwZc8bMSc7iCi.png"
+              },
+              "clientId": "6e3bd9c0-ff0e-431d-b14d-6fcbd1ab6b42",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "2f7d068d-2b0b-4b14-a503-cf734130dad1",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "cdfaf35d-8865-4b39-9949-a234e240aa4a": {
+    "exercise": {
+      "id": "cdfaf35d-8865-4b39-9949-a234e240aa4a",
+      "created_at": "2026-04-23T10:46:34.686826Z",
+      "updated_at": "2026-05-06T12:33:24.315267Z",
+      "name": "10. Adding a book",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "ef9d53de-613e-4e03-b8af-6768e85edf5d",
+      "chapter_id": "3da19a48-b3e3-4404-896e-2c6327d27600",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 2,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "84b21b0e-0c93-40c0-a00b-d4c577fdd5b5",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "355bfe2f-d14d-4927-9348-91d28cfdbe58",
+      "exercise_tasks": [
+        {
+          "id": "d3fd6e04-8799-4b45-83c8-03fd53b57467",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "355bfe2f-d14d-4927-9348-91d28cfdbe58",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement a possibility to add new books to your application. The functionality can look like this:",
+                "dropCap": false
+              },
+              "clientId": "c7318b26-e637-4b40-94bc-8aca7ba176db",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "browser showing the add book form with data fulfilled",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/pHAhGpSY2KHS4PqmM85DwOaHLGfSio.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/pHAhGpSY2KHS4PqmM85DwOaHLGfSio.png"
+              },
+              "clientId": "def43507-5137-4376-af8b-da3acca9628d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "Use <a href=\"https://react.dev/reference/react-dom/components/input#providing-a-label-for-an-input\" data-type=\"link\" data-id=\"https://react.dev/reference/react-dom/components/input#providing-a-label-for-an-input\">labels</a> with <code>title</code>, <code>author</code>, <code>published</code>, and <code>genre</code> for the input fields, so that the tests in later chapters can correctly identify the fields.",
+                "dropCap": false
+              },
+              "clientId": "26ca04aa-f5e2-459c-8c5b-7694b0296149",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Make sure that the Authors and Books views are kept up to date after a new book is added.",
+                "dropCap": false
+              },
+              "clientId": "d46cce6f-0a0d-4377-9a87-056c1b1e9614",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "In case of problems when making queries or mutations, check from the developer console what the server response is:",
+                "dropCap": false
+              },
+              "clientId": "5506d91c-f2aa-493f-8f54-d620ca7ea0f4",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "browser unhandled rejection and dev tools network and preview highlighted showing error message",
+                "aspectRatio": "2.5088309055013074",
+                "blurDataUrl": "",
+                "caption": "",
+                "height": "auto",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/arm0megVywYxKf47PIZzuj86BCZHch.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/arm0megVywYxKf47PIZzuj86BCZHch.png",
+                "width": "735px"
+              },
+              "clientId": "27e1c02a-9177-4c03-822e-4299c6f437fb",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "The Chrome extension <a href=\"https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm/related\" target=\"_blank\" rel=\"noreferrer noopener\">Apollo Client Devtools</a> can be very helpful in diagnosing the situation.",
+                "dropCap": false
+              },
+              "clientId": "97011244-1e7a-43fb-a027-caf9519fc943",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "",
+                "dropCap": false
+              },
+              "clientId": "9b2f067d-b8ad-423d-a74c-caf7d822aaea",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "8cc9642e-c647-46c4-9bf2-e6c5772e3b11",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "e1dda126-3f5d-466a-b1ca-f040458e8e3b": {
+    "exercise": {
+      "id": "e1dda126-3f5d-466a-b1ca-f040458e8e3b",
+      "created_at": "2026-04-23T10:46:34.686826Z",
+      "updated_at": "2026-05-06T12:33:24.315267Z",
+      "name": "11. Authors birth year",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "ef9d53de-613e-4e03-b8af-6768e85edf5d",
+      "chapter_id": "3da19a48-b3e3-4404-896e-2c6327d27600",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 3,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "0febfa3e-5a2b-4013-9d2f-bff7179a8bc2",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "ae7ba721-c546-42a8-a2c3-294f7a1b1c87",
+      "exercise_tasks": [
+        {
+          "id": "b3b729ee-ee0d-4ff1-9dff-4aa76e3a4798",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "ae7ba721-c546-42a8-a2c3-294f7a1b1c87",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement a possibility to set authors birth year. You can create a new view for setting the birth year, or place it on the Authors view:",
+                "dropCap": false
+              },
+              "clientId": "c338c3f1-2ac5-4852-b07d-1a7044df0724",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "browser showing born input text field year",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/wVsqQLMykyGHZdX9AHt3PPTAXiEMrS.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/wVsqQLMykyGHZdX9AHt3PPTAXiEMrS.png"
+              },
+              "clientId": "6ab17b45-43fc-4d39-893e-3a5c48d417ca",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "Make sure that the Authors view is kept up to date after setting a birth year.",
+                "dropCap": false
+              },
+              "clientId": "843dce32-9740-4d94-93eb-a83b663bd12e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "65f63bc5-0c67-46b5-98f8-8e3341136eed",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "2f899f13-5ea7-4bb0-b781-b029dda4e4ca": {
+    "exercise": {
+      "id": "2f899f13-5ea7-4bb0-b781-b029dda4e4ca",
+      "created_at": "2026-04-23T10:46:34.686826Z",
+      "updated_at": "2026-05-06T12:33:24.315267Z",
+      "name": "12. Authors birth year advanced",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "ef9d53de-613e-4e03-b8af-6768e85edf5d",
+      "chapter_id": "3da19a48-b3e3-4404-896e-2c6327d27600",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 4,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "922230f1-035b-4d42-b0ff-93b7580eb6f3",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "60c2f457-eee2-4091-b707-0fe2066462ab",
+      "exercise_tasks": [
+        {
+          "id": "20cf476c-265b-46b4-a875-304e6099d431",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "60c2f457-eee2-4091-b707-0fe2066462ab",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Make the birth year form such that the birth year can be set via a dropdown only for an existing author. Use the <a href=\"https://react.dev/reference/react-dom/components/select\" target=\"_blank\" rel=\"noreferrer noopener\">select element</a>.",
+                "dropCap": false
+              },
+              "clientId": "d5bf2aeb-303c-4090-a790-ba2f5ce73d5d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The solution looks as follows:",
+                "dropCap": false
+              },
+              "clientId": "1bb5c578-d64a-4e17-a529-5e8db9c9d94d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "browser showing set birthyear option for existing name",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/3vTvcOffThtf4nuNkImfJEOATn6ShX.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/3vTvcOffThtf4nuNkImfJEOATn6ShX.png"
+              },
+              "clientId": "1efaa527-605b-4b17-97f9-1f807af9cfa2",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "e93310bd-fcf4-4c8e-bcab-4e752453ffbb",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "81d912fb-be09-4d1b-a102-ef7c3ceca799": {
+    "exercise": {
+      "id": "81d912fb-be09-4d1b-a102-ef7c3ceca799",
+      "created_at": "2026-04-23T13:26:50.046211Z",
+      "updated_at": "2026-04-23T13:32:16.464637Z",
+      "name": "0. Warmup",
+      "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
+      "exam_id": null,
+      "page_id": "f58de0f7-7516-4eae-9174-31e9240e0439",
+      "chapter_id": "5e664d4c-7655-4e91-a010-dd7e3ddc9ae1",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 0,
+      "copied_from": null,
+      "max_tries_per_slide": 5,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "7e525c2f-ae92-45bc-a3d7-e885f86e991b",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "690c3643-3a2b-4f7a-a66b-5a7730a5b2f3",
+      "exercise_tasks": [
+        {
+          "id": "e84e05dc-cafe-4d38-82d8-f183a5403eec",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "690c3643-3a2b-4f7a-a66b-5a7730a5b2f3",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Before the start, let us ensure that you have read the info on this page well enough.",
+                "dropCap": false
+              },
+              "clientId": "4b42685a-539a-481d-832a-9dbe8dd30e3b",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "allowSelectingMultipleOptions": true,
+                "body": null,
+                "id": "5470b05a-9466-4273-882b-50b0b6c74328",
+                "multipleChoiceMultipleOptionsGradingPolicy": "default",
+                "optionDisplayDirection": "vertical",
+                "options": [
+                  {
+                    "body": null,
+                    "id": "45dcea26-7c14-4104-a0c2-889c51493067",
+                    "order": 1,
+                    "title": "The exercises are submitted using a GitHub repository"
+                  },
+                  {
+                    "body": null,
+                    "id": "84017dcc-725a-4172-b164-78c7a97d141f",
+                    "order": 2,
+                    "title": "You need an University of Helsinki enrollment before you start the course"
+                  },
+                  {
+                    "body": null,
+                    "id": "cbf327f1-f15b-4e4c-80e6-c22f5f93a4c3",
+                    "order": 3,
+                    "title": "It is not allowed to submit your friend’s answer as your own."
+                  },
+                  {
+                    "body": null,
+                    "id": "ae28c488-291c-49d7-a037-0ab0a3873e6a",
+                    "order": 4,
+                    "title": "For a certificate or University credits, one should do all exercises"
+                  },
+                  {
+                    "body": null,
+                    "id": "95b1a4e6-234c-45f1-8327-9a27cb60770a",
+                    "order": 5,
+                    "title": "It is not allowed to use a LLM in the course"
+                  },
+                  {
+                    "body": null,
+                    "id": "02f6930a-e907-47fa-89e0-494aa84b888f",
+                    "order": 6,
+                    "title": "It is possible to submit the exercises in any order"
+                  }
+                ],
+                "order": 0,
+                "shuffleOptions": false,
+                "title": "Which of the following claims are true?",
+                "type": "multiple-choice"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  }
+}
