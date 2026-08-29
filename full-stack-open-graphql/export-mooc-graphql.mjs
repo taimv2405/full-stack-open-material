@@ -138,18 +138,23 @@ const main = async () => {
     }
   }))
   const exercises = new Map(exerciseEntries.filter(([, detail]) => detail))
+  for (const detail of exercises.values()) {
+    for (const task of detail.current_exercise_slide?.exercise_tasks ?? []) {
+      for (const block of task.assignment ?? []) collectImageUrls(block, imageUrls)
+    }
+  }
 
   const imagePaths = new Map()
-  let imageNumber = 0
-  for (const url of [...imageUrls].sort()) {
-    imageNumber += 1
+  const sortedImageUrls = [...imageUrls].sort()
+  await Promise.all(sortedImageUrls.map(async (url, index) => {
+    const imageNumber = index + 1
     try {
       imagePaths.set(url, await downloadAsset(url, imageNumber))
       console.log(`Downloaded image ${imageNumber}/${imageUrls.size}`)
     } catch (error) {
       console.warn(`Could not download ${url}: ${error.message}`)
     }
-  }
+  }))
 
   const exportedAt = new Date().toISOString()
   const chapters = []

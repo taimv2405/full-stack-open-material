@@ -1,7 +1,7 @@
 # Chapter 6: Fragments and subscriptions
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-6
-Exported: 2026-08-27T10:29:32.646Z
+Exported: 2026-08-29T06:23:34.819Z
 
 We are approaching the end of this part. Let's finish by having a look at a few more details about GraphQL.
 
@@ -428,7 +428,7 @@ Execution of this line sends a WebSocket message about the added person to all t
 
 It's possible to test the subscriptions with the Apollo Explorer like this:
 
-![apollo explorer showing subscriptions tab and response](assets/image-009.png)
+![apollo explorer showing subscriptions tab and response](assets/image-011.png)
 
 So the subscription is
 
@@ -594,7 +594,7 @@ const App = () => {
 
 When a new person is now added to the phonebook, no matter where it's done, the details of the new person are printed to the client’s console:
 
-![dev tools showing data personAdded Object with Mainroad](assets/image-021.png)
+![dev tools showing data personAdded Object with Mainroad](assets/image-033.png)
 
 When a new person is added to the list, the server sends the details to the client, and the callback function defined as the value of the useSubscription hook’s `onData` attribute is called, with the person added on the server passed to it as a parameter.
 

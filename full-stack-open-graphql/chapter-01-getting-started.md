@@ -1,7 +1,7 @@
 # Chapter 1: Getting Started
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-1
-Exported: 2026-08-27T10:29:32.646Z
+Exported: 2026-08-29T06:23:34.819Z
 
 In this part, we will explore GraphQL, a modern alternative to REST for implementing server interfaces. We will learn the core concepts of GraphQL, including schemas, queries, mutations, and subscriptions, and build a GraphQL server using Apollo Server. On the frontend, we will connect a React application to the GraphQL backend using Apollo Client, handling data fetching, caching, and state management. We will also add a database and user authentication to the backend, and finish by looking at advanced topics such as optimizing queries.
 

@@ -1,7 +1,7 @@
 # Chapter 4: Database and user administration
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-4
-Exported: 2026-08-27T10:29:32.646Z
+Exported: 2026-08-29T06:23:34.819Z
 
 In this chapter, we’ll start using a database to store data and extend the application with user management. First, however, we’ll refactor the backend code. The current code for the phonebook backend can be found on [GitHub](https://github.com/fullstack-hy2020/graphql-phonebook-backend/tree/part8-3) in the part8-3 branch.
 
@@ -582,7 +582,7 @@ Just like in the previous case with REST, the idea now is that a logged-in user 
 
 In the Apollo Explorer, the header is added to a query like so:
 
-![apollo explorer highlighting headers with authorization and bearer token](assets/image-018.png)
+![apollo explorer highlighting headers with authorization and bearer token](assets/image-028.png)
 
 On the backend, the most convenient way to pass the token that arrives with the request to the resolvers is to use Apollo Server’s [context](https://www.apollographql.com/docs/apollo-server/data/context/). With the context, we can perform things that are common to all queries and mutations, for example [identifying the user](https://www.apollographql.com/blog/authorization-in-graphql/) associated with the request.
 
@@ -656,7 +656,7 @@ Query: {
 
 If the header contains a valid token, the query returns the details of the user identified by the token.
 
-![apollo studio showing query response object](assets/image-023.png)
+![apollo studio showing query response object](assets/image-036.png)
 
 ## Friends list
 
@@ -939,4 +939,4 @@ on:
 
 Verify that the tests pass in GitHub Actions:
 
-![GitHub Actions shows that Test library-backend workflow has passed](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/cZsFYoMCwd4C4tJV0mhoj8KXzaAw6B.png)
+![GitHub Actions shows that Test library-backend workflow has passed](assets/image-023.png)

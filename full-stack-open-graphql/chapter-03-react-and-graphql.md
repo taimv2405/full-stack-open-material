@@ -1,7 +1,7 @@
 # Chapter 3: React and GraphQL
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-3
-Exported: 2026-08-27T10:29:32.646Z
+Exported: 2026-08-29T06:23:34.819Z
 
 We will next implement a React app that uses the GraphQL server we created.
 
@@ -9,7 +9,7 @@ The current code of the server can be found on [GitHub](https://github.com/fulls
 
 In theory, we could use GraphQL with HTTP POST requests. The following shows an example of this with Postman:
 
-![postman showing localhost:4000 graphql with allPersons query](assets/image-007.png)
+![postman showing localhost:4000 graphql with allPersons query](assets/image-009.png)
 
 The communication works by sending HTTP POST requests to [http://localhost:4000/graphql](http://localhost:4000/graphql). The query itself is a string sent as the value of the key query.
 
@@ -76,7 +76,7 @@ client.query({ query }).then((response) => {
 
 The server's response is printed to the console:
 
-![devtools shows allPersons array with 3 people](assets/image-010.png)
+![devtools shows allPersons array with 3 people](assets/image-012.png)
 
 A `gql` tag is added before the template literal that forms the query, imported from the @apollo/client package:
 
@@ -264,7 +264,7 @@ The name of the query is findPersonByName, and it is given a string $nameToSearc
 
 It is also possible to do queries with parameters with the Apollo Explorer. The parameters are given in Variables:
 
-![apollostudio findPersonByName highlighting nameToSearch Arto Hellas](assets/image-013.png)
+![apollostudio findPersonByName highlighting nameToSearch Arto Hellas](assets/image-019.png)
 
 The `useQuery` hook is well-suited for situations where the query is done when the component is rendered. However, we now want to make the query only when a user wants to see the details of a specific person, so the query is done only [as required](https://www.apollographql.com/docs/react/data/queries/#executing-queries-manually).
 
@@ -380,7 +380,7 @@ if (nameToSearch && result.data) {
 
 A single-person view looks like this:
 
-![browser showing single-person](assets/image-003.png)
+![browser showing single-person](assets/image-005.png)
 
 When a user wants to return to the person list, the `nameToSearch` state is set to `null`.
 
@@ -390,15 +390,15 @@ The current code of the application can be found on [GitHub](https://github.com/
 
 When we do multiple queries, for example with the address details of Arto Hellas, we notice something interesting: the query to the backend is done only the first time around. After this, despite the same query being done again by the code, the query is not sent to the backend.
 
-![browser showing dev tools response with network tab and graphql](assets/image-015.png)
+![browser showing dev tools response with network tab and graphql](assets/image-021.png)
 
 Apollo client saves the responses of queries to [cache](https://www.apollographql.com/docs/react/caching/overview/). To optimize performance if the response to a query is already in the cache, the query is not sent to the server at all.
 
-![apollo dev tools showing root_query allPersons](assets/image-005.png)
+![apollo dev tools showing root_query allPersons](assets/image-007.png)
 
 Cache shows the detailed info of Arto Hellas after the query findPerson:
 
-![apollo dev tools showing first person with information](assets/image-004.png)
+![apollo dev tools showing first person with information](assets/image-006.png)
 
 ## Doing mutations
 
@@ -772,7 +772,7 @@ const App = () => {
 
 Now the user is informed about an error with a simple notification.
 
-![browser showing in red name must be unique](assets/image-011.png)
+![browser showing in red name must be unique](assets/image-015.png)
 
 The current code of the application can be found on [GitHub](https://github.com/fullstack-hy2020/graphql-phonebook-frontend/tree/part8-3) branch part8-3.
 
@@ -873,13 +873,13 @@ const App = () => {
 
 It looks bleak, but it works:
 
-![browser showing main page with name and phone having information in the input](assets/image-016.png)
+![browser showing main page with name and phone having information in the input](assets/image-026.png)
 
 Surprisingly, when a person's number is changed, the new number automatically appears on the list of persons rendered by the Persons component. This happens because each person has an identifying field of type ID, so the person's details saved to the cache update automatically when they are changed with the mutation.
 
 Our application still has one small flaw. If we try to change the phone number for a name which does not exist, nothing seems to happen. This happens because if a person with the given name cannot be found, the mutation response is null:
 
-![dev tools showing network with localhost and response with editNumber being null](assets/image-020.png)
+![dev tools showing network with localhost and response with editNumber being null](assets/image-031.png)
 
 Since this isn’t considered an error state from GraphQL’s point of view, registering an `onError` error handler wouldn’t be useful in this situation. However, we can add an `onCompleted` callback to the `useMutation` hook, where we can generate a potential error message:
 
@@ -918,19 +918,19 @@ Through these exercises, we'll implement a frontend for the GraphQL library. The
 
 Implement an Authors view to show the details of all authors on a page as follows:
 
-![browser showing 5 authors with the buttons](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/IYEDc2GHRSMJS6uGME2IpMn8ItSwEF.png)
+![browser showing 5 authors with the buttons](assets/image-014.png)
 
 ## Exercise: 9. Books view
 
 Implement a Books view that shows the details of all books except their genres.
 
-![browser showing 7 books with the button](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/IWpkbtzPYYZ5fG4SsrwZc8bMSc7iCi.png)
+![browser showing 7 books with the button](assets/image-013.png)
 
 ## Exercise: 10. Adding a book
 
 Implement a possibility to add new books to your application. The functionality can look like this:
 
-![browser showing the add book form with data fulfilled](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/pHAhGpSY2KHS4PqmM85DwOaHLGfSio.png)
+![browser showing the add book form with data fulfilled](assets/image-032.png)
 
 Use [labels](https://react.dev/reference/react-dom/components/input#providing-a-label-for-an-input) with `title`, `author`, `published`, and `genre` for the input fields, so that the tests in later chapters can correctly identify the fields.
 
@@ -938,7 +938,7 @@ Make sure that the Authors and Books views are kept up to date after a new book 
 
 In case of problems when making queries or mutations, check from the developer console what the server response is:
 
-![browser unhandled rejection and dev tools network and preview highlighted showing error message](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/arm0megVywYxKf47PIZzuj86BCZHch.png)
+![browser unhandled rejection and dev tools network and preview highlighted showing error message](assets/image-022.png)
 
 The Chrome extension [Apollo Client Devtools](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm/related) can be very helpful in diagnosing the situation.
 
@@ -946,7 +946,7 @@ The Chrome extension [Apollo Client Devtools](https://chrome.google.com/webstore
 
 Implement a possibility to set authors birth year. You can create a new view for setting the birth year, or place it on the Authors view:
 
-![browser showing born input text field year](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/wVsqQLMykyGHZdX9AHt3PPTAXiEMrS.png)
+![browser showing born input text field year](assets/image-035.png)
 
 Make sure that the Authors view is kept up to date after setting a birth year.
 
@@ -956,4 +956,4 @@ Make the birth year form such that the birth year can be set via a dropdown only
 
 The solution looks as follows:
 
-![browser showing set birthyear option for existing name](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/3vTvcOffThtf4nuNkImfJEOATn6ShX.png)
+![browser showing set birthyear option for existing name](assets/image-004.png)

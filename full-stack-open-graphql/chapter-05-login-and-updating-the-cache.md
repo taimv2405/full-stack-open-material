@@ -1,7 +1,7 @@
 # Chapter 5: Login and updating the cache
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-5
-Exported: 2026-08-27T10:29:32.646Z
+Exported: 2026-08-29T06:23:34.819Z
 
 The frontend of our application shows the phone directory just fine with the updated server. However, if we want to add new persons, we have to add login functionality to the frontend.
 
@@ -221,7 +221,7 @@ Creating new persons and changing numbers works again.
 
 In the application, it should be possible to add a person without a phone number. However, if we now try to add a person without a phone number, it doesn’t work:
 
-![browser showing person validation failed](assets/image-017.png)
+![browser showing person validation failed](assets/image-027.png)
 
 Validation fails, because frontend sends an empty string as the value of `phone`.
 
@@ -260,7 +260,7 @@ There is also an issue with the functionality for changing a phone number. The d
 
 From the console’s Network tab we can see that the request is answered with an error message:
 
-![The console’s Network tab shows the error message returned in the response](assets/image-022.png)
+![The console’s Network tab shows the error message returned in the response](assets/image-034.png)
 
 Let’s modify the application so that validation errors are also shown when changing a phone number:
 
@@ -289,7 +289,7 @@ const PhoneForm = ({ setError }) => {
 
 The request that updates the number, `changeNumber`, is now executed inside a try block. If the database validations fail, execution ends up in the catch block, where an appropriate error message is set in the application using the `setError` function:
 
-![The application shows an error message if the phone number is shorter than 5 characters](assets/image-019.png)
+![The application shows an error message if the phone number is shorter than 5 characters](assets/image-029.png)
 
 ## Updating cache, revisited
 
@@ -361,15 +361,15 @@ It is not necessary yet to handle validation errors.
 
 Make the login form into a separate view which can be accessed through a navigation menu:
 
-![browser books showing login button highlighted](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/VgH3PFMe1FWmYNRwcIRToXF58M2BIX.png)
+![browser books showing login button highlighted](assets/image-018.png)
 
 The login form:
 
-![browser showing login form](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/fZvwJpQ24mV6PXgitCyRalzYCW5ET2.png)
+![browser showing login form](assets/image-025.png)
 
 When a user is logged in, the navigation changes to show the functionalities which can only be done by a logged-in user:
 
-![browser showing addbook and logout buttons](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/fXkEOyldwHyBKJ0lX4btiDee9IPYsu.png)
+![browser showing addbook and logout buttons](assets/image-024.png)
 
 Also make sure that the Set birthyear form is only rendered when the user is logged in.
 
@@ -377,7 +377,7 @@ Also make sure that the Set birthyear form is only rendered when the user is log
 
 Complete your application to filter the book list by genre. Your solution might look something like this:
 
-![browser showing books buttons down at the bottom](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/oQT45I3Z5C9LkHPyot4QESJtyjmQvf.png)
+![browser showing books buttons down at the bottom](assets/image-030.png)
 
 In this exercise, the filtering can be done using just React.
 
@@ -385,7 +385,7 @@ In this exercise, the filtering can be done using just React.
 
 Implement a view which shows all the books based on the logged-in user's favourite genre.
 
-![browser showing two books via patterns](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/JuCJ6z2Y8kN8EE1gV65jVvPXUtfYUo.png)
+![browser showing two books via patterns](assets/image-016.png)
 
 ## Exercise: 22. Books by genre with GraphQL
 
@@ -428,4 +428,4 @@ on:
 
 The workflow is run whenever you push a new commit to GitHub. Make sure that both workflows run successfully in GitHub Actions:
 
-![GitHub Actions shows that Test library-backend workflow has passed](https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/3VEfswqYcZseu5C33MaGI92xjBMSDk.png)
+![GitHub Actions shows that Test library-backend workflow has passed](assets/image-003.png)

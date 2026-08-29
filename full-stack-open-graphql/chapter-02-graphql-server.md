@@ -1,7 +1,7 @@
 # Chapter 2: GraphQL server
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-2
-Exported: 2026-08-27T10:29:32.646Z
+Exported: 2026-08-29T06:23:34.819Z
 
 REST, familiar to us from the previous parts of the course, has long been the most prevalent way to implement the interfaces servers offer for browsers, and in general the integration between different applications on the web.
 
@@ -401,7 +401,7 @@ When Apollo server is run in development mode the page [http://localhost:4000](h
 
 Let's try it out:
 
-![apollo studio Example Query with response allPersons](assets/image-012.png)
+![apollo studio Example Query with response allPersons](assets/image-017.png)
 
 At the left side Explorer shows the API-documentation that it has automatically generated based on the schema.
 
@@ -431,7 +431,7 @@ The schema contains structural information, but in the code editor the whole con
 
 We need to somehow indicate to the extension that `typeDefs` contains GraphQL. There are several ways to do this. We'll do it now by adding the type-indicating comment `/* GraphQL */` before the template literal string:
 
-![VS Code uses syntax highlighting for the GraphQL schema when the comment /* GraphQL */ is added before the template literal string](assets/image-006.png)
+![VS Code uses syntax highlighting for the GraphQL schema when the comment /* GraphQL */ is added before the template literal string](assets/image-008.png)
 
 Now the syntax highlighting works. The comment helps the installed extension recognize the string as GraphQL and provide intelligent editor features, but it does not affect the application's runtime. Prettier can now also format the schema.
 
@@ -743,7 +743,7 @@ So the resolver of the address field of the Person type formats the response obj
 
 If we try to create a new person, but the parameters do not correspond with the schema description, the server gives an error message:
 
-![apollo showing error with addPerson GRAPHQL VALIDATION FAILED](assets/image-014.png)
+![apollo showing error with addPerson GRAPHQL VALIDATION FAILED](assets/image-020.png)
 
 So some of the error handling can be automatically done with GraphQL [validation](https://graphql.org/learn/validation/).
 
@@ -781,7 +781,7 @@ const resolvers = {
 
 So if the name to be added already exists in the phonebook, throw `GraphQLError` error.
 
-![apollo showing error BAD_USER_INPUT](assets/image-008.png)
+![apollo showing error BAD_USER_INPUT](assets/image-010.png)
 
 The current code of the application can be found on [GitHub](https://github.com/fullstack-hy2020/graphql-phonebook-backend/tree/part8-2), branch part8-2.
 
