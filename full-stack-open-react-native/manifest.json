@@ -1,0 +1,70 @@
+{
+  "exported_at": "2026-09-13T08:03:38.501Z",
+  "course": {
+    "id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+    "slug": "full-stack-open-react-native",
+    "name": "Full Stack Open: React Native"
+  },
+  "chapters": [
+    {
+      "title": "Getting started",
+      "url_path": "/chapter-1",
+      "file": "chapter-01-getting-started.md",
+      "updated_at": "2026-09-02T08:28:54.771476Z"
+    },
+    {
+      "title": "Introduction to React Native",
+      "url_path": "/chapter-2",
+      "file": "chapter-02-introduction-to-react-native.md",
+      "updated_at": "2026-05-21T08:05:59.786010Z"
+    },
+    {
+      "title": "React Native basics",
+      "url_path": "/chapter-3",
+      "file": "chapter-03-react-native-basics.md",
+      "updated_at": "2026-04-13T09:00:51.236583Z"
+    },
+    {
+      "title": "Communicating with server",
+      "url_path": "/chapter-4",
+      "file": "chapter-04-communicating-with-server.md",
+      "updated_at": "2026-08-12T07:21:30.208215Z"
+    },
+    {
+      "title": "Testing and extending our application",
+      "url_path": "/chapter-5",
+      "file": "chapter-05-testing-and-extending-our-application.md",
+      "updated_at": "2026-09-01T20:46:58.930411Z"
+    }
+  ],
+  "images": {
+    "https://courses.mooc.fi/api/v0/files/course/99e12118-87d6-4620-b278-8deb041d81ca/images/EtAeelSUYdNTJWrOY1pv2DiEJsMr9q.png": "assets/image-028.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/U029aGjQiKUE8CMMrEc4BIqySufV8v.jpg": "assets/image-015.jpg",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/1w0DhJGF5wXtvCnIJvbhgoBcqE3Yd0.png": "assets/image-004.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/74kH012SBVlEFHOrRsqywdhCxCuWdS.png": "assets/image-007.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/1Xecym4yHVUvpAj8oBC3IqeSNL6edu.png": "assets/image-003.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/GncDVKYsteTkL2jfGSvrhghdzeEon8.png": "assets/image-011.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/iHlyM3n8xDIykz1Jca1J8oFQ4aOqlI.png": "assets/image-021.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/giMdoPmU5eh5hYubmyB7aOZjIffbpZ.png": "assets/image-019.png",
+    "https://courses.mooc.fi/api/v0/files/course/789089e5-7425-4a5d-9c40-6ae915de7ee5/images/DPXe3SFeStGBmVSLraxQBTH0MLFN4k.png": "assets/image-027.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/ngBn248YfivaB8yc5V5C2ApO1kMH8L.jpg": "assets/image-023.jpg",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/5RPpyX8M2NmHLrGYekavuKZKjtiyt3.jpg": "assets/image-006.jpg",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/RquuxRmNLRS3j9zz87KlZqk7RlF7ko.png": "assets/image-014.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/h0WJcFlZCrasRi53mTzIjvGpn5gaXc.jpg": "assets/image-020.jpg",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/cyLRmXq8OxMzVeH4T2NWFugHLYTGHm.png": "assets/image-018.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/ZacIHTnd3puISG9hIq1qWWkauBtf3x.jpg": "assets/image-016.jpg",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/J5AsJXE0L5MtrhPZWdWkerFiFZwG28.png": "assets/image-012.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/7In2BANnmv0c7a1MhIxCabEPggkpdq.jpg": "assets/image-008.jpg",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/9UTQW8qYvIuKHaLE2Us16OVbpPi1Rq.png": "assets/image-009.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/0BMXNCvbeaDd9GcV0QH1ImnoxwpHmh.png": "assets/image-001.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/oVqZaInMNAOfUNS0U4ThZv285Bu18j.jpg": "assets/image-024.jpg",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/3Udl1y9VYXpHzqOpYO9fIjUWYEcNJx.png": "assets/image-005.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/uhYpOq79Ivj8tWswCa6jMJQ67JB4NN.png": "assets/image-025.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/L3UrSRdPLPQ41xargTxtKwBZRbw1UX.png": "assets/image-013.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/FD4P1MjoSUiDVEbp24qxntsxq15NfR.png": "assets/image-010.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/jjpa31MwBO1tZU5YVrRGQTguOxRp3y.png": "assets/image-022.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/yYilJIWXuz3Qrc8CH0AXneKVxGPJEF.png": "assets/image-026.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/aUXBVmyvq3RwtvrTaHx4uZL3JjTVt3.png": "assets/image-017.png",
+    "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/1BVyhOB0JtEiRN7xD5R8lDeX9FmD8N.png": "assets/image-002.png"
+  }
+}

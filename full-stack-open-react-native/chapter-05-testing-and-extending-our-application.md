@@ -1,0 +1,1115 @@
+# Testing and extending our application
+
+Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-react-native/chapter-5
+Exported: 2026-09-13T08:03:38.501Z
+
+Now that we have established a good foundation for our project, it is time to start expanding it. In this section you can put to use all the React Native knowledge you have gained so far. Along with expanding our application we will cover some new areas, such as testing, and additional resources.
+
+## Testing React Native applications
+
+To start testing code of any kind, the first thing we need is a testing framework, which we can use to run a set of test cases and inspect their results. For testing a JavaScript application, [Jest](https://jestjs.io/) is a popular candidate for such testing framework. For testing an Expo based React Native application with Jest, Expo provides a set of Jest configuration in a form of [jest-expo](https://github.com/expo/expo/tree/master/packages/jest-expo) preset. Let's get started by installing the packages:
+
+```
+npx expo install jest-expo jest @types/jest --dev
+```
+
+To use the jest-expo preset in Jest, we need to add the following [Jest configuration](https://docs.expo.dev/develop/unit-testing/#additional-configuration-for-using-transformignorepatterns) to the package.json file along with the test script:
+
+```
+{
+  // ...
+  "scripts": {
+    // other scripts...
+    "test": "jest" // HIGHLIGHT LINE
+  },
+  // BEGIN HIGHLIGHT
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@sentry/react-native|native-base|react-native-svg|react-router-native)"
+    ]
+  }
+  // END HIGHLIGHT
+  // ...
+}
+```
+
+We also need a bit of configuration so that VS Code can suggest appropriate matchers for the `expect` keyword, for example. This can be done by creating a jsconfig.json file in the root of the project with the following content:
+
+```
+{
+  "compilerOptions": {
+    "checkJs": false,
+    "types": ["jest"]
+  }
+}
+```
+
+In order to use ESLint in the Jest's test files, we also need the [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest) plugin for ESLint. Let's install it:
+
+```
+npm install eslint-plugin-jest --save-dev
+```
+
+To use the eslint-plugin-jest plugin, we need to enable it in the eslint.config.js file:
+
+```
+// https://docs.expo.dev/guides/using-eslint/
+const { defineConfig } = require('eslint/config');
+const expoConfig = require('eslint-config-expo/flat');
+const pluginJest = require('eslint-plugin-jest'); // HIGHLIGHT LINE
+
+module.exports = defineConfig([
+  expoConfig,
+  {
+    ignores: ['dist/*'],
+  },
+  // BEGIN HIGHLIGHT
+  {
+    files: ['**/*.test.js', '**/*.spec.js'],
+    ...pluginJest.configs['flat/recommended'],
+  },
+  // END HIGHLIGHT
+]);
+```
+
+To see that the setup is working, create a directory __tests__ in the src directory and in the created directory create a file example.test.js. In that file, add this simple test:
+
+```
+describe('Example', () => {
+  it('works', () => {
+    expect(1).toBe(1);
+  });
+});
+```
+
+Now, let's run our example test by running `npm test`. The command's output should indicate that the test located in the src/__tests__/example.test.js file is passed.
+
+## Organizing tests
+
+Organizing test files in a single __tests__ directory is one approach in organizing the tests. When choosing this approach, it is recommended to put the test files in their corresponding subdirectories just like the code itself. This means that for example tests related to components are in the components directory, tests related to utilities are in the utils directory, and so on. This will result in the following structure:
+
+```
+src/
+  __tests__/
+    components/
+      AppBar.js
+      RepositoryList.js
+      ...
+    utils/
+      authStorage.js
+      ...
+    ...
+```
+
+Another approach is to organize the tests near the implementation. This means that for example, the test file containing tests for the `AppBar` component is in the same directory as the component's code. This will result in the following structure:
+
+```
+src/
+  components/
+    AppBar/
+      AppBar.test.jsx
+      index.jsx
+    ...
+  ...
+```
+
+In this example, the component's code is in the index.jsx file and the test in the AppBar.test.jsx file. Note that in order for Jest to find your test files you either have to put them into a __tests__ directory, use the .test or .spec suffix, or [manually configure](https://jestjs.io/docs/en/configuration#testmatch-arraystring) the global patterns.
+
+## Testing components
+
+Now that we have managed to set up Jest and run a very simple test, it is time to find out how to test components. As we know, testing components requires a way to serialize a component's render output and simulate firing different kind of events, such as pressing a button. For these purposes, there is the [Testing Library](https://testing-library.com/docs/intro) family, which provides libraries for testing user interface components in different platforms. All of these libraries share similar API for testing user interface components in a user-centric way.
+
+In [part 5](https://fullstackopen.com/en/part5/testing_react_apps) we got familiar with one of these libraries, the [React Testing Library](https://testing-library.com/docs/react-testing-library/intro). Unfortunately, this library is only suitable for testing React web applications. Luckily, there exists a React Native counterpart for this library, which is the [React Native Testing Library](https://callstack.github.io/react-native-testing-library/). This is the library we will be using while testing our React Native application's components. The good news is, that these libraries share a very similar API, so there aren't too many new concepts to learn. Let's install @testing-library/react-native library to our project:
+
+```
+npx expo install @testing-library/react-native --dev
+```
+
+> 
+
+The main concepts of the React Native Testing Library are the [queries](https://callstack.github.io/react-native-testing-library/docs/api/queries) and [firing events](https://oss.callstack.com/react-native-testing-library/docs/api/events/fire-event). Queries are used to extract a set of nodes from the component that is rendered using the [render](https://oss.callstack.com/react-native-testing-library/docs/api/render) function. Queries are useful in tests where we expect for example some text, such as the name of a repository, to be present in the rendered component. Here's an example how to use the [ByText](https://oss.callstack.com/react-native-testing-library/docs/api/queries/#by-text) query to check if the component's `Text` element has the correct textual content:
+
+```
+import { Text, View } from 'react-native';
+import { render, screen } from '@testing-library/react-native';
+
+const Greeting = ({ name }) => {
+  return (
+    <View>
+      <Text>Hello {name}!</Text>
+    </View>
+  );
+};
+
+describe('Greeting', () => {
+  it('renders a greeting message based on the name prop', () => {
+    render(<Greeting name="Kalle" />);
+
+    screen.debug();
+
+    expect(screen.getByText('Hello Kalle!')).toBeDefined();
+  });
+});
+```
+
+Tests use the object [screen](https://oss.callstack.com/react-native-testing-library/docs/api/screen) to do the queries to the rendered component.
+
+We acquire the `Text` node containing certain text by using the `getByText` function. The Jest matcher [toBeDefined](https://jestjs.io/docs/expect#tobedefined) is used to ensure that the query has found the element.
+
+React Native Testing Library's documentation has some good hints on [how to query different kinds of elements](https://callstack.github.io/react-native-testing-library/docs/guides/how-to-query). Another guide worth reading is Kent C. Dodds article [Making your UI tests resilient to change](https://kentcdodds.com/blog/making-your-ui-tests-resilient-to-change).
+
+The object `screen` also has a helper method [debug](https://oss.callstack.com/react-native-testing-library/docs/api/screen#debug) that prints the rendered React tree in a user-friendly format. Use it if you are unsure what the React tree rendered by the `render` function looks like.
+
+For all available queries, check the React Native Testing Library's [documentation](https://callstack.github.io/react-native-testing-library/docs/api/queries). The full list of available React Native specific matchers can be found in the [documentation](https://oss.callstack.com/react-native-testing-library/docs/api/jest-matchers) of the React Native Testing Library. Jest's [documentation](https://jestjs.io/docs/en/expect) contains every universal Jest matcher.
+
+The second very important React Native Testing Library concept is firing events. We can fire an event in a provided node by using the [fireEvent](https://callstack.github.io/react-native-testing-library/docs/api#fireevent) object's methods. This is useful for example typing text into a text field or pressing a button. Here is an example of how to test submitting a simple form:
+
+```
+import { useState } from 'react';
+import { Text, TextInput, Pressable, View } from 'react-native';
+import { render, fireEvent, screen } from '@testing-library/react-native';
+
+const Form = ({ onSubmit }) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = () => {
+    onSubmit({ username, password });
+  };
+
+  return (
+    <View>
+      <View>
+        <TextInput
+          value={username}
+          onChangeText={(text) => setUsername(text)}
+          placeholder="Username"
+        />
+      </View>
+      <View>
+        <TextInput
+          value={password}
+          onChangeText={(text) => setPassword(text)}
+          placeholder="Password"
+        />
+      </View>
+      <View>
+        <Pressable onPress={handleSubmit}>
+          <Text>Submit</Text>
+        </Pressable>
+      </View>
+    </View>
+  );
+};
+
+describe('Form', () => {
+  it('calls function provided by onSubmit prop after pressing the submit button', () => {
+    const onSubmit = jest.fn();
+    render(<Form onSubmit={onSubmit} />);
+
+    fireEvent.changeText(screen.getByPlaceholderText('Username'), 'kalle');
+    fireEvent.changeText(screen.getByPlaceholderText('Password'), 'password');
+    fireEvent.press(screen.getByText('Submit'));
+
+    expect(onSubmit).toHaveBeenCalledTimes(1);
+
+    // onSubmit.mock.calls[0][0] contains the first argument of the first call
+    expect(onSubmit.mock.calls[0][0]).toEqual({
+      username: 'kalle',
+      password: 'password',
+    });
+  });
+});
+```
+
+In this test, we want to test that after filling the form's fields using the `fireEvent.changeText` method and pressing the submit button using the `fireEvent.press` method, the `onSubmit` callback function is called correctly. To inspect whether the `onSubmit` function is called and with which arguments, we can use a [mock function](https://jestjs.io/docs/en/mock-function-api). Mock functions are functions with preprogrammed behavior such as a specific return value. In addition, we can create expectations for the mock functions such as "expect the mock function to have been called once". The full list of available expectations can be found in the Jest's [expect documentation](https://jestjs.io/docs/en/expect).
+
+Before heading further into the world of testing React Native applications, play around with these examples by adding a test file in the __tests__ directory we created earlier.
+
+## Handling dependencies in tests
+
+Components in the previous examples are quite easy to test because they are more or less pure. Pure components don't depend on side effects such as network requests or using some native API such as the AsyncStorage. The `Form` component is much less pure than the `Greeting` component because its state changes can be counted as a side effect. Nevertheless, testing it isn't too difficult.
+
+Next, let's have a look at a strategy for testing components with side effects. Let's pick the `RepositoryList` component from our application as an example. At the moment the component has one side effect, which is a GraphQL query for fetching the reviewed repositories. The current implementation of the `RepositoryList` component looks something like this:
+
+```
+const RepositoryList = () => {
+  const { repositories } = useRepositories();
+
+  const repositoryNodes = repositories
+    ? repositories.edges.map((edge) => edge.node)
+    : [];
+
+  return (
+    <FlatList
+      data={repositoryNodes}
+      // ...
+    />
+  );
+};
+
+export default RepositoryList;
+```
+
+The only side effect is the use of the `useRepositories` hook, which sends a GraphQL query. There are a few ways to test this component. One way is to mock the Apollo Client's responses as instructed in the Apollo Client's [documentation](https://www.apollographql.com/docs/react/development-testing/testing/). A more simple way is to assume that the `useRepositories` hook works as intended (preferably through testing it) and extract the components "pure" code into another component, such as the `RepositoryListContainer` component:
+
+```
+export const RepositoryListContainer = ({ repositories }) => {
+  const repositoryNodes = repositories
+    ? repositories.edges.map((edge) => edge.node)
+    : [];
+
+  return (
+    <FlatList
+      data={repositoryNodes}
+      // ...
+    />
+  );
+};
+
+const RepositoryList = () => {
+  const { repositories } = useRepositories();
+
+  return <RepositoryListContainer repositories={repositories} />;
+};
+
+export default RepositoryList;
+```
+
+Now, the `RepositoryList` component contains only the side effects and its implementation is quite simple. We can test the `RepositoryListContainer` component by providing it with paginated repository data through the `repositories` prop and checking that the rendered content has the correct information.
+
+## Exercise: 17. Testing the reviewed repositories list
+
+Implement a test that ensures that the `RepositoryListContainer` component renders repository's name, description, language, forks count, stargazers count, rating average, and review count correctly. One approach in implementing this test is to add a [testID](https://reactnative.dev/docs/view#testid) prop for the element wrapping a single repository's information:
+
+```
+const RepositoryItem = (/* ... */) => {
+  // ...
+
+  return (
+    <View testID="repositoryItem" {/* ... */}>
+      {/* ... */}
+    </View>
+  )
+};
+```
+
+Once the `testID` prop is added, you can use the [getAllByTestId](https://oss.callstack.com/react-native-testing-library/docs/api/queries#get-all-by) query to get those elements:
+
+```
+const repositoryItems = screen.getAllByTestId('repositoryItem');
+const [firstRepositoryItem, secondRepositoryItem] = repositoryItems;
+
+// expect something from the first and the second repository item
+```
+
+Having those elements you can use the [toHaveTextContent](https://github.com/testing-library/jest-native#tohavetextcontent) matcher to check whether an element has certain textual content. You might also find the [Querying Within Elements](https://testing-library.com/docs/dom-testing-library/api-within/) guide useful. If you are unsure what is being rendered, use the [debug](https://oss.callstack.com/react-native-testing-library/docs/api/screen#debug) function to see the serialized rendering result.
+
+Use this as a base for your test:
+
+```
+describe('RepositoryList', () => {
+  describe('RepositoryListContainer', () => {
+    it('renders repository information correctly', () => {
+      const repositories = {
+        totalCount: 8,
+        pageInfo: {
+          hasNextPage: true,
+          endCursor:
+            'WyJhc3luYy1saWJyYXJ5LnJlYWN0LWFzeW5jIiwxNTg4NjU2NzUwMDc2XQ==',
+          startCursor: 'WyJqYXJlZHBhbG1lci5mb3JtaWsiLDE1ODg2NjAzNTAwNzZd',
+        },
+        edges: [
+          {
+            node: {
+              id: 'jaredpalmer.formik',
+              fullName: 'jaredpalmer/formik',
+              description: 'Build forms in React, without the tears',
+              language: 'TypeScript',
+              forksCount: 1619,
+              stargazersCount: 21856,
+              ratingAverage: 88,
+              reviewCount: 3,
+              ownerAvatarUrl:
+                'https://avatars2.githubusercontent.com/u/4060187?v=4',
+            },
+            cursor: 'WyJqYXJlZHBhbG1lci5mb3JtaWsiLDE1ODg2NjAzNTAwNzZd',
+          },
+          {
+            node: {
+              id: 'async-library.react-async',
+              fullName: 'async-library/react-async',
+              description: 'Flexible promise-based React data loader',
+              language: 'JavaScript',
+              forksCount: 69,
+              stargazersCount: 1760,
+              ratingAverage: 72,
+              reviewCount: 3,
+              ownerAvatarUrl:
+                'https://avatars1.githubusercontent.com/u/54310907?v=4',
+            },
+            cursor:
+              'WyJhc3luYy1saWJyYXJ5LnJlYWN0LWFzeW5jIiwxNTg4NjU2NzUwMDc2XQ==',
+          },
+        ],
+      };
+
+      // Add your test code here
+    });
+  });
+});
+```
+
+You can put the test file where you please. However, it is recommended to follow one of the ways of organizing test files introduced earlier. Use the `repositories` variable as the repository data for the test. There should be no need to alter the variable's value. Note that the repository data contains two repositories, which means that you need to check that both repositories' information is present.
+
+## Exercise: 18. Testing the sign in form
+
+Implement a test that ensures that filling the sign in form's username and password fields and pressing the submit button will call the `onSubmit` handler with correct arguments. The first argument of the handler should be an object representing the form's values. You can ignore the other arguments of the function. Remember that the [fireEvent](https://oss.callstack.com/react-native-testing-library/docs/api/events/fire-event) methods can be used for triggering events and a [mock function](https://jestjs.io/docs/en/mock-function-api) for checking whether the `onSubmit` handler is called or not.
+
+You don't have to test any Apollo Client or AsyncStorage related code which is in the `useSignIn` hook. As in the previous exercise, extract the pure code into its own component and test it in the test.
+
+Note that Formik's form submissions are asynchronous so expecting the `onSubmit` function to be called immediately after pressing the submit button won't work. You can get around this issue by making the test function an async function using the `async` keyword and using the React Native Testing Library's [waitFor](https://oss.callstack.com/react-native-testing-library/docs/api/misc/async#waitfor) helper function. The `waitFor` function can be used to wait for expectations to pass. If the expectations don't pass within a certain period, the function will throw an error. Here is a rough example of how to use it:
+
+```
+import { render, screen, fireEvent, waitFor } from '@testing-library/react-native';
+// ...
+
+describe('SignIn', () => {
+  describe('SignInContainer', () => {
+    it('calls onSubmit function with correct arguments when a valid form is submitted', async () => {
+      // render the SignInContainer component, fill the text inputs and press the submit button
+
+      await waitFor(() => {
+        // expect the onSubmit function to have been called once and with a correct first argument
+      });
+    });
+  });
+});
+```
+
+## Extending our application
+
+It is time to put everything we have learned so far to good use and start extending our application. Our application still lacks a few important features such as reviewing a repository and registering a user. The upcoming exercises will focus on these essential features.
+
+## Exercise: 19. The single repository view
+
+Implement a view for a single repository, which contains the same repository information as in the reviewed repositories list but also a button for opening the repository in GitHub. It would be a good idea to reuse the `RepositoryItem` component used in the `RepositoryList` component and display the GitHub repository button for example based on a boolean prop.
+
+The repository's URL is in the `url` field of the `Repository` type in the GraphQL schema. You can fetch a single repository from the Apollo server with the `repository` query. The query has a single argument, which is the id of the repository. Here's a simple example of the `repository` query:
+
+```
+{
+  repository(id: "jaredpalmer.formik") {
+    id
+    fullName
+    url
+  }
+}
+```
+
+As always, test your queries in the Apollo Sandbox first before using them in your application. If you are unsure about the GraphQL schema or what are the available queries, take a look at the documentation next to the operations editor. If you have trouble using the id as a variable in the query, take a moment to study the Apollo Client's [documentation](https://www.apollographql.com/docs/react/data/queries/) on queries.
+
+To learn how to open a URL in a browser, read the Expo's [Linking API documentation](https://docs.expo.dev/versions/latest/sdk/linking/). You will need this feature while implementing the button for opening the repository in GitHub. Hint: [Linking.openURL](https://docs.expo.dev/versions/latest/sdk/linking/#linkingopenurlurl) method will come in handy.
+
+The view should have its own route. It would be a good idea to define the repository's id in the route's path as a path parameter, which you can access by using the [useParams](https://reactrouter.com/6.14.2/hooks/use-params) hook. The user should be able to access the view by pressing a repository in the reviewed repositories list. You can achieve this by for example wrapping the `RepositoryItem` with a [Pressable](https://reactnative.dev/docs/pressable) component in the `RepositoryList` component and using `navigate` function to change the route in an `onPress` event handler. You can access the `navigate` function with the [useNavigate](https://reactrouter.com/api/hooks/useNavigate) hook.
+
+The final version of the single repository view should look something like this:
+
+![Application preview](assets/image-010.png)
+
+Note if the peer depencendy issues prevent installing the library, try the `--legacy-peer-deps` option:
+
+```
+npm install expo-linking --legacy-peer-deps
+```
+
+## Exercise: 20. Repository's review list
+
+Now that we have a view for a single repository, let's display repository's reviews there. Repository's reviews are in the `reviews` field of the `Repository` type in the GraphQL schema. `reviews` is a similar paginated list as in the `repositories` query. Here's an example of getting reviews of a repository:
+
+```
+{
+  repository(id: "jaredpalmer.formik") {
+    id
+    fullName
+    reviews {
+      edges {
+        node {
+          id
+          text
+          rating
+          createdAt
+          user {
+            id
+            username
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+Review's `text` field contains the textual review, `rating` field a numeric rating between 0 and 100, and `createdAt` the date when the review was created. Review's `user` field contains the reviewer's information, which is of type `User`.
+
+We want to display reviews as a scrollable list, which makes [FlatList](https://reactnative.dev/docs/flatlist) a suitable component for the job. To display the previous exercise's repository's information at the top of the list, you can use the `FlatList` component's [ListHeaderComponent](https://reactnative.dev/docs/flatlist#listheadercomponent) prop. You can use the [ItemSeparatorComponent](https://reactnative.dev/docs/flatlist#itemseparatorcomponent) to add some space between the items like in the `RepositoryList` component. Here's an example of the structure:
+
+```
+const ReviewItem = ({ review }) => {
+  // Single review item
+};
+
+const SingleRepository = () => {
+  // ...
+
+  return (
+    <FlatList
+      data={reviews}
+      renderItem={({ item }) => <ReviewItem review={item} />}
+      keyExtractor={({ id }) => id}
+      ListHeaderComponent={() => <RepositoryView ... />}
+      // ...
+    />
+  );
+};
+
+export default SingleRepository;
+```
+
+The final version of the repository's reviews list should look something like this:
+
+![Application preview](assets/image-014.png)
+
+The date under the reviewer's username is the creation date of the review, which is in the `createdAt` field of the `Review` type. The date format should be user-friendly such as “DD MMM YYYY” (e.g., 24 Mar 2026).You can for example install the [date-fns](https://date-fns.org/) library and use the [format](https://date-fns.org/v2.28.0/docs/format) function for formatting the creation date.
+
+The round shape of the rating's container can be achieved with the `borderRadius` style property. You can make it round by fixing the container's `width` and `height` style property and setting the border-radius as `width / 2`.
+
+## Exercise: 21. The review form
+
+Implement a form for creating a review using Formik. The form should have four fields: repository owner's GitHub username (for example "jaredpalmer"), repository's name (for example "formik"), a numeric rating, and a textual review. Validate the fields using Yup schema so that it contains the following validations:
+
+- Repository owner's username is a required string
+- Repository's name is a required string
+- Rating is a required number between 0 and 100
+- Review is a optional string
+
+Explore Yup's [documentation](https://github.com/jquense/yup#yup) to find suitable validators. Use sensible error messages with the validators. The validation message can be defined as the validator method's `message` argument. You can make the review field expand to multiple lines by using `TextInput` component's [multiline](https://reactnative.dev/docs/textinput#multiline) prop.
+
+You can create a review using the `createReview` mutation. Check this mutation's arguments in the Apollo Sandbox. You can use the [useMutation](https://www.apollographql.com/docs/react/api/react/useMutation) hook to send a mutation to the Apollo Server.
+
+After a successful `createReview` mutation, redirect the user to the repository's view you implemented in the previous exercise. This can be done with the `navigate` function after you have obtained it using the [useNavigate](https://reactrouter.com/api/hooks/useNavigate) hook. The created review has a `repositoryId` field which you can use to construct the route's path.
+
+To prevent getting cached data with the `repository` query in the single repository view, use the `cache-and-network` [fetch policy](https://www.apollographql.com/docs/react/data/queries/#setting-a-fetch-policy) in the query. It can be used with the `useQuery` hook like this:
+
+```
+useQuery(GET_REPOSITORY, {
+  fetchPolicy: 'cache-and-network',
+  // Other options
+});
+```
+
+Note that only an existing public GitHub repository can be reviewed and a user can review the same repository only once. You don't have to handle these error cases, but the error payload includes specific codes and messages for these errors. You can try out your implementation by reviewing one of your own public repositories or any other public repository.
+
+The review form should be accessible through the app bar. Create a tab to the app bar with a label "Create a review". This tab should only be visible to users who have signed in. You will also need to define a route for the review form.
+
+The final version of the review form should look something like this:
+
+![Application preview](assets/image-025.png)
+
+This screenshot has been taken after invalid form submission to present what the form should look like in an invalid state.
+
+## Exercise: 22. The sign up form
+
+Implement a sign up form for registering a user using Formik. The form should have three fields: username, password, and password confirmation. Validate the form using Yup schema so that it contains the following validations:
+
+- Username is a required string with a length between 5 and 30
+- Password is a required string with a length between 5 and 50
+- Password confirmation matches the password
+
+The password confirmation field's validation can be a bit tricky, but it can be done for example by using the [oneOf](https://github.com/jquense/yup#schemaoneofarrayofvalues-arrayany-message-string--function-schema-alias-equals) and [ref](https://github.com/jquense/yup#refpath-string-options--contextprefix-string--ref) methods like suggested in [this issue](https://github.com/jaredpalmer/formik/issues/90#issuecomment-354873201).
+
+You can create a new user by using the `createUser` mutation. Find out how this mutation works by exploring the documentation in the Apollo Sandbox. After a successful `createUser` mutation, sign the created user in by using the `useSignIn` hook as we did in the sign in the form. After the user has been signed in, redirect the user to the reviewed repositories list view.
+
+The user should be able to access the sign-up form through the app bar by pressing a "Sign up" tab. This tab should only be visible to users that aren't signed in.
+
+The final version of the sign up form should look something like this:
+
+![Application preview](assets/image-007.png)
+
+This screenshot has been taken after invalid form submission to present what the form should look like in an invalid state.
+
+## Exercise: 23. Sorting the reviewed repositories list
+
+At the moment repositories in the reviewed repositories list are ordered by the date of repository's first review. Implement a feature that allows users to select the principle, which is used to order the repositories. The available ordering principles should be:
+
+- Latest repositories. The repository with the latest first review is on the top of the list. This is the current behavior and should be the default principle.
+- Highest rated repositories. The repository with the highest average rating is on the top of the list.
+- Lowest rated repositories. The repository with the lowest average rating is on the top of the list.
+
+The `repositories` query used to fetch the reviewed repositories has an argument called `orderBy`, which you can use to define the ordering principle. The argument has two allowed values: CREATED_AT (order by the date of repository's first review) and RATING_AVERAGE, (order by the repository's average rating). The query also has an argument called `orderDirection` which can be used to change the order direction. The argument has two allowed values: `ASC` (ascending, smallest value first) and `DESC` (descending, biggest value first).
+
+The selected ordering principle state can be maintained for example using the React's [useState](https://react.dev/reference/react/useState) hook. The variables used in the `repositories` query can be given to the `useRepositories` hook as an argument.
+
+You can use for example [@react-native-picker/picker](https://docs.expo.dev/versions/latest/sdk/picker/) library, or [React Native Paper](https://callstack.github.io/react-native-paper/) library's [Menu](https://callstack.github.io/react-native-paper/docs/components/Menu/) component to implement the ordering principle's selection. You can use the `FlatList` component's [ListHeaderComponent](https://reactnative.dev/docs/flatlist#listheadercomponent) prop to provide the list with a header containing the selection component.
+
+The final version of the feature, depending on the selection component in use, should look something like this:
+
+![Application preview](assets/image-008.jpg)
+
+## Exercise: 24. Filtering the reviewed repositories list
+
+The Apollo Server allows filtering repositories using the repository's name or the owner's username. This can be done using the `searchKeyword` argument in the `repositories` query. Here's an example of how to use the argument in a query:
+
+```
+{
+  repositories(searchKeyword: "ze") {
+    edges {
+      node {
+        id
+        fullName
+      }
+    }
+  }
+}
+```
+
+Implement a feature for filtering the reviewed repositories list based on a keyword. Users should be able to type in a keyword into a text input and the list should be filtered as the user types. You can use a simple `TextInput` component or something a bit fancier such as React Native Paper's [Searchbar](https://callstack.github.io/react-native-paper/docs/components/Searchbar/) component as the text input. Put the text input component in the `FlatList` component's header.
+
+To avoid a multitude of unnecessary requests while the user types the keyword fast, only pick the latest input after a short delay. This technique is often referred to as [debouncing](https://lodash.com/docs/4.17.15#debounce). [use-debounce](https://www.npmjs.com/package/use-debounce) library is a handy hook for debouncing a state variable. Use it with a sensible delay time, such as 500 milliseconds.
+
+Store the text input's value by using the `useState` hook. You can then create a debounced value based on that value by using the `useDebounce` hook. Pass the debounced value to the query as the value of the `searchKeyword` argument.
+
+The final version of the filtering feature should look something like this:
+
+![Application preview](assets/image-011.png)
+
+#### 
+
+## Exercise: 25. The user's reviews view
+
+Implement a feature which allows user to see their reviews. Once signed in, the user should be able to access this view by pressing a "My reviews" tab in the app bar. Here is what the review list view should roughly look like:
+
+![Application preview](assets/image-026.png)
+
+Remember that you can fetch the authenticated user from the Apollo Server with the `me` query. This query returns a `User` type, which has a field `reviews`. If you have already implemented a reusable `me` query in your code, you can customize this query to fetch the `reviews` field conditionally. This can be done using GraphQL's [include](https://graphql.org/learn/queries/#directives) directive.
+
+Let's say that the current query is implemented roughly in the following manner:
+
+```
+const GET_CURRENT_USER = gql`
+  query {
+    me {
+      # user fields...
+    }
+  }
+`;
+```
+
+You can provide the query with an `includeReviews` argument and use that with the `include` directive:
+
+```
+const GET_CURRENT_USER = gql`
+  query getCurrentUser($includeReviews: Boolean = false) {
+    me {
+      # user fields...
+      reviews @include(if: $includeReviews) {
+        edges {
+          node {
+            # review fields...
+          }
+        }
+      }
+    }
+  }
+`;
+```
+
+The `includeReviews` argument has a default value of `false`, because we don't want to cause additional server overhead unless we explicitly want to fetch authenticated user's reviews. The principle of the `include` directive is quite simple: if the value of the `if` argument is `true`, include the field, otherwise omit it.
+
+#### 
+
+## Exercise: 26. Review actions
+
+Now that user can see their reviews, let's add some actions to the reviews. Under each review on the review list, there should be two buttons. One button is for viewing the review's repository. Pressing this button should take the user to the single repository view implemented in one of the earlier exercises. The other button is for deleting the review. Pressing this button should delete the review. Here is what the actions should roughly look like:
+
+![Application preview](assets/image-018.png)
+
+Pressing the delete button should be followed by a confirmation alert. If the user confirms the deletion, the review is deleted. Otherwise, the deletion is discarded. You can implement the confirmation using the [Alert](https://reactnative.dev/docs/alert) module. Note that calling the `Alert.alert` method won't open any window in Expo web preview. Use either Expo mobile app or an emulator to see the what the alert window looks like.
+
+Here is the confirmation alert that should pop out once the user presses the delete button:
+
+![Application preview](assets/image-006.jpg)
+
+You can delete a review using the `deleteReview` mutation. This mutation has a single argument, which is the id of the review to be deleted. After the mutation has been performed, the easiest way to update the review list's query is to call the [refetch](https://www.apollographql.com/docs/react/data/queries/#refetching) function.
+
+## Cursor-based pagination
+
+When an API returns an ordered list of items from some collection, it usually returns a subset of the whole set of items to reduce the required bandwidth and to decrease the memory usage of the client applications. The desired subset of items can be parameterized so that the client can request for example the first twenty items on the list after some index. This technique is commonly referred to as pagination. When items can be requested after a certain item defined by a cursor, we are talking about cursor-based pagination.
+
+So cursor is just a serialized presentation of an item in an ordered list. Let's have a look at the paginated repositories returned by the `repositories` query using the following query:
+
+```
+{
+  repositories(first: 2) {
+    totalCount
+    edges {
+      node {
+        id
+        fullName
+        createdAt
+      }
+      cursor
+    }
+    pageInfo {
+      endCursor
+      startCursor
+      hasNextPage
+    }
+  }
+}
+```
+
+The `first` argument tells the API to return only the first two repositories. Here's an example of a result of the query:
+
+```
+{
+  "data": {
+    "repositories": {
+      "totalCount": 10,
+      "edges": [
+        {
+          "node": {
+            "id": "zeit.next.js",
+            "fullName": "zeit/next.js",
+            "createdAt": "2020-05-15T11:59:57.557Z"
+          },
+          "cursor": "WyJ6ZWl0Lm5leHQuanMiLDE1ODk1NDM5OTc1NTdd"
+        },
+        {
+          "node": {
+            "id": "zeit.swr",
+            "fullName": "zeit/swr",
+            "createdAt": "2020-05-15T11:58:53.867Z"
+          },
+          "cursor": "WyJ6ZWl0LnN3ciIsMTU4OTU0MzkzMzg2N10="
+        }
+      ],
+      "pageInfo": {
+        "endCursor": "WyJ6ZWl0LnN3ciIsMTU4OTU0MzkzMzg2N10=",
+        "startCursor": "WyJ6ZWl0Lm5leHQuanMiLDE1ODk1NDM5OTc1NTdd",
+        "hasNextPage": true
+      }
+    }
+  }
+}
+```
+
+The format of the result object and the arguments are based on the [Relay's GraphQL Cursor Connections Specification](https://relay.dev/graphql/connections.htm), which has become a quite common pagination specification and has been widely adopted for example in the [GitHub's GraphQL API](https://docs.github.com/en/graphql). In the result object, we have the `edges` array containing items with `node` and `cursor` attributes. As we know, the `node` contains the repository itself. The `cursor` on the other hand is a Base64 encoded representation of the node. In this case, it contains the repository's id and date of repository's creation as a timestamp. This is the information we need to point to the item when they are ordered by the creation time of the repository. The `pageInfo` contains information such as the cursor of the first and the last item in the array.
+
+Let's say that we want to get the next set of items after the last item of the current set, which is the "zeit/swr" repository. We can set the `after` argument of the query as the value of the `endCursor` like this:
+
+```
+{
+  repositories(first: 2, after: "WyJ6ZWl0LnN3ciIsMTU4OTU0MzkzMzg2N10=") {
+    totalCount
+    edges {
+      node {
+        id
+        fullName
+        createdAt
+      }
+      cursor
+    }
+    pageInfo {
+      endCursor
+      startCursor
+      hasNextPage
+    }
+  }
+}
+```
+
+Now that we have the next two items and we can keep on doing this until the `hasNextPage` has the value `false`, meaning that we have reached the end of the list. To dig deeper into cursor-based pagination, read Shopify's article [Pagination with Relative Cursors](https://shopify.engineering/pagination-relative-cursors). It provides great details on the implementation itself and the benefits over the traditional index-based pagination.
+
+## Infinite scrolling
+
+Vertically scrollable lists in mobile and desktop applications are commonly implemented using a technique called infinite scrolling. The principle of infinite scrolling is quite simple:
+
+- Fetch the initial set of items
+- When the user reaches the last item, fetch the next set of items after the last item
+
+The second step is repeated until the user gets tired of scrolling or some scrolling limit is exceeded. The name "infinite scrolling" refers to the way the list seems to be infinite - the user can just keep on scrolling and new items keep on appearing on the list.
+
+Let's have a look at how this works in practice using the Apollo Client's `useQuery` hook. Apollo Client has a great [documentation](https://www.apollographql.com/docs/react/pagination/cursor-based/) on implementing the cursor-based pagination. Let's implement infinite scrolling for the reviewed repositories list as an example.
+
+First, we need to know when the user has reached the end of the list. Luckily, the `FlatList` component has a prop [onEndReached](https://reactnative.dev/docs/virtualizedlist#onendreached), which will call the provided function once the user has scrolled to the last item on the list. You can change how early the `onEndReached` callback is called using the [onEndReachedThreshold](https://reactnative.dev/docs/virtualizedlist#onendreachedthreshold) prop. Alter the `RepositoryList` component's `FlatList` component so that it logs a message to the console once the end of the list is reached:
+
+```
+export const RepositoryListContainer = ({
+  repositories,
+  onEndReached, // HIGHLIGHT LINE
+  /* ... */,
+}) => {
+  const repositoryNodes = repositories
+    ? repositories.edges.map((edge) => edge.node)
+    : [];
+
+  return (
+    <FlatList
+      data={repositoryNodes}
+      // ...
+      // BEGIN HIGHLIGHT
+      onEndReached={onEndReached}
+      onEndReachedThreshold={0.5}
+      // END HIGHLIGHT
+    />
+  );
+};
+
+const RepositoryList = () => {
+  // ...
+
+  const { repositories } = useRepositories(/* ... */);
+
+  return (
+    <RepositoryListContainer
+      repositories={repositories}
+      onEndReached={() => console.log('End of the list reached');} // HIGHLIGHT LINE
+      // ...
+    />
+  );
+};
+
+export default RepositoryList;
+```
+
+Try scrolling to the end of the reviewed repositories list and you should see the message in the logs.
+
+Next, we need to fetch more repositories once the end of the list is reached. This can be achieved using the [fetchMore](https://www.apollographql.com/docs/react/pagination/core-api/#the-fetchmore-function) function provided by the `useQuery` hook. To describe to Apollo Client how to merge the existing repositories in the cache with the next set of repositories, we can use a [field policy](https://www.apollographql.com/docs/react/caching/cache-field-behavior/). In general, field policies can be used to customize the cache behavior during read and write operations with [read](https://www.apollographql.com/docs/react/caching/cache-field-behavior/#the-read-function) and [merge](https://www.apollographql.com/docs/react/caching/cache-field-behavior/#the-merge-function) functions.
+
+Let's add a field policy for the `repositories` query in the apolloClient.js file:
+
+```
+import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
+import { SetContextLink } from '@apollo/client/link/context';
+import { relayStylePagination } from '@apollo/client/utilities'; // HIGHLIGHT LINE
+
+const httpLink = new HttpLink({
+  uri: process.env.EXPO_PUBLIC_APOLLO_URI,
+});
+
+
+// BEGIN HIGHLIGHT
+const cache = new InMemoryCache({
+  typePolicies: {
+    Query: {
+      fields: {
+        repositories: relayStylePagination(),
+      },
+    },
+  },
+});
+// END HIGHLIGHT
+
+const createApolloClient = authStorage => {
+  const authLink = new SetContextLink(async ({ headers }) => {
+    try {
+      const accessToken = await authStorage.getAccessToken();
+      return {
+        headers: {
+          ...headers,
+          authorization: accessToken ? `Bearer ${accessToken}` : '',
+        },
+      };
+    } catch (e) {
+      console.log(e);
+      return {
+        headers,
+      };
+    }
+  });
+
+  return new ApolloClient({
+    link: authLink.concat(httpLink),
+    cache, // HIGHLIGHT LINE
+  });
+};
+
+export default createApolloClient;
+```
+
+As mentioned earlier, the format of the pagination's result object and the arguments are based on the Relay's pagination specification. Luckily, Apollo Client provides a predefined field policy, `relayStylePagination`, which can be used in this case.
+
+Next, let's alter the `useRepositories` hook so that it returns a decorated `fetchMore` function, which calls the actual `fetchMore` function with appropriate arguments so that we can fetch the next set of repositories:
+
+```
+const useRepositories = (variables) => {
+  const { data, loading, fetchMore, ...result } = useQuery(GET_REPOSITORIES, {  // HIGHLIGHT LINE
+    variables,
+    // ...
+  });
+
+  // BEGIN HIGHLIGHT
+  const handleFetchMore = () => {
+    const canFetchMore = !loading && data?.repositories.pageInfo.hasNextPage;
+ 
+    if (!canFetchMore) {
+      return;
+    }
+ 
+    fetchMore({
+      variables: {
+        after: data.repositories.pageInfo.endCursor,
+        ...variables,
+      },
+    });
+  };
+  // END HIGHLIGHT
+
+  return {
+    repositories: data?.repositories,
+    fetchMore: handleFetchMore,  // HIGHLIGHT LINE
+    loading,
+    ...result,
+  };
+};
+```
+
+Make sure you have the `pageInfo` and the `cursor` fields in your `repositories` query as described in the pagination examples. You will also need to include the `after` and `first` arguments for the query.
+
+The `handleFetchMore` function will call the Apollo Client's `fetchMore` function if there are more items to fetch, which is determined by the `hasNextPage` property. We also want to prevent fetching more items if fetching is already in process. In this case, `loading` will be `true`. In the `fetchMore` function we are providing the query with an `after` variable, which receives the latest `endCursor` value.
+
+The last step is to pass the `fetchMore` function as the value of the `onEndReached` prop:
+
+```
+const RepositoryList = () => {
+  // ...
+
+  const { repositories, fetchMore } = useRepositories({  // HIGHLIGHT LINE
+    first: 5, // HIGHLIGHT LINE
+    // ...
+  });
+
+  return (
+    <RepositoryListContainer
+      repositories={repositories}
+      onEndReached={fetchMore}  // HIGHLIGHT LINE
+      // ...
+    />
+  );
+};
+
+export default RepositoryList;
+```
+
+Use a relatively small `first` argument value such as 5 while trying out the infinite scrolling. This way you don't need to review too many repositories. If the list contains so few repositories that the end of the list is already close or visible, `fetchMore` may be called immediately when the view is loaded or it may not fire until the user scrolls. If this causes problems during testing, you can get around this issue by increasing the value of `first` argument. Once you are confident that the infinite scrolling is working, feel free to use a larger value for the `first` argument.
+
+## Exercise: 27. OPTIONAL: Infinite scrolling for the repository's reviews list
+
+Note: This is an optional exercise, and no points are awarded for it.
+
+Implement infinite scrolling for the repository's reviews list. The `Repository` type's `reviews` field has the `first` and `after` arguments similar to the `repositories` query. `ReviewConnection` type also has the `pageInfo` field just like the `RepositoryConnection` type.
+
+Here's an example query:
+
+```
+{
+  repository(id: "jaredpalmer.formik") {
+    id
+    fullName
+    reviews(first: 2, after: "WyIxYjEwZTRkOC01N2VlLTRkMDAtODg4Ni1lNGEwNDlkN2ZmOGYuamFyZWRwYWxtZXIuZm9ybWlrIiwxNTg4NjU2NzUwMDgwXQ==") {
+      totalCount
+      edges {
+        node {
+          id
+          text
+          rating
+          createdAt
+          repositoryId
+          user {
+            id
+            username
+          }
+        }
+        cursor
+      }
+      pageInfo {
+        endCursor
+        startCursor
+        hasNextPage
+      }
+    }
+  }
+}
+```
+
+The cache's field policy can be similar as with the `repositories` query:
+
+```
+const cache = new InMemoryCache({
+  typePolicies: {
+    Query: {
+      fields: {
+        repositories: relayStylePagination(),
+      },
+    },
+    // BEGIN HIGHLIGHT
+    Repository: {
+      fields: {
+        reviews: relayStylePagination(),
+      },
+    },
+    // END HIGHLIGHT
+  },
+});
+```
+
+As with the reviewed repositories list, use a relatively small `first` argument value while you are trying out the infinite scrolling. You might need to create a few new users and use them to create a few new reviews to make the reviews list long enough to scroll. Set the value of the `first` argument high enough so that the `fetchMore` callback isn't called immediately after the view is loaded, but low enough so that you can see that more reviews are fetched once you reach the end of the list. Once everything is working as intended you can use a larger value for the `first` argument.
+
+## Sharing the application with a QR code
+
+So far, we have only developed the application locally on our own machine and tested it on our own phone or emulator. But what if we wanted to let other people test the application as well, so that someone else could try it on their own phone?
+
+Expo provides a ready-made solution for this. [Expo Application Services](https://expo.dev/services) (EAS) is Expo's cloud service that provides tools for building, updating, and distributing applications. [EAS Update](https://docs.expo.dev/eas-update/introduction/) is a free service that allows you to publish your application to Expo's servers. A unique QR code is generated for each published version, and with it anyone can open the application with their Expo Go app.
+
+Let's now deploy the final version of the application to Expo's servers. You will need an Expo account to use the service. If you do not have one, create an account at [https://expo.dev/signup](https://expo.dev/signup).
+
+Log in to your Expo account from the command line:
+
+```
+npx eas-cli@latest login
+```
+
+Next, configure the repository as an EAS project:
+
+```
+npx eas-cli@latest update:configure
+```
+
+The `update:configure` command connects the project to Expo's EAS service and adds the required configuration to the app.json file.
+
+The initial setup is now complete. However, one detail still needs attention. In order to work, the application needs the [Rate Repository API](https://github.com/fullstack-hy2020/rate-repository-api), which acts as the application's backend and database. Because it is a completely separate application from the React Native frontend, it would normally need to be deployed somewhere separately.
+
+For the final exercises of this part, the course provides a pre-deployed Rate Repository API at [https://rate-repository-api-2.ext.ocp-prod-0.k8s.it.helsinki.fi](https://rate-repository-api-2.ext.ocp-prod-0.k8s.it.helsinki.fi). This is the same Rate Repository API that we have used locally in previous exercises. The API functionality is the same as before, and the database has been seeded with a few users and repositories according to the instructions in the Rate Repository API [README](https://github.com/fullstack-hy2020/rate-repository-api?tab=readme-ov-file#-getting-started).
+
+The API is now running in production mode, meaning that the environment variable NODE_ENV is set to production. This has some practical consequences. For example, Apollo Sandbox does not automatically know the API schema. The database used by the Rate Repository API is also reset regularly without prior warning, so during local development you should still use a locally running Rate Repository API.
+
+Create an environment variable named `EXPO_PUBLIC_APOLLO_URI` for the EAS project and set its value to the URL of the pre-deployed Rate Repository API with the following command:
+
+```
+npx eas-cli@latest env:create --name EXPO_PUBLIC_APOLLO_URI --value https://rate-repository-api-2.ext.ocp-prod-0.k8s.it.helsinki.fi/ --environment preview --visibility plaintext
+```
+
+- The environment variable is created in an environment named `preview`, which is intended specifically for this kind of application testing.
+- The visibility of the environment variable is set to `plaintext`, because the value is not particularly secret.
+
+We are now ready to deploy the application to Expo's servers. The deployment is done with the following command:
+
+```
+npx eas-cli@latest update --branch main --environment preview --message "The first deploy"
+```
+
+- EAS Update makes it possible to group updates into different branches. In our case, the `--branch` option specifies that the update is published to a branch named `main`.
+- Thanks to the `--environment` option, our application gets access to the `preview` environment and the `EXPO_PUBLIC_APOLLO_URI` environment variable that we defined earlier.
+- The `--message` option sets an arbitrary message for the update so that it can be distinguished from other updates.
+
+When the update has been published, the command line will finally print a link to the EAS Dashboard page for the deployment. The dashboard includes a Preview button that shows a QR code leading to the application. When the QR code is scanned with the Expo Go app, the application should open on the phone and work with the external Rate Repository API. In other words, the repository list should load, it should be possible to create new users in the application and sign in with existing credentials, and so on.
+
+If you want to make changes to the application, it is enough to run the latest `npx eas-cli@latest update` command again to publish a new update. Note that each published update gets its own unique QR code.
+
+Using EAS Update makes it easier to demonstrate the progress of application development to others, because there is no need to share source code, build installation packages, or publish anything to an app store. The deployment process stays simple while still allowing the application to be tested on real devices.
+
+## Exercise: 28. Publishing the app via EAS Publish
+
+## If the QR code is missing from the readme, your submissions will be rejected, and you will fail the course.
+
+Publish the final version of your application via EAS Update by following the instructions in the course material.
+
+Then add a README.md file to the root of the repository and include a screenshot of the QR code in it. Make sure that the application opened through the QR code actually works, because the course instructor will inspect your application using the QR code before awarding credit.
+
+Note: Some students have reported issues when trying to open the application via Expo Go on a physical phone using the QR code. However, opening the QR code within an emulator seems to work correctly.
+
+Your README.md file can start, for example, like this:
+
+![Example content for README.md file](assets/image-013.png)
+
+## Additional resources
+
+As we are getting closer to the end of this part, let's take a moment to look at some additional React Native related resources. [Awesome React Native](https://github.com/jondot/awesome-react-native) is an extremely encompassing curated list of React Native resources such as libraries, tutorials, and articles. Because the list is exhaustively long, let's have a closer look at few of its highlights
+
+### React Native Paper
+
+> 
+
+[React Native Paper](https://callstack.github.io/react-native-paper/) is for React Native what [Material-UI](https://material-ui.com/) is for React web applications. It offers a wide range of high-quality UI components, support for [custom themes](https://callstack.github.io/react-native-paper/docs/guides/theming/) and a fairly simple [setup](https://callstack.github.io/react-native-paper/docs/guides/getting-started) for Expo based React Native applications.
+
+### Styled-components
+
+> 
+
+[Styled-components](https://styled-components.com/) is a library for styling React components using [CSS-in-JS](https://en.wikipedia.org/wiki/CSS-in-JS) technique. In React Native we are already used to defining component's styles as a JavaScript object, so CSS-in-JS is not so uncharted territory. However, the approach of styled-components is quite different from using the `StyleSheet.create` method and the `style` prop.
+
+In styled-components components' styles are defined with the component using a feature called [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates) or a plain JavaScript object. Styled-components makes it possible to define new style properties for component based on its props at runtime. This brings many possibilities, such as seamlessly switching between a light and a dark theme. It also has a full [theming support](https://styled-components.com/docs/advanced#theming). Here is an example of creating a `Text` component with style variations based on props:
+
+```
+import styled from 'styled-components/native';
+import { css } from 'styled-components';
+
+const FancyText = styled.Text`
+  color: grey;
+  font-size: 14px;
+
+  ${({ isBlue }) =>
+    isBlue &&
+    css`
+      color: blue;
+    `}
+
+  ${({ isBig }) =>
+    isBig &&
+    css`
+      font-size: 24px;
+      font-weight: 700;
+    `}
+`;
+
+const Main = () => {
+  return (
+    <>
+      <FancyText>Simple text</FancyText>
+      <FancyText isBlue>Blue text</FancyText>
+      <FancyText isBig>Big text</FancyText>
+      <FancyText isBig isBlue>
+        Big blue text
+      </FancyText>
+    </>
+  );
+};
+```
+
+Because styled-components processes the style definitions, it is possible to use CSS-like snake case syntax with the property names and units in property values. However, units don't have any effect because property values are internally unitless. For more information on styled-components, head out to the [documentation](https://styled-components.com/docs).
+
+### React-spring
+
+> 
+
+[React-spring](https://www.react-spring.dev/) is a library that provides a clean [API](https://www.react-spring.dev/docs/getting-started) for animating React Native components.
+
+### React Navigation
+
+> 
+
+[React Navigation](https://reactnavigation.org/) is a routing library for React Native. It shares some similarities with the React Router library we have been using during this and earlier parts. However, unlike React Router, React Navigation offers more native features such as native gestures and animations to transition between views.
+
+## Closing words
+
+That's it, our application is ready. Good job! We have learned many new concepts during our journey such as setting up our React Native application using Expo, using React Native's core components and adding style to them, communicating with the server, and testing React Native applications.
+
+The final piece of the puzzle would be to deploy the application to the Apple App Store and Google Play Store. This is entirely optional. In case you decide to try it, you first need to create either iOS or Android builds by following Expo's [documentation](https://docs.expo.dev/build/setup/). Then you can upload these builds to either Apple App Store or Google Play Store. Expo has [documentation](https://docs.expo.dev/submit/introduction/) for this as well.
+
+## Exercise: 29. Your GitHub repository
+
+In this exercise, you should only tell us what your exercise repository is.
+
+Note that if you are using a private repository, add the GitHub user mluukkai as a collaborator. If the repository can not be accessed, your course is not graded.

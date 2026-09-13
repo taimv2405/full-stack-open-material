@@ -1,0 +1,3834 @@
+{
+  "deb81906-b863-4ebb-b628-6b11fde1421d": {
+    "exercise": {
+      "id": "deb81906-b863-4ebb-b628-6b11fde1421d",
+      "created_at": "2026-03-26T12:55:30.207299Z",
+      "updated_at": "2026-09-02T08:28:54.771476Z",
+      "name": "0. The first step",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "067f6447-1c8f-46c4-9688-72cdb33145de",
+      "chapter_id": "a17c813a-5809-495f-b872-e64e7f670dbe",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 0,
+      "copied_from": null,
+      "max_tries_per_slide": 5,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "2b4e5fda-18ad-43ad-a8c9-26d59da99ca3",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "ae5c670b-7baf-4716-9746-90ec34cb1e46",
+      "exercise_tasks": [
+        {
+          "id": "077fc185-314c-4b7e-982b-1b24861d1707",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "ae5c670b-7baf-4716-9746-90ec34cb1e46",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Before the start, let us ensure that you have read the info on this page well enough.",
+                "dropCap": false
+              },
+              "clientId": "c307fdf4-88e3-4a71-afb7-65d08f9eccc5",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "allowSelectingMultipleOptions": true,
+                "body": null,
+                "id": "262be46e-ec91-4d70-9b57-5ad4bb4bf572",
+                "multipleChoiceMultipleOptionsGradingPolicy": "default",
+                "optionDisplayDirection": "vertical",
+                "options": [
+                  {
+                    "body": null,
+                    "id": "09b32af4-3d05-4ac3-a5ca-9ca5bd843efc",
+                    "order": 1,
+                    "title": "The exercises are submitted using a GitHub repository"
+                  },
+                  {
+                    "body": null,
+                    "id": "2199068e-fe45-4c4e-8a45-c90c1fdd0c64",
+                    "order": 2,
+                    "title": "You need an University of Helsinki enrollment before you start the course"
+                  },
+                  {
+                    "body": null,
+                    "id": "ec73332c-0940-4fb7-8ac9-d3d591df31d8",
+                    "order": 5,
+                    "title": "It is not allowed to use a LLM in the course"
+                  },
+                  {
+                    "body": null,
+                    "id": "f3c8e7f5-b2fd-4b18-b816-68e428f186fd",
+                    "order": 5,
+                    "title": "It is not allowed to submit your friend’s answer as your own."
+                  },
+                  {
+                    "body": null,
+                    "id": "91aa437a-955c-4c48-a00f-e2d73bb55aa2",
+                    "order": 5,
+                    "title": "For a certificate or University credits, one should do all exercises"
+                  }
+                ],
+                "order": 0,
+                "shuffleOptions": false,
+                "title": "",
+                "type": "multiple-choice"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "8d1e77c6-e74c-47a4-b4b7-74adc6420c19": {
+    "exercise": {
+      "id": "8d1e77c6-e74c-47a4-b4b7-74adc6420c19",
+      "created_at": "2026-03-26T10:51:28.287989Z",
+      "updated_at": "2026-05-21T08:05:59.786010Z",
+      "name": "1. initializing the application",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "21c59e09-ab1f-4c54-9f26-17fef4b72ab4",
+      "chapter_id": "ca20bc5f-16b2-4843-b088-8eed598a00ac",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 0,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "6cfd25f1-0c91-4a42-8ef8-5374ea5bf49f",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "0399046d-c4d9-4851-9cb3-da015bcb5b11",
+      "exercise_tasks": [
+        {
+          "id": "670ad868-9afc-4e7b-9e1b-b7c1af1ab80c",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "0399046d-c4d9-4851-9cb3-da015bcb5b11",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Initialize your application with Expo command-line interface and set up the development environment either using an emulator or Expo's mobile app. It is recommended to try both and find out which development environment is the most suitable for you. Name your application <em>rate-repository-app</em>.",
+                "dropCap": false
+              },
+              "clientId": "bfc59c67-fade-49cc-962c-964d72c16dc5",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>Initialize your application with Expo command-line interface and set up the development environment either using an emulator or Expo's mobile app. It is recommended to try both and find out which development environment is the most suitable for you. The name of the application is not that relevant. You can, for example, go with <em>rate-repository-app</em>.</p>",
+              "validationIssues": []
+            },
+            {
+              "attributes": {
+                "content": "To submit this exercise and all future exercises you need <a href=\"https://github.com/new\" target=\"_blank\" rel=\"noreferrer noopener\">a GitHub repository</a>. You can use the same repository as in the previous parts if you want, as long as the folder structure is clear and the different parts are neatly separated into their own.",
+                "dropCap": false
+              },
+              "clientId": "7db32d59-da1e-4176-8c4a-6ed18c439bd8",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>Initialize your application with Expo command-line interface and set up the development environment either using an emulator or Expo's mobile app. It is recommended to try both and find out which development environment is the most suitable for you. The name of the application is not that relevant. You can, for example, go with <em>rate-repository-app</em>.</p>",
+              "validationIssues": []
+            },
+            {
+              "attributes": {
+                "content": "If you decide to use a private repository, add GitHub user <a href=\"https://github.com/mluukkai\" target=\"_blank\" rel=\"noreferrer noopener\">mluukkai</a> as a <a href=\"https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository\" target=\"_blank\" rel=\"noreferrer noopener\">repository collaborator</a>. The collaborator status is only used for verifying your submissions.",
+                "dropCap": false
+              },
+              "clientId": "6bf05528-bf29-4ab2-87cb-867fca67c58f",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>Initialize your application with Expo command-line interface and set up the development environment either using an emulator or Expo's mobile app. It is recommended to try both and find out which development environment is the most suitable for you. The name of the application is not that relevant. You can, for example, go with <em>rate-repository-app</em>.</p>",
+              "validationIssues": []
+            },
+            {
+              "attributes": {
+                "content": "Just commit and push your changes into the repository and you are all done.",
+                "dropCap": false
+              },
+              "clientId": "5d8c96c3-27e1-4518-bb67-57cd53fd0d76",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>To submit this exercise and all future exercises you need to&nbsp;<a href=\"https://github.com/new\" target=\"_blank\" rel=\"noreferrer noopener\">create a new GitHub repository</a>. The name of the repository can be for example the name of the application you initialized with&nbsp;<em>create-expo-app</em>. If you decide to create a private repository, add GitHub user&nbsp;<a href=\"https://github.com/mluukkai\" target=\"_blank\" rel=\"noreferrer noopener\">mluukkai</a>&nbsp;as a&nbsp;<a href=\"https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository\" target=\"_blank\" rel=\"noreferrer noopener\">repository collaborator</a>. The collaborator status is only used for verifying your submissions.</p>",
+              "validationIssues": []
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "0a6e40ac-d089-476c-a121-d5d6ff5de8ea",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "155e2b62-79e6-4165-80e7-c9a245374dbb": {
+    "exercise": {
+      "id": "155e2b62-79e6-4165-80e7-c9a245374dbb",
+      "created_at": "2026-03-26T11:35:19.373465Z",
+      "updated_at": "2026-05-21T08:05:59.786010Z",
+      "name": "2. Setting up the ESLint",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "21c59e09-ab1f-4c54-9f26-17fef4b72ab4",
+      "chapter_id": "ca20bc5f-16b2-4843-b088-8eed598a00ac",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 1,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "c1b1caa4-d4ce-4270-bda2-ad77e899873d",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "f7623cd6-7f6e-4047-b67f-a8e4bf39a179",
+      "exercise_tasks": [
+        {
+          "id": "8fb06e2a-f369-4501-8918-d1c110838afa",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "f7623cd6-7f6e-4047-b67f-a8e4bf39a179",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Set up ESLint in your project so that you can perform linter checks by running <code>npm run lint</code>. To get most of linting it is also recommended to integrate ESLint with your editor.",
+                "dropCap": false
+              },
+              "clientId": "aba88db4-2eb6-456a-9fa0-78768275bfce",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>Set up ESLint in your project so that you can perform linter checks by running <code>npm run lint</code>. To get most of linting it is also recommended to integrate ESLint with your editor.</p>",
+              "validationIssues": []
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "f1441a3b-e8fc-43e0-ae4c-ac683f83d166",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "542b00ec-db70-4dab-b060-44b0f439ec86": {
+    "exercise": {
+      "id": "542b00ec-db70-4dab-b060-44b0f439ec86",
+      "created_at": "2026-04-12T11:36:34.303903Z",
+      "updated_at": "2026-04-13T09:00:51.236583Z",
+      "name": "3. The reviewed repositories list",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "4830d7b5-d6bd-4540-8937-7bd69b26a7f3",
+      "chapter_id": "7a5cd396-b64a-4625-8117-b7756a7a5786",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 0,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "ebe0672f-5984-45e5-9fb8-ca9677e65f75",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "8630d5ec-b527-4980-ac3f-318f03780b16",
+      "exercise_tasks": [
+        {
+          "id": "f8f21aa5-9c2d-47b1-b444-fcf38c406ed0",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "8630d5ec-b527-4980-ac3f-318f03780b16",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "In this exercise, we will implement the first version of the reviewed repositories list. The list should contain the repository's full name, description, language, number of stars, number of forks, number of reviews, and rating average. Luckily React Native provides a handy component for displaying a list of data, which is the&nbsp;<a href=\"https://reactnative.dev/docs/flatlist\" target=\"_blank\" rel=\"noreferrer noopener\">FlatList</a>&nbsp;component.",
+                "dropCap": false
+              },
+              "clientId": "5fe4db79-bbae-4b91-9a5d-f65b454bdda8",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Implement components <code>RepositoryList</code> and <code>RepositoryItem</code> in the <em>components</em> directory's files <em>RepositoryList.jsx</em> and <em>RepositoryItem.jsx</em>. The <code>RepositoryList</code> component should render the <code>FlatList</code> component and <code>RepositoryItem</code> a single item on the list (hint: use the <code>FlatList</code> component's <a href=\"https://reactnative.dev/docs/flatlist#required-renderitem\" target=\"_blank\" rel=\"noreferrer noopener\">renderItem</a> prop). Use this as the basis for the <em>RepositoryList.jsx</em> file:",
+                "dropCap": false
+              },
+              "clientId": "3c792a89-dcae-4835-8ab9-4c678877974b",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "import { FlatList, View, StyleSheet } from 'react-native';\n\nconst styles = StyleSheet.create({\n  separator: {\n    height: 10,\n  },\n});\n\nconst repositories = [\n  {\n    id: 'jaredpalmer.formik',\n    fullName: 'jaredpalmer/formik',\n    description: 'Build forms in React, without the tears',\n    language: 'TypeScript',\n    forksCount: 1589,\n    stargazersCount: 21553,\n    ratingAverage: 88,\n    reviewCount: 4,\n    ownerAvatarUrl: 'https://avatars2.githubusercontent.com/u/4060187?v=4',\n  },\n  {\n    id: 'rails.rails',\n    fullName: 'rails/rails',\n    description: 'Ruby on Rails',\n    language: 'Ruby',\n    forksCount: 18349,\n    stargazersCount: 45377,\n    ratingAverage: 100,\n    reviewCount: 2,\n    ownerAvatarUrl: 'https://avatars1.githubusercontent.com/u/4223?v=4',\n  },\n  {\n    id: 'django.django',\n    fullName: 'django/django',\n    description: 'The Web framework for perfectionists with deadlines.',\n    language: 'Python',\n    forksCount: 21015,\n    stargazersCount: 48496,\n    ratingAverage: 73,\n    reviewCount: 5,\n    ownerAvatarUrl: 'https://avatars2.githubusercontent.com/u/27804?v=4',\n  },\n  {\n    id: 'reduxjs.redux',\n    fullName: 'reduxjs/redux',\n    description: 'Predictable state container for JavaScript apps',\n    language: 'TypeScript',\n    forksCount: 13902,\n    stargazersCount: 52869,\n    ratingAverage: 0,\n    reviewCount: 0,\n    ownerAvatarUrl: 'https://avatars3.githubusercontent.com/u/13142323?v=4',\n  },\n];\n\nconst ItemSeparator = () =&gt; &lt;View style={styles.separator} /&gt;;\n\nconst RepositoryList = () =&gt; {\n  return (\n    &lt;FlatList\n      data={repositories}\n      ItemSeparatorComponent={ItemSeparator}\n      // other props\n    /&gt;\n  );\n};\n\nexport default RepositoryList;"
+              },
+              "clientId": "ff0ead14-596a-46a6-b57a-5a63995d46d4",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "<em>Do not</em> alter the contents of the <code>repositories</code> variable, it should contain everything you need to complete this exercise. Render the <code>RepositoryList</code> component in the <code>Main</code> component which we previously added to the <em>Main.jsx</em> file. The reviewed repository list should roughly look something like this:",
+                "dropCap": false
+              },
+              "clientId": "1f3a1492-fef6-42f8-94b0-2a75687232f3",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/ZacIHTnd3puISG9hIq1qWWkauBtf3x.jpg",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/ZacIHTnd3puISG9hIq1qWWkauBtf3x.jpg"
+              },
+              "clientId": "9488506c-e2fd-4dce-bdcb-56d330d0dd49",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "9a2dfaa2-85c7-4853-a466-1fa43dec7e8f",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "94c09a3a-1c57-4217-b1dd-30ebbec42a8a": {
+    "exercise": {
+      "id": "94c09a3a-1c57-4217-b1dd-30ebbec42a8a",
+      "created_at": "2026-04-12T15:12:11.424520Z",
+      "updated_at": "2026-04-13T09:00:51.236583Z",
+      "name": "4. The app bar",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "4830d7b5-d6bd-4540-8937-7bd69b26a7f3",
+      "chapter_id": "7a5cd396-b64a-4625-8117-b7756a7a5786",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 1,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "07f0d2ab-ae13-4f61-8bc9-1bd017542fe4",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "5ac8b70c-e96b-4210-abee-45af8eb254de",
+      "exercise_tasks": [
+        {
+          "id": "33665d60-954a-4dc4-ba17-d53f4be09f9e",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "5ac8b70c-e96b-4210-abee-45af8eb254de",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "We will soon need to navigate between different views in our application. That is why we need an&nbsp;<a href=\"https://material.io/components/app-bars-top/\" target=\"_blank\" rel=\"noreferrer noopener\">app bar</a>&nbsp;to display tabs for switching between different views. Create a file&nbsp;<em>AppBar.jsx</em>&nbsp;in the&nbsp;<em>components</em>&nbsp;folder with the following content:",
+                "dropCap": false
+              },
+              "clientId": "d0d19591-f422-4dd2-ba27-2993296bcc97",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>We will soon need to navigate between different views in our application. That is why we need an <a href=\"https://material.io/components/app-bars-top/\" target=\"_blank\" rel=\"noreferrer noopener\">app bar</a> to display tabs for switching between different views. Create a file <em>AppBar.jsx</em> in the <em>components</em> folder with the following content:</p>",
+              "validationIssues": []
+            },
+            {
+              "attributes": {
+                "content": "import { View, StyleSheet } from 'react-native';\nimport Constants from 'expo-constants';\n\nconst styles = StyleSheet.create({\n  container: {\n    paddingTop: Constants.statusBarHeight,\n    // ...\n  },\n  // ...\n});\n\nconst AppBar = () =&gt; {\n  return &lt;View style={styles.container}&gt;{/* ... */}&lt;/View&gt;;\n};\n\nexport default AppBar;"
+              },
+              "clientId": "9b64596e-858d-45e6-bcff-9d32947421f6",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Now that the <code>AppBar</code> component will prevent the status bar from overlapping the content, you can remove the <code>marginTop</code> style we added for the <code>Main</code> component earlier in the <em>Main.jsx</em> file. The <code>AppBar</code> component should currently contain a tab with the text <em>\"Repositories\"</em>. Make the tab pressable by using the <a href=\"https://reactnative.dev/docs/pressable\" target=\"_blank\" rel=\"noreferrer noopener\">Pressable</a> component but you don't have to handle the <code>onPress</code> event in any way. Add the <code>AppBar</code> component to the <code>Main</code> component so that it is the uppermost component on the screen. The <code>AppBar</code> component should look something like this:",
+                "dropCap": false
+              },
+              "clientId": "b6065097-4d07-4737-927f-7ec98ffea58f",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>Now that the&nbsp;<em>AppBar</em>&nbsp;component will prevent the status bar from overlapping the content, you can remove the&nbsp;<em>marginTop</em>&nbsp;style we added for the&nbsp;<em>Main</em>&nbsp;component earlier in the&nbsp;<em>Main.jsx</em>&nbsp;file. The&nbsp;<em>AppBar</em>&nbsp;component should currently contain a tab with the text&nbsp;<em>\"Repositories\"</em>. Make the tab pressable by using the&nbsp;<a href=\"https://reactnative.dev/docs/pressable\" target=\"_blank\" rel=\"noreferrer noopener\">Pressable</a>&nbsp;component but you don't have to handle the&nbsp;<em>onPress</em>&nbsp;event in any way. Add the&nbsp;<em>AppBar</em>&nbsp;component to the&nbsp;<em>Main</em>&nbsp;component so that it is the uppermost component on the screen. The&nbsp;<em>AppBar</em>&nbsp;component should look something like this:<img alt=\"Application preview\" src=\"https://fullstackopen.com/static/69e23cd64074a3851f9ee91982d5ae30/4b190/6.jpg\"></p>",
+              "validationIssues": []
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "blurDataUrl": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/ngBn248YfivaB8yc5V5C2ApO1kMH8L.jpg",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/ngBn248YfivaB8yc5V5C2ApO1kMH8L.jpg"
+              },
+              "clientId": "c59438ca-18c6-4e9c-b2a0-7fefb2f58f2c",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "The background color of the app bar in the image is <code>#24292e</code> but you can use any other color as well. It might be a good idea to add the app bar's background color into the theme configuration so that it is easy to change it if needed. Another good idea might be to separate the app bar's tab into a component like <code>AppBarTab</code> so that it is easy to add new tabs in the future.",
+                "dropCap": false
+              },
+              "clientId": "9ca16056-e2c4-48dc-b860-0e10c2227e33",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>The background color of the app bar in the image is <em>#24292e</em> but you can use any other color as well. It might be a good idea to add the app bar's background color into the theme configuration so that it is easy to change it if needed. Another good idea might be to separate the app bar's tab into a component like <em>AppBarTab</em> so that it is easy to add new tabs in the future.</p>",
+              "validationIssues": []
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "58178d23-5c06-423c-9e8e-11ddf39fdd54",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "49aa2f2d-7737-4f7f-926f-cace988281e7": {
+    "exercise": {
+      "id": "49aa2f2d-7737-4f7f-926f-cace988281e7",
+      "created_at": "2026-03-26T10:23:18.582817Z",
+      "updated_at": "2026-04-13T09:00:51.236583Z",
+      "name": "5. Polished reviewed repositories list",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "4830d7b5-d6bd-4540-8937-7bd69b26a7f3",
+      "chapter_id": "7a5cd396-b64a-4625-8117-b7756a7a5786",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 2,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "d4236e5c-2b8e-41ce-bb69-324402702245",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "0f872736-ee0b-417d-ab8e-4758ff0065bd",
+      "exercise_tasks": [
+        {
+          "id": "e9ff7089-a766-40b5-99d9-660657ab75ec",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "0f872736-ee0b-417d-ab8e-4758ff0065bd",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "The current version of the reviewed repositories list looks quite grim. Modify the <em>RepositoryItem</em> component so that it also displays the repository author's avatar image. You can implement this by using the <a href=\"https://reactnative.dev/docs/image\" target=\"_blank\" rel=\"noreferrer noopener\">Image</a> component. Counts, such as the number of stars and forks, larger than or equal to 1000 should be displayed in thousands with the precision of one decimal and with a \"k\" suffix. This means that for example fork count of 8439 should be displayed as \"8.4k\". Also, polish the overall look of the component so that the reviewed repositories list looks something like this:",
+                "dropCap": false
+              },
+              "clientId": "be90e99c-3e1b-47c1-bbad-41612ef9b7e3",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/h0WJcFlZCrasRi53mTzIjvGpn5gaXc.jpg",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/h0WJcFlZCrasRi53mTzIjvGpn5gaXc.jpg"
+              },
+              "clientId": "e247bcda-5a01-4522-a934-fe167d25298d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "In the image, the <code>Main</code> component's background color is set to <code>#e1e4e8</code> whereas <code>RepositoryItem</code> component's background color is set to <code>white</code>. The language tag's background color is <code>#0366d6</code> which is the value of the <code>colors.primary</code> variable in the theme configuration. Remember to exploit the <code>Text</code> component we implemented earlier. Also when needed, split the <code>RepositoryItem</code> component into smaller components.",
+                "dropCap": false
+              },
+              "clientId": "e90997bf-25e8-4314-a912-254b0f481e27",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "15c7d8d4-d776-4a45-b6eb-b3bf813b9453",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "39bf1285-3f8d-457e-8872-498984ea6a77": {
+    "exercise": {
+      "id": "39bf1285-3f8d-457e-8872-498984ea6a77",
+      "created_at": "2026-04-12T15:23:14.129482Z",
+      "updated_at": "2026-04-13T09:00:51.236583Z",
+      "name": "6. The sign-in view",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "4830d7b5-d6bd-4540-8937-7bd69b26a7f3",
+      "chapter_id": "7a5cd396-b64a-4625-8117-b7756a7a5786",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 3,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "e9bbde84-2388-4d66-bb88-81757d58c029",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "50e83052-74dc-4074-b95d-ffb5f51cf8be",
+      "exercise_tasks": [
+        {
+          "id": "09a26b46-3d08-44cb-8980-0f7cf192c65a",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "50e83052-74dc-4074-b95d-ffb5f51cf8be",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "We will soon implement a form, that a user can use to&nbsp;<em>sign in</em>&nbsp;to our application. Before that, we must implement a view that can be accessed from the app bar. Create a file&nbsp;<em>SignIn.jsx</em>&nbsp;in the&nbsp;<em>components</em>&nbsp;directory with the following content:",
+                "dropCap": false
+              },
+              "clientId": "bce1f7b0-2aa5-4a62-9de6-a5b824100975",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>We will soon implement a form, that a user can use to <em>sign in</em> to our application. Before that, we must implement a view that can be accessed from the app bar. Create a file <em>SignIn.jsx</em> in the <em>components</em> directory with the following content:</p>",
+              "validationIssues": []
+            },
+            {
+              "attributes": {
+                "content": "import Text from './Text';\n\nconst SignIn = () =&gt; {\n  return &lt;Text&gt;The sign-in view&lt;/Text&gt;;\n};\n\nexport default SignIn;"
+              },
+              "clientId": "52b2b7a5-f019-4f65-9e00-af7b76451b42",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Set up a route for this <code>SignIn</code> component in the <code>Main</code> component. Also, add a tab with the text \"Sign in\" to the app bar next to the \"Repositories\" tab. Users should be able to navigate between the two views by pressing the tabs (hint: you can use the React router's <a href=\"https://reactrouter.com/6.4.5/components/link-native\" target=\"_blank\" rel=\"noreferrer noopener\">Link</a> component).",
+                "dropCap": false
+              },
+              "clientId": "3b96ef2e-882e-4b07-948d-a0f512ad311d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>Set up a route for this <em>SignIn</em> component in the <em>Main</em> component. Also, add a tab with the text \"Sign in\" to the app bar next to the \"Repositories\" tab. Users should be able to navigate between the two views by pressing the tabs (hint: you can use the React router's <a href=\"https://reactrouter.com/6.4.5/components/link-native\" target=\"_blank\" rel=\"noreferrer noopener\">Link</a> component).</p>",
+              "validationIssues": []
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "7600cf46-a310-4e78-b3e9-77777201d13f",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "9cdc794e-06a9-4275-8787-4a7f20622234": {
+    "exercise": {
+      "id": "9cdc794e-06a9-4275-8787-4a7f20622234",
+      "created_at": "2026-04-12T15:26:22.415488Z",
+      "updated_at": "2026-04-13T09:00:51.236583Z",
+      "name": "7. Scrollable app bar",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "4830d7b5-d6bd-4540-8937-7bd69b26a7f3",
+      "chapter_id": "7a5cd396-b64a-4625-8117-b7756a7a5786",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 4,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "5fdd40dd-5979-4392-abf5-401bb2deab0f",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "6446f6ef-1215-40b7-b605-6c36496cfcb1",
+      "exercise_tasks": [
+        {
+          "id": "4ccce93a-79ea-4e12-a5a0-cbe0a5a97d1b",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "6446f6ef-1215-40b7-b605-6c36496cfcb1",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "As we are adding more tabs to our app bar, it is a good idea to allow horizontal scrolling once the tabs won't fit the screen. The&nbsp;<a href=\"https://reactnative.dev/docs/scrollview\" target=\"_blank\" rel=\"noreferrer noopener\">ScrollView</a>&nbsp;component is just the right component for the job.",
+                "dropCap": false
+              },
+              "clientId": "95d9e1bc-d0b2-4878-8817-f5f867e9aecc",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>As we are adding more tabs to our app bar, it is a good idea to allow horizontal scrolling once the tabs won't fit the screen. The <a href=\"https://reactnative.dev/docs/scrollview\" target=\"_blank\" rel=\"noreferrer noopener\">ScrollView</a> component is just the right component for the job.</p>",
+              "validationIssues": []
+            },
+            {
+              "attributes": {
+                "content": "Wrap the tabs in the <code>AppBar</code> component's tabs with a <code>ScrollView</code> component:",
+                "dropCap": false
+              },
+              "clientId": "67381ab0-8dae-413b-9311-87422f69d70c",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "const AppBar = () => {\n  return (\n    &lt;View style={styles.container}>\n      &lt;ScrollView horizontal>{/* ... */}&lt;/ScrollView> // HIGHLIGHT LINE\n    &lt;/View>\n  );\n};"
+              },
+              "clientId": "0ee83fb3-4ae2-41c1-80e1-7f5826392bfd",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Setting the <a href=\"https://reactnative.dev/docs/scrollview#horizontal\" target=\"_blank\" rel=\"noreferrer noopener\">horizontal</a> prop <code>true</code> will cause the <code>ScrollView</code> component to scroll horizontally once the content won't fit the screen. Note that, you will need to add suitable style properties to the <code>ScrollView</code> component so that the tabs will be laid in a <em>row</em> inside the flex container. You can make sure that the app bar can be scrolled horizontally by adding tabs until the last tab won't fit the screen. Just remember to remove the extra tabs once the app bar is working as intended.",
+                "dropCap": false
+              },
+              "clientId": "8b084f1e-f649-456e-8b76-cd184b391e64",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>Setting the <a href=\"https://reactnative.dev/docs/scrollview#horizontal\" target=\"_blank\" rel=\"noreferrer noopener\">horizontal</a> prop <em>true</em> will cause the <em>ScrollView</em> component to scroll horizontally once the content won't fit the screen. Note that, you will need to add suitable style properties to the <em>ScrollView</em> component so that the tabs will be laid in a <em>row</em> inside the flex container. You can make sure that the app bar can be scrolled horizontally by adding tabs until the last tab won't fit the screen. Just remember to remove the extra tabs once the app bar is working as intended.</p>",
+              "validationIssues": []
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "c8a54245-51f0-48b0-b43b-a0faf4ec3770",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "6ed11b2f-9ec9-4d5d-872b-7a264caa2028": {
+    "exercise": {
+      "id": "6ed11b2f-9ec9-4d5d-872b-7a264caa2028",
+      "created_at": "2026-04-12T15:28:47.088737Z",
+      "updated_at": "2026-04-13T09:00:51.236583Z",
+      "name": "8. The sign-in form",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "4830d7b5-d6bd-4540-8937-7bd69b26a7f3",
+      "chapter_id": "7a5cd396-b64a-4625-8117-b7756a7a5786",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 5,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "a5364074-60ff-4904-99a4-0f21c9eb3b55",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "c7a401ec-1c16-4aac-a91a-70d61de52c1b",
+      "exercise_tasks": [
+        {
+          "id": "f09ef680-e4da-4cae-bbe1-c22e60907ba5",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "c7a401ec-1c16-4aac-a91a-70d61de52c1b",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement a sign-in form to the <em><code>SignIn</code></em> component we added earlier in the <em>SignIn.jsx</em> file. The sign-in form should include two text fields, one for the username and one for the password. There should also be a button for submitting the form. You don't need to implement an <code>onSubmit</code> callback function, it is enough that the form values are logged using <code>console.log</code> when the form is submitted:",
+                "dropCap": false
+              },
+              "clientId": "84af5f40-f845-4ffb-a455-327c6d0b3202",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "const onSubmit = (values) =&gt; {\n  console.log(values);\n};"
+              },
+              "clientId": "209e7395-5e71-4215-b5e4-00086ff3b3de",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "You can use the <a href=\"https://reactnative.dev/docs/textinput#securetextentry\" target=\"_blank\" rel=\"noreferrer noopener\">secureTextEntry</a> prop in the <code>TextInput</code> component to obscure the password input.",
+                "dropCap": false
+              },
+              "clientId": "c41d6012-cdea-4baa-861f-38de9beb16a3",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The sign-in form should look something like this:",
+                "dropCap": false
+              },
+              "clientId": "d2348c0e-dca1-4feb-b558-0664fe2fceb8",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Sing-in form",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/oVqZaInMNAOfUNS0U4ThZv285Bu18j.jpg",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/oVqZaInMNAOfUNS0U4ThZv285Bu18j.jpg"
+              },
+              "clientId": "d19a8c4e-d87e-4dbc-b328-6f5b0b630687",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "7451622f-372e-45c7-82b0-95525d2a6ff2",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "f443ab3f-c700-4f35-983f-71ce43ad7fd8": {
+    "exercise": {
+      "id": "f443ab3f-c700-4f35-983f-71ce43ad7fd8",
+      "created_at": "2026-04-12T15:30:38.269580Z",
+      "updated_at": "2026-04-13T09:00:51.236583Z",
+      "name": "9. Validating the sign-in form",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "4830d7b5-d6bd-4540-8937-7bd69b26a7f3",
+      "chapter_id": "7a5cd396-b64a-4625-8117-b7756a7a5786",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 6,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "482adc61-17c7-40b7-a71f-a431ca3292b6",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "ca04edd1-268b-486a-8175-84c54a0d21f8",
+      "exercise_tasks": [
+        {
+          "id": "bc684464-1507-4078-bc71-a2ba86020d0c",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "ca04edd1-268b-486a-8175-84c54a0d21f8",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Validate the sign-in form so that both username and password fields are required. Note that the <code>onSubmit</code> callback implemented in the previous exercise, <em>should not be called</em> if the form validation fails.",
+                "dropCap": false
+              },
+              "clientId": "d43708d9-d96b-4335-b4db-5323ee174db2",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The current implementation of the <code>TextInput</code> component should display an error message if a touched field has an error. Emphasize this error message by giving it a red color.",
+                "dropCap": false
+              },
+              "clientId": "10feb69f-c302-4ce8-a3c9-04de7d0c3495",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "On top of the red error message, give an invalid field a visual indication of an error by giving it a red border color.",
+                "dropCap": false
+              },
+              "clientId": "f15297f3-98bc-4fc4-bf29-6bf32865eb6e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Here's what the sign-in form should roughly look like with an invalid field:",
+                "dropCap": false
+              },
+              "clientId": "1db40baf-c42f-468c-9841-3c76e4cd1d2c",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/U029aGjQiKUE8CMMrEc4BIqySufV8v.jpg",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/U029aGjQiKUE8CMMrEc4BIqySufV8v.jpg"
+              },
+              "clientId": "0842d875-3983-44a6-b7c7-1ff7f67df582",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "The red color used in this implementation is <code>#d73a4a</code>.",
+                "dropCap": false
+              },
+              "clientId": "8ef17b81-3184-442e-b4d8-cb936485db10",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "075e84e6-2b1d-4519-b99e-13a66b3e835a",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "a3f7e6d7-70d5-4352-bec6-8d740842c52e": {
+    "exercise": {
+      "id": "a3f7e6d7-70d5-4352-bec6-8d740842c52e",
+      "created_at": "2026-04-12T15:32:12.167712Z",
+      "updated_at": "2026-04-13T09:00:51.236583Z",
+      "name": "10. A platform-specific font",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "4830d7b5-d6bd-4540-8937-7bd69b26a7f3",
+      "chapter_id": "7a5cd396-b64a-4625-8117-b7756a7a5786",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 7,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "4a91b5b6-cbc9-4d18-92d7-f181d3653358",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "38b76d09-5d46-45b2-8dd7-3c5e47a79228",
+      "exercise_tasks": [
+        {
+          "id": "16318cf9-dcf3-4ca6-9aaa-6399cdc9693a",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "38b76d09-5d46-45b2-8dd7-3c5e47a79228",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Currently, the font family of our application is set to <em>System</em> in the theme configuration located in the <em>theme.js</em> file. Instead of the <em>System</em> font, use a platform-specific <a href=\"https://en.wikipedia.org/wiki/Sans-serif\" target=\"_blank\" rel=\"noreferrer noopener\">Sans-serif</a> font. On the Android platform, use the <em>Roboto</em> font and on the iOS platform, use the <em>Arial</em> font. The default font can be <em>System</em>.",
+                "dropCap": false
+              },
+              "clientId": "30550547-508e-4522-96af-68bb37e6d254",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "164da8ad-311d-4be4-bbcf-3bde730d9ef4",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "5fc42c70-77f8-46d1-b718-fe6830c7a97a": {
+    "exercise": {
+      "id": "5fc42c70-77f8-46d1-b718-fe6830c7a97a",
+      "created_at": "2026-04-13T08:06:29.377792Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "17. Testing the reviewed repositories list",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 0,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "716efbef-8d4d-4d9e-964d-cbf192f279ff",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "fffccc59-85e7-4aae-ba18-d59e48b398ec",
+      "exercise_tasks": [
+        {
+          "id": "ff29e8d5-71bb-4ef3-8278-216e93e9ff67",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "fffccc59-85e7-4aae-ba18-d59e48b398ec",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement a test that ensures that the&nbsp;<code>RepositoryListContainer</code>&nbsp;component renders repository's name, description, language, forks count, stargazers count, rating average, and review count correctly. One approach in implementing this test is to add a&nbsp;<a href=\"https://reactnative.dev/docs/view#testid\" target=\"_blank\" rel=\"noreferrer noopener\">testID</a>&nbsp;prop for the element wrapping a single repository's information:",
+                "dropCap": false
+              },
+              "clientId": "b04da03c-ff89-47c0-acc5-223f80d616a8",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "const RepositoryItem = (/* ... */) =&gt; {\n  // ...\n\n  return (\n    &lt;View testID=\"repositoryItem\" {/* ... */}&gt;\n      {/* ... */}\n    &lt;/View&gt;\n  )\n};"
+              },
+              "clientId": "e209f055-fa9b-4354-820c-3e5913f445c7",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Once the&nbsp;<code>testID</code>&nbsp;prop is added, you can use the&nbsp;<a href=\"https://oss.callstack.com/react-native-testing-library/docs/api/queries#get-all-by\" target=\"_blank\" rel=\"noreferrer noopener\">getAllByTestId</a>&nbsp;query to get those elements:",
+                "dropCap": false
+              },
+              "clientId": "cd6ebbf0-adb8-4824-a57e-d601905ca061",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "const repositoryItems = screen.getAllByTestId('repositoryItem');\nconst [firstRepositoryItem, secondRepositoryItem] = repositoryItems;\n\n// expect something from the first and the second repository item"
+              },
+              "clientId": "10ca8880-6bba-43ab-8461-8b7ca7529f47",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Having those elements you can use the&nbsp;<a href=\"https://github.com/testing-library/jest-native#tohavetextcontent\" target=\"_blank\" rel=\"noreferrer noopener\">toHaveTextContent</a>&nbsp;matcher to check whether an element has certain textual content. You might also find the&nbsp;<a href=\"https://testing-library.com/docs/dom-testing-library/api-within/\" target=\"_blank\" rel=\"noreferrer noopener\">Querying Within Elements</a>&nbsp;guide useful. If you are unsure what is being rendered, use the&nbsp;<a href=\"https://oss.callstack.com/react-native-testing-library/docs/api/screen#debug\" target=\"_blank\" rel=\"noreferrer noopener\">debug</a>&nbsp;function to see the serialized rendering result.",
+                "dropCap": false
+              },
+              "clientId": "ad8a41d6-874d-4e29-95c1-75d9a2b1aba3",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Use this as a base for your test:",
+                "dropCap": false
+              },
+              "clientId": "8dcfd89d-4b60-42f3-a836-079c36308ed7",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "describe('RepositoryList', () =&gt; {\n  describe('RepositoryListContainer', () =&gt; {\n    it('renders repository information correctly', () =&gt; {\n      const repositories = {\n        totalCount: 8,\n        pageInfo: {\n          hasNextPage: true,\n          endCursor:\n            'WyJhc3luYy1saWJyYXJ5LnJlYWN0LWFzeW5jIiwxNTg4NjU2NzUwMDc2XQ==',\n          startCursor: 'WyJqYXJlZHBhbG1lci5mb3JtaWsiLDE1ODg2NjAzNTAwNzZd',\n        },\n        edges: [\n          {\n            node: {\n              id: 'jaredpalmer.formik',\n              fullName: 'jaredpalmer/formik',\n              description: 'Build forms in React, without the tears',\n              language: 'TypeScript',\n              forksCount: 1619,\n              stargazersCount: 21856,\n              ratingAverage: 88,\n              reviewCount: 3,\n              ownerAvatarUrl:\n                'https://avatars2.githubusercontent.com/u/4060187?v=4',\n            },\n            cursor: 'WyJqYXJlZHBhbG1lci5mb3JtaWsiLDE1ODg2NjAzNTAwNzZd',\n          },\n          {\n            node: {\n              id: 'async-library.react-async',\n              fullName: 'async-library/react-async',\n              description: 'Flexible promise-based React data loader',\n              language: 'JavaScript',\n              forksCount: 69,\n              stargazersCount: 1760,\n              ratingAverage: 72,\n              reviewCount: 3,\n              ownerAvatarUrl:\n                'https://avatars1.githubusercontent.com/u/54310907?v=4',\n            },\n            cursor:\n              'WyJhc3luYy1saWJyYXJ5LnJlYWN0LWFzeW5jIiwxNTg4NjU2NzUwMDc2XQ==',\n          },\n        ],\n      };\n\n      // Add your test code here\n    });\n  });\n});"
+              },
+              "clientId": "877659bf-c537-4330-974f-7c6c94097381",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "You can put the test file where you please. However, it is recommended to follow one of the ways of organizing test files introduced earlier. Use the&nbsp;<code>repositories</code>&nbsp;variable as the repository data for the test. There should be no need to alter the variable's value. Note that the repository data contains two repositories, which means that you need to check that both repositories' information is present.",
+                "dropCap": false
+              },
+              "clientId": "542b4bb1-c7c1-4bf6-9e06-7055777b33b6",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "e7ee442d-04ab-408e-9c54-9eb7b115f594",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "310b2013-ca4e-4567-897e-5dd13e1de25d": {
+    "exercise": {
+      "id": "310b2013-ca4e-4567-897e-5dd13e1de25d",
+      "created_at": "2026-04-13T08:06:29.377792Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "18. Testing the sign in form",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 1,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "b637663a-04de-42d8-acc9-7fc3de92be10",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "cce2d0cb-03af-4ba0-8280-91d5440792c3",
+      "exercise_tasks": [
+        {
+          "id": "30c46395-7f1c-405c-80fd-81a58a879e40",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "cce2d0cb-03af-4ba0-8280-91d5440792c3",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement a test that ensures that filling the sign in form's username and password fields and pressing the submit button&nbsp;<em>will call</em>&nbsp;the&nbsp;<code>onSubmit</code>&nbsp;handler with&nbsp;<em>correct arguments</em>. The&nbsp;<em>first argument</em>&nbsp;of the handler should be an object representing the form's values. You can ignore the other arguments of the function. Remember that the&nbsp;<a href=\"https://oss.callstack.com/react-native-testing-library/docs/api/events/fire-event\" target=\"_blank\" rel=\"noreferrer noopener\">fireEvent</a>&nbsp;methods can be used for triggering events and a&nbsp;<a href=\"https://jestjs.io/docs/en/mock-function-api\" target=\"_blank\" rel=\"noreferrer noopener\">mock function</a>&nbsp;for checking whether the&nbsp;<code>onSubmit</code>&nbsp;handler is called or not.",
+                "dropCap": false
+              },
+              "clientId": "fe6eb7c6-55a2-4c29-a0d7-d943ed35f80d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "You don't have to test any Apollo Client or AsyncStorage related code which is in the&nbsp;<code>useSignIn</code>&nbsp;hook. As in the previous exercise, extract the pure code into its own component and test it in the test.",
+                "dropCap": false
+              },
+              "clientId": "fea037ce-38bf-4431-b811-3366f606bd76",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Note that Formik's form submissions are&nbsp;<em>asynchronous</em>&nbsp;so expecting the&nbsp;<code>onSubmit</code>&nbsp;function to be called immediately after pressing the submit button won't work. You can get around this issue by making the test function an async function using the&nbsp;<code>async</code>&nbsp;keyword and using the React Native Testing Library's&nbsp;<a href=\"https://oss.callstack.com/react-native-testing-library/docs/api/misc/async#waitfor\" target=\"_blank\" rel=\"noreferrer noopener\">waitFor</a>&nbsp;helper function. The&nbsp;<code>waitFor</code>&nbsp;function can be used to wait for expectations to pass. If the expectations don't pass within a certain period, the function will throw an error. Here is a rough example of how to use it:",
+                "dropCap": false
+              },
+              "clientId": "aa777500-37bb-46af-97ec-1a18a92c6f63",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "import { render, screen, fireEvent, waitFor } from '@testing-library/react-native';\n// ...\n\ndescribe('SignIn', () =&gt; {\n  describe('SignInContainer', () =&gt; {\n    it('calls onSubmit function with correct arguments when a valid form is submitted', async () =&gt; {\n      // render the SignInContainer component, fill the text inputs and press the submit button\n\n      await waitFor(() =&gt; {\n        // expect the onSubmit function to have been called once and with a correct first argument\n      });\n    });\n  });\n});"
+              },
+              "clientId": "53cb8449-381f-4caf-bad6-f6bb61d83ced",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "bc12d807-2b95-4595-96d2-3989b7c7f256",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "216b3360-510f-450e-9d0c-86d3772dfd4d": {
+    "exercise": {
+      "id": "216b3360-510f-450e-9d0c-86d3772dfd4d",
+      "created_at": "2026-04-13T08:23:12.947672Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "19. The single repository view",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 2,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "1c1ef3fb-301e-448b-841c-dd0351fc438f",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "bfe970ed-646a-47dc-aeb9-d18ffc4d7d64",
+      "exercise_tasks": [
+        {
+          "id": "b54ae390-eb43-442d-803b-bf2136f2aec1",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "bfe970ed-646a-47dc-aeb9-d18ffc4d7d64",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement a view for a single repository, which contains the same repository information as in the reviewed repositories list but also a button for opening the repository in GitHub. It would be a good idea to reuse the&nbsp;<code>RepositoryItem</code>&nbsp;component used in the&nbsp;<code>RepositoryList</code>&nbsp;component and display the GitHub repository button for example based on a boolean prop.",
+                "dropCap": false
+              },
+              "clientId": "f3b23b71-3035-4702-a556-064b0f8fff6e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The repository's URL is in the&nbsp;<code>url</code>&nbsp;field of the&nbsp;<code>Repository</code>&nbsp;type in the GraphQL schema. You can fetch a single repository from the Apollo server with the&nbsp;<code>repository</code>&nbsp;query. The query has a single argument, which is the id of the repository. Here's a simple example of the&nbsp;<code>repository</code>&nbsp;query:",
+                "dropCap": false
+              },
+              "clientId": "f5e909e5-65fb-46d3-b403-f82a6ed26b4a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "{\n  repository(id: \"jaredpalmer.formik\") {\n    id\n    fullName\n    url\n  }\n}"
+              },
+              "clientId": "efdfc9be-1fd9-4c4b-bfb2-d2c997ac6c78",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "As always, test your queries in the Apollo Sandbox first before using them in your application. If you are unsure about the GraphQL schema or what are the available queries, take a look at the documentation next to the operations editor. If you have trouble using the id as a variable in the query, take a moment to study the Apollo Client's&nbsp;<a href=\"https://www.apollographql.com/docs/react/data/queries/\" target=\"_blank\" rel=\"noreferrer noopener\">documentation</a>&nbsp;on queries.",
+                "dropCap": false
+              },
+              "clientId": "dd63756a-2ec7-4c58-a42d-6732b38ccfa2",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "To learn how to open a URL in a browser, read the Expo's&nbsp;<a href=\"https://docs.expo.dev/versions/latest/sdk/linking/\" target=\"_blank\" rel=\"noreferrer noopener\">Linking API documentation</a>. You will need this feature while implementing the button for opening the repository in GitHub. Hint:&nbsp;<a href=\"https://docs.expo.dev/versions/latest/sdk/linking/#linkingopenurlurl\" target=\"_blank\" rel=\"noreferrer noopener\">Linking.openURL</a>&nbsp;method will come in handy.",
+                "dropCap": false
+              },
+              "clientId": "e2159197-19ce-469e-8bad-1600f1a7297e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The view should have its own route. It would be a good idea to define the repository's id in the route's path as a path parameter, which you can access by using the&nbsp;<a href=\"https://reactrouter.com/6.14.2/hooks/use-params\" target=\"_blank\" rel=\"noreferrer noopener\">useParams</a>&nbsp;hook. The user should be able to access the view by pressing a repository in the reviewed repositories list. You can achieve this by for example wrapping the&nbsp;<code>RepositoryItem</code>&nbsp;with a&nbsp;<a href=\"https://reactnative.dev/docs/pressable\" target=\"_blank\" rel=\"noreferrer noopener\">Pressable</a>&nbsp;component in the&nbsp;<code>RepositoryList</code>&nbsp;component and using&nbsp;<code>navigate</code>&nbsp;function to change the route in an&nbsp;<code>onPress</code>&nbsp;event handler. You can access the&nbsp;<code>navigate</code>&nbsp;function with the&nbsp;<a href=\"https://reactrouter.com/api/hooks/useNavigate\" target=\"_blank\" rel=\"noreferrer noopener\">useNavigate</a>&nbsp;hook.",
+                "dropCap": false
+              },
+              "clientId": "d37d0b7a-c98f-4605-9895-856dbe843c61",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The final version of the single repository view should look something like this:",
+                "dropCap": false
+              },
+              "clientId": "71e86aaa-d397-46b5-9106-f76b18da0c45",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/FD4P1MjoSUiDVEbp24qxntsxq15NfR.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/FD4P1MjoSUiDVEbp24qxntsxq15NfR.png"
+              },
+              "clientId": "37c65aeb-d3ec-40ae-abc8-c684bddd5c3d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "<strong>Note</strong>&nbsp;if the peer depencendy issues prevent installing the library, try the&nbsp;<code>--legacy-peer-deps</code>&nbsp;option:",
+                "dropCap": false
+              },
+              "clientId": "612a7e35-dc43-4657-9794-a68b28197290",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "npm install expo-linking --legacy-peer-deps"
+              },
+              "clientId": "88dc84bb-f849-40c2-b212-b41427bbe5ce",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "538eda39-c292-4827-ac3c-ef920e64e4ce",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "8f1bdb3f-0de4-4cc3-8f1d-de5cb0ddc451": {
+    "exercise": {
+      "id": "8f1bdb3f-0de4-4cc3-8f1d-de5cb0ddc451",
+      "created_at": "2026-04-13T08:23:12.947672Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "20. Repository's review list",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 3,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "f7dd1b35-26b2-42d7-99d6-8d0dd39e7150",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "3e1fe592-1eaf-4a31-aa59-785074445bf1",
+      "exercise_tasks": [
+        {
+          "id": "b470de5d-34d3-4d3e-98f2-809188ef4062",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "3e1fe592-1eaf-4a31-aa59-785074445bf1",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Now that we have a view for a single repository, let's display repository's reviews there. Repository's reviews are in the&nbsp;<code>reviews</code>&nbsp;field of the&nbsp;<code>Repository</code>&nbsp;type in the GraphQL schema.&nbsp;<code>reviews</code>&nbsp;is a similar paginated list as in the&nbsp;<code>repositories</code>&nbsp;query. Here's an example of getting reviews of a repository:",
+                "dropCap": false
+              },
+              "clientId": "ab4d8d87-4f47-42d8-9f1e-92659dfc5e8e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "{\n  repository(id: \"jaredpalmer.formik\") {\n    id\n    fullName\n    reviews {\n      edges {\n        node {\n          id\n          text\n          rating\n          createdAt\n          user {\n            id\n            username\n          }\n        }\n      }\n    }\n  }\n}"
+              },
+              "clientId": "3611797e-8655-4152-bdde-f69cf7aa029c",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Review's&nbsp;<code>text</code>&nbsp;field contains the textual review,&nbsp;<code>rating</code>&nbsp;field a numeric rating between 0 and 100, and&nbsp;<code>createdAt</code>&nbsp;the date when the review was created. Review's&nbsp;<code>user</code>&nbsp;field contains the reviewer's information, which is of type&nbsp;<code>User</code>.",
+                "dropCap": false
+              },
+              "clientId": "8b464dca-7940-40a3-be4c-77704256211b",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "We want to display reviews as a scrollable list, which makes&nbsp;<a href=\"https://reactnative.dev/docs/flatlist\" target=\"_blank\" rel=\"noreferrer noopener\">FlatList</a>&nbsp;a suitable component for the job. To display the previous exercise's repository's information at the top of the list, you can use the&nbsp;<code>FlatList</code>&nbsp;component's&nbsp;<a href=\"https://reactnative.dev/docs/flatlist#listheadercomponent\" target=\"_blank\" rel=\"noreferrer noopener\">ListHeaderComponent</a>&nbsp;prop. You can use the&nbsp;<a href=\"https://reactnative.dev/docs/flatlist#itemseparatorcomponent\" target=\"_blank\" rel=\"noreferrer noopener\">ItemSeparatorComponent</a>&nbsp;to add some space between the items like in the&nbsp;<code>RepositoryList</code>&nbsp;component. Here's an example of the structure:",
+                "dropCap": false
+              },
+              "clientId": "26e7a045-0564-4f26-b902-3e3108749ca3",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "const ReviewItem = ({ review }) =&gt; {\n  // Single review item\n};\n\nconst SingleRepository = () =&gt; {\n  // ...\n\n  return (\n    &lt;FlatList\n      data={reviews}\n      renderItem={({ item }) =&gt; &lt;ReviewItem review={item} /&gt;}\n      keyExtractor={({ id }) =&gt; id}\n      ListHeaderComponent={() =&gt; &lt;RepositoryView ... /&gt;}\n      // ...\n    /&gt;\n  );\n};\n\nexport default SingleRepository;"
+              },
+              "clientId": "13e8ea65-7a0f-4110-9e6b-be8e942f3904",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "The final version of the repository's reviews list should look something like this:",
+                "dropCap": false
+              },
+              "clientId": "2247ef2e-2641-4c4a-8fdd-9d08b445bfa0",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/RquuxRmNLRS3j9zz87KlZqk7RlF7ko.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/RquuxRmNLRS3j9zz87KlZqk7RlF7ko.png"
+              },
+              "clientId": "1b9e59dc-42b4-4c0f-9c3f-2df79c71cf0a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "",
+                "dropCap": false
+              },
+              "clientId": "ff54b166-c68c-4de5-b1a6-705e025d9365",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The date under the reviewer's username is the creation date of the review, which is in the&nbsp;<code>createdAt</code>&nbsp;field of the&nbsp;<code>Review</code>&nbsp;type. The date format should be user-friendly such as “DD MMM YYYY” (e.g., 24 Mar 2026).You can for example install the&nbsp;<a href=\"https://date-fns.org/\" target=\"_blank\" rel=\"noreferrer noopener\">date-fns</a>&nbsp;library and use the&nbsp;<a href=\"https://date-fns.org/v2.28.0/docs/format\" target=\"_blank\" rel=\"noreferrer noopener\">format</a>&nbsp;function for formatting the creation date.",
+                "dropCap": false
+              },
+              "clientId": "1879ca14-7adb-4840-b898-d2686f32562a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The round shape of the rating's container can be achieved with the&nbsp;<code>borderRadius</code>&nbsp;style property. You can make it round by fixing the container's&nbsp;<code>width</code>&nbsp;and&nbsp;<code>height</code>&nbsp;style property and setting the border-radius as&nbsp;<code>width / 2</code>.",
+                "dropCap": false
+              },
+              "clientId": "80f8a0b2-93f3-4437-955a-55fb7a2d3ab5",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "78a53f1d-318e-4b6b-b52e-85daa26c4780",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "dda11b80-bedd-4ec1-bdac-ad66f871b090": {
+    "exercise": {
+      "id": "dda11b80-bedd-4ec1-bdac-ad66f871b090",
+      "created_at": "2026-04-13T08:23:12.947672Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "21. The review form",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 4,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "7fde064a-908e-4c57-9d39-58421ad5af4c",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "4bbfe0b2-dce5-4c68-9098-f0450753d38f",
+      "exercise_tasks": [
+        {
+          "id": "064983d0-10a7-4658-90fc-d1f8d86cfe6c",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "4bbfe0b2-dce5-4c68-9098-f0450753d38f",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement a form for creating a review using Formik. The form should have four fields: repository owner's GitHub username (for example \"jaredpalmer\"), repository's name (for example \"formik\"), a numeric rating, and a textual review. Validate the fields using Yup schema so that it contains the following validations:",
+                "dropCap": false
+              },
+              "clientId": "9c935176-edcd-4906-964a-caff7a5f61a2",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "ordered": false,
+                "values": ""
+              },
+              "clientId": "011618ff-bd6f-4bd4-a8b6-791ffa546cfb",
+              "innerBlocks": [
+                {
+                  "attributes": {
+                    "content": "Repository owner's username is a required string"
+                  },
+                  "clientId": "6f57dca5-e872-4d54-a4fe-342ad07638e5",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                },
+                {
+                  "attributes": {
+                    "content": "Repository's name is a required string"
+                  },
+                  "clientId": "93cf6d37-7e1d-4968-a962-56ac34e28aca",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                },
+                {
+                  "attributes": {
+                    "content": "Rating is a required number between 0 and 100"
+                  },
+                  "clientId": "03844449-e861-4736-820d-571eff70ea2f",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                },
+                {
+                  "attributes": {
+                    "content": "Review is a optional string"
+                  },
+                  "clientId": "49560de6-7406-4cc2-bcfd-89312e532475",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                }
+              ],
+              "isValid": true,
+              "name": "core/list"
+            },
+            {
+              "attributes": {
+                "content": "Explore Yup's&nbsp;<a href=\"https://github.com/jquense/yup#yup\" target=\"_blank\" rel=\"noreferrer noopener\">documentation</a>&nbsp;to find suitable validators. Use sensible error messages with the validators. The validation message can be defined as the validator method's&nbsp;<code>message</code>&nbsp;argument. You can make the review field expand to multiple lines by using&nbsp;<code>TextInput</code>&nbsp;component's&nbsp;<a href=\"https://reactnative.dev/docs/textinput#multiline\" target=\"_blank\" rel=\"noreferrer noopener\">multiline</a>&nbsp;prop.",
+                "dropCap": false
+              },
+              "clientId": "b7793c99-30b8-4892-b79e-72dc0718ecad",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "You can create a review using the&nbsp;<code>createReview</code>&nbsp;mutation. Check this mutation's arguments in the Apollo Sandbox. You can use the&nbsp;<a href=\"https://www.apollographql.com/docs/react/api/react/useMutation\" target=\"_blank\" rel=\"noreferrer noopener\">useMutation</a>&nbsp;hook to send a mutation to the Apollo Server.",
+                "dropCap": false
+              },
+              "clientId": "d2cf0d72-ae36-4b3d-80d3-54b5ac55d90f",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "After a successful&nbsp;<code>createReview</code>&nbsp;mutation, redirect the user to the repository's view you implemented in the previous exercise. This can be done with the&nbsp;<code>navigate</code>&nbsp;function after you have obtained it using the&nbsp;<a href=\"https://reactrouter.com/api/hooks/useNavigate\" target=\"_blank\" rel=\"noreferrer noopener\">useNavigate</a>&nbsp;hook. The created review has a&nbsp;<code>repositoryId</code>&nbsp;field which you can use to construct the route's path.",
+                "dropCap": false
+              },
+              "clientId": "f88884f9-7b05-4a13-9b26-a9e7ee22e6f0",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "To prevent getting cached data with the&nbsp;<code>repository</code>&nbsp;query in the single repository view, use the&nbsp;<code>cache-and-network</code>&nbsp;<a href=\"https://www.apollographql.com/docs/react/data/queries/#setting-a-fetch-policy\" target=\"_blank\" rel=\"noreferrer noopener\">fetch policy</a>&nbsp;in the query. It can be used with the&nbsp;<code>useQuery</code>&nbsp;hook like this:",
+                "dropCap": false
+              },
+              "clientId": "fd29b82c-5fd4-45ab-a2a8-e82d395a163a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "useQuery(GET_REPOSITORY, {\n  fetchPolicy: 'cache-and-network',\n  // Other options\n});"
+              },
+              "clientId": "b27e29db-5b80-481e-b323-9c15f78cb00a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Note that only&nbsp;<em>an existing public GitHub repository</em>&nbsp;can be reviewed and a user can review the same repository&nbsp;<em>only once</em>. You don't have to handle these error cases, but the error payload includes specific codes and messages for these errors. You can try out your implementation by reviewing one of your own public repositories or any other public repository.",
+                "dropCap": false
+              },
+              "clientId": "e30ebbe8-8b11-4063-ac92-f8af8ac638d3",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The review form should be accessible through the app bar. Create a tab to the app bar with a label \"Create a review\". This tab should only be visible to users who have signed in. You will also need to define a route for the review form.",
+                "dropCap": false
+              },
+              "clientId": "b5be6425-3783-4e99-9da4-b6752fd6ac5f",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The final version of the review form should look something like this:",
+                "dropCap": false
+              },
+              "clientId": "90fdd6c3-94bb-4dae-9875-f472e7211d5d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/uhYpOq79Ivj8tWswCa6jMJQ67JB4NN.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/uhYpOq79Ivj8tWswCa6jMJQ67JB4NN.png"
+              },
+              "clientId": "1e2ce021-ab0a-42da-a34b-55a70787a58a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "This screenshot has been taken after invalid form submission to present what the form should look like in an invalid state.",
+                "dropCap": false
+              },
+              "clientId": "d0d632a4-30f9-4fa0-ac1d-a76cf9a1c739",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "25188613-0172-4546-a02a-cfb3a6423aae",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "7ed5f0c4-8200-4bea-98cd-8dc503a3a538": {
+    "exercise": {
+      "id": "7ed5f0c4-8200-4bea-98cd-8dc503a3a538",
+      "created_at": "2026-04-13T08:23:12.947672Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "22. The sign up form",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 5,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "fd8b1b85-1bca-41d0-8864-ce886d1060d3",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "39733eb5-50b3-44f0-9df7-92fc4084735e",
+      "exercise_tasks": [
+        {
+          "id": "1f6d8dfc-1297-496d-a8c7-148725e6d881",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "39733eb5-50b3-44f0-9df7-92fc4084735e",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement a sign up form for registering a user using Formik. The form should have three fields: username, password, and password confirmation. Validate the form using Yup schema so that it contains the following validations:",
+                "dropCap": false
+              },
+              "clientId": "7af848fd-1386-41ae-8542-32181c9cebdc",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "ordered": false,
+                "values": ""
+              },
+              "clientId": "000fe106-a751-41d3-8407-8418fb3e6469",
+              "innerBlocks": [
+                {
+                  "attributes": {
+                    "content": "Username is a required string with a length between 5 and 30"
+                  },
+                  "clientId": "9ec521a5-96d1-4914-95d2-06840882dd05",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                },
+                {
+                  "attributes": {
+                    "content": "Password is a required string with a length between 5 and 50"
+                  },
+                  "clientId": "7ad20766-851e-4f78-b799-3acdb894bf50",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                },
+                {
+                  "attributes": {
+                    "content": "Password confirmation matches the password"
+                  },
+                  "clientId": "b14ab72e-6302-4b00-97e3-99b1d02d4fb2",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                }
+              ],
+              "isValid": true,
+              "name": "core/list"
+            },
+            {
+              "attributes": {
+                "content": "The password confirmation field's validation can be a bit tricky, but it can be done for example by using the&nbsp;<a href=\"https://github.com/jquense/yup#schemaoneofarrayofvalues-arrayany-message-string--function-schema-alias-equals\" target=\"_blank\" rel=\"noreferrer noopener\">oneOf</a>&nbsp;and&nbsp;<a href=\"https://github.com/jquense/yup#refpath-string-options--contextprefix-string--ref\" target=\"_blank\" rel=\"noreferrer noopener\">ref</a>&nbsp;methods like suggested in&nbsp;<a href=\"https://github.com/jaredpalmer/formik/issues/90#issuecomment-354873201\" target=\"_blank\" rel=\"noreferrer noopener\">this issue</a>.",
+                "dropCap": false
+              },
+              "clientId": "00ea235f-0977-4b51-87db-9a8875b66e92",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "You can create a new user by using the&nbsp;<code>createUser</code>&nbsp;mutation. Find out how this mutation works by exploring the documentation in the Apollo Sandbox. After a successful&nbsp;<code>createUser</code>&nbsp;mutation, sign the created user in by using the&nbsp;<code>useSignIn</code>&nbsp;hook as we did in the sign in the form. After the user has been signed in, redirect the user to the reviewed repositories list view.",
+                "dropCap": false
+              },
+              "clientId": "ca471b44-bac0-422d-988e-b30132a643fc",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The user should be able to access the sign-up form through the app bar by pressing a \"Sign up\" tab. This tab should only be visible to users that aren't signed in.",
+                "dropCap": false
+              },
+              "clientId": "77bd0c23-87a7-4841-8aa1-3afc1db9e275",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The final version of the sign up form should look something like this:",
+                "dropCap": false
+              },
+              "clientId": "0c0d2ec3-54d1-41f0-997a-65c377bf4537",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/74kH012SBVlEFHOrRsqywdhCxCuWdS.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/74kH012SBVlEFHOrRsqywdhCxCuWdS.png"
+              },
+              "clientId": "b5060147-7cf0-46ef-bf59-c715ecf6fae6",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "This screenshot has been taken after invalid form submission to present what the form should look like in an invalid state.",
+                "dropCap": false
+              },
+              "clientId": "23f2b05f-4a62-4349-a56d-ba3d75927cd3",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "a9213345-1001-445a-9120-a1a7eb67a6b7",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "617657b8-fe54-45e4-b362-677707842073": {
+    "exercise": {
+      "id": "617657b8-fe54-45e4-b362-677707842073",
+      "created_at": "2026-04-13T08:23:12.947672Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "23. Sorting the reviewed repositories list",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 6,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "8726c298-3146-4450-a6ab-f1f5230f78f1",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "c073461e-29c4-46db-9a12-487cae147105",
+      "exercise_tasks": [
+        {
+          "id": "e5ded132-d7b1-4f9e-9730-a301207ea6fe",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "c073461e-29c4-46db-9a12-487cae147105",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "At the moment repositories in the reviewed repositories list are ordered by the date of repository's first review. Implement a feature that allows users to select the principle, which is used to order the repositories. The available ordering principles should be:",
+                "dropCap": false
+              },
+              "clientId": "33a0fa18-41d6-44a2-8695-870489127412",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "ordered": false,
+                "values": ""
+              },
+              "clientId": "99a5f26f-d414-49d3-b59f-bd8019c5a219",
+              "innerBlocks": [
+                {
+                  "attributes": {
+                    "content": "Latest repositories. The repository with the latest first review is on the top of the list. This is the current behavior and should be the default principle."
+                  },
+                  "clientId": "bf4e7c0c-48b8-44be-8ffb-048d6a620962",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                },
+                {
+                  "attributes": {
+                    "content": "Highest rated repositories. The repository with the <em>highest</em> average rating is on the top of the list."
+                  },
+                  "clientId": "a86cfb0f-7354-4dfa-a119-d14283da30b3",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                },
+                {
+                  "attributes": {
+                    "content": "Lowest rated repositories. The repository with the <em>lowest</em> average rating is on the top of the list."
+                  },
+                  "clientId": "7e988ef8-c64c-4527-bd55-7cae5e5973ee",
+                  "innerBlocks": [],
+                  "isValid": true,
+                  "name": "core/list-item"
+                }
+              ],
+              "isValid": true,
+              "name": "core/list"
+            },
+            {
+              "attributes": {
+                "content": "The&nbsp;<code>repositories</code>&nbsp;query used to fetch the reviewed repositories has an argument called&nbsp;<code>orderBy</code>, which you can use to define the ordering principle. The argument has two allowed values: CREATED_AT (order by the date of repository's first review) and RATING_AVERAGE, (order by the repository's average rating). The query also has an argument called&nbsp;<code>orderDirection</code>&nbsp;which can be used to change the order direction. The argument has two allowed values:&nbsp;<code>ASC</code>&nbsp;(ascending, smallest value first) and&nbsp;<code>DESC</code>&nbsp;(descending, biggest value first).",
+                "dropCap": false
+              },
+              "clientId": "195815d2-5286-481e-9539-02fe204e907e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The selected ordering principle state can be maintained for example using the React's&nbsp;<a href=\"https://react.dev/reference/react/useState\" target=\"_blank\" rel=\"noreferrer noopener\">useState</a>&nbsp;hook. The variables used in the&nbsp;<code>repositories</code>&nbsp;query can be given to the&nbsp;<code>useRepositories</code>&nbsp;hook as an argument.",
+                "dropCap": false
+              },
+              "clientId": "32c0de1a-61f2-46ba-a641-b915cb965002",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "You can use for example&nbsp;<a href=\"https://docs.expo.dev/versions/latest/sdk/picker/\" target=\"_blank\" rel=\"noreferrer noopener\">@react-native-picker/picker</a>&nbsp;library, or&nbsp;<a href=\"https://callstack.github.io/react-native-paper/\" target=\"_blank\" rel=\"noreferrer noopener\">React Native Paper</a>&nbsp;library's&nbsp;<a href=\"https://callstack.github.io/react-native-paper/docs/components/Menu/\" target=\"_blank\" rel=\"noreferrer noopener\">Menu</a>&nbsp;component to implement the ordering principle's selection. You can use the&nbsp;<code>FlatList</code>&nbsp;component's&nbsp;<a href=\"https://reactnative.dev/docs/flatlist#listheadercomponent\" target=\"_blank\" rel=\"noreferrer noopener\">ListHeaderComponent</a>&nbsp;prop to provide the list with a header containing the selection component.",
+                "dropCap": false
+              },
+              "clientId": "25197912-8184-45a9-9685-7d8c1b96b993",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The final version of the feature, depending on the selection component in use, should look something like this:",
+                "dropCap": false
+              },
+              "clientId": "e14aa5b5-a58a-4972-8686-a91f52881580",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/7In2BANnmv0c7a1MhIxCabEPggkpdq.jpg",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/7In2BANnmv0c7a1MhIxCabEPggkpdq.jpg"
+              },
+              "clientId": "d03e694b-c187-43bc-a19d-76b3377c76a4",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "",
+                "dropCap": false
+              },
+              "clientId": "15c0e7e4-99a9-4627-b3e8-f22af1e9025e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "e1ab4a36-9a26-4e09-a255-0185b38dae56",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "ce9a521b-d851-46f0-ac75-94e68c824066": {
+    "exercise": {
+      "id": "ce9a521b-d851-46f0-ac75-94e68c824066",
+      "created_at": "2026-04-13T08:23:12.947672Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "24. Filtering the reviewed repositories list",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 7,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "671c3b65-53af-4230-9595-bcefb096c6a0",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "7dffa459-a294-4e1d-b8a3-0494b01ec1d8",
+      "exercise_tasks": [
+        {
+          "id": "d31e8f97-c31b-4f30-a8c1-ecebaee068ce",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "7dffa459-a294-4e1d-b8a3-0494b01ec1d8",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "The Apollo Server allows filtering repositories using the repository's name or the owner's username. This can be done using the&nbsp;<code>searchKeyword</code>&nbsp;argument in the&nbsp;<code>repositories</code>&nbsp;query. Here's an example of how to use the argument in a query:",
+                "dropCap": false
+              },
+              "clientId": "cfafcf40-b3e9-45cb-9de5-3bbc9c579ffc",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "{\n  repositories(searchKeyword: \"ze\") {\n    edges {\n      node {\n        id\n        fullName\n      }\n    }\n  }\n}"
+              },
+              "clientId": "5943b438-5022-46ff-b270-f6682b93c482",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Implement a feature for filtering the reviewed repositories list based on a keyword. Users should be able to type in a keyword into a text input and the list should be filtered as the user types. You can use a simple&nbsp;<code>TextInput</code>&nbsp;component or something a bit fancier such as React Native Paper's&nbsp;<a href=\"https://callstack.github.io/react-native-paper/docs/components/Searchbar/\" target=\"_blank\" rel=\"noreferrer noopener\">Searchbar</a>&nbsp;component as the text input. Put the text input component in the&nbsp;<code>FlatList</code>&nbsp;component's header.",
+                "dropCap": false
+              },
+              "clientId": "163c2a36-12ca-49ab-b6e2-d98d61ce36fa",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "To avoid a multitude of unnecessary requests while the user types the keyword fast, only pick the latest input after a short delay. This technique is often referred to as&nbsp;<a href=\"https://lodash.com/docs/4.17.15#debounce\" target=\"_blank\" rel=\"noreferrer noopener\">debouncing</a>.&nbsp;<a href=\"https://www.npmjs.com/package/use-debounce\" target=\"_blank\" rel=\"noreferrer noopener\">use-debounce</a>&nbsp;library is a handy hook for debouncing a state variable. Use it with a sensible delay time, such as 500 milliseconds.",
+                "dropCap": false
+              },
+              "clientId": "be75e978-a7d1-438f-bfd0-67769902cc8a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Store the text input's value by using the&nbsp;<code>useState</code>&nbsp;hook. You can then create a debounced value based on that value by using the&nbsp;<code>useDebounce</code>&nbsp;hook. Pass the debounced value to the query as the value of the&nbsp;<code>searchKeyword</code>&nbsp;argument.",
+                "dropCap": false
+              },
+              "clientId": "044b2fe6-938e-4a1a-b49e-a7d839a836db",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The final version of the filtering feature should look something like this:",
+                "dropCap": false
+              },
+              "clientId": "c4a314bf-6c94-4c9a-875a-91877fa9de23",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/GncDVKYsteTkL2jfGSvrhghdzeEon8.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/GncDVKYsteTkL2jfGSvrhghdzeEon8.png"
+              },
+              "clientId": "a51ad217-9ce0-4daa-aa68-9ed21eedf3b6",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "1b274440-d42a-4e1b-8f21-94c7ccb811f3",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "5c247d75-8520-4582-9375-476d7ed445c3": {
+    "exercise": {
+      "id": "5c247d75-8520-4582-9375-476d7ed445c3",
+      "created_at": "2026-04-13T08:23:12.947672Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "25. The user's reviews view",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 8,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "8bad55c9-34af-4c12-a549-d796869d605e",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "1b80dc72-342c-47e4-8850-112dc0456348",
+      "exercise_tasks": [
+        {
+          "id": "0420c072-5e2d-4ae3-99fc-c36aaab0ff66",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "1b80dc72-342c-47e4-8850-112dc0456348",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Implement a feature which allows user to see their reviews. Once signed in, the user should be able to access this view by pressing a \"My reviews\" tab in the app bar. Here is what the review list view should roughly look like:",
+                "dropCap": false
+              },
+              "clientId": "289d950e-cd2b-435c-bb73-a5c67213e3e4",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/yYilJIWXuz3Qrc8CH0AXneKVxGPJEF.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/yYilJIWXuz3Qrc8CH0AXneKVxGPJEF.png"
+              },
+              "clientId": "43693fc5-7956-4274-92b5-a4f1b55380aa",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "Remember that you can fetch the authenticated user from the Apollo Server with the&nbsp;<code>me</code>&nbsp;query. This query returns a&nbsp;<code>User</code>&nbsp;type, which has a field&nbsp;<code>reviews</code>. If you have already implemented a reusable&nbsp;<code>me</code>&nbsp;query in your code, you can customize this query to fetch the&nbsp;<code>reviews</code>&nbsp;field conditionally. This can be done using GraphQL's&nbsp;<a href=\"https://graphql.org/learn/queries/#directives\" target=\"_blank\" rel=\"noreferrer noopener\">include</a>&nbsp;directive.",
+                "dropCap": false
+              },
+              "clientId": "49660cf6-ea9f-4531-b921-fbec820d825d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Let's say that the current query is implemented roughly in the following manner:",
+                "dropCap": false
+              },
+              "clientId": "c6a2a062-546c-4e57-99b9-d7ee6aaa54c1",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "const GET_CURRENT_USER = gql`\n  query {\n    me {\n      # user fields...\n    }\n  }\n`;"
+              },
+              "clientId": "827ce097-d39b-483d-b596-0faf19156b4b",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "You can provide the query with an&nbsp;<code>includeReviews</code>&nbsp;argument and use that with the&nbsp;<code>include</code>&nbsp;directive:",
+                "dropCap": false
+              },
+              "clientId": "3ab71dae-72aa-4c1c-961a-43d00141c578",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "const GET_CURRENT_USER = gql`\n  query getCurrentUser($includeReviews: Boolean = false) {\n    me {\n      # user fields...\n      reviews @include(if: $includeReviews) {\n        edges {\n          node {\n            # review fields...\n          }\n        }\n      }\n    }\n  }\n`;"
+              },
+              "clientId": "86a3c87d-f662-43f1-875f-4d9e32ccd993",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "The&nbsp;<code>includeReviews</code>&nbsp;argument has a default value of&nbsp;<code>false</code>, because we don't want to cause additional server overhead unless we explicitly want to fetch authenticated user's reviews. The principle of the&nbsp;<code>include</code>&nbsp;directive is quite simple: if the value of the&nbsp;<code>if</code>&nbsp;argument is&nbsp;<code>true</code>, include the field, otherwise omit it.",
+                "dropCap": false
+              },
+              "clientId": "89355570-c818-4f9f-9f3a-9043d30e8fe7",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "c04d2699-3ab3-438e-af16-0c9baabbac4b",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "f3b93230-57a2-4da5-ba68-cdf9e1be1e6d": {
+    "exercise": {
+      "id": "f3b93230-57a2-4da5-ba68-cdf9e1be1e6d",
+      "created_at": "2026-04-13T08:23:12.947672Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "26. Review actions",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 9,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "867b24e7-b2c1-4135-8404-9a91ea31eeed",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "326807e3-8b38-44bd-ab34-430e04de6bb1",
+      "exercise_tasks": [
+        {
+          "id": "436cc26e-6602-449e-b80e-4e6f69da6cb1",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "326807e3-8b38-44bd-ab34-430e04de6bb1",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Now that user can see their reviews, let's add some actions to the reviews. Under each review on the review list, there should be two buttons. One button is for viewing the review's repository. Pressing this button should take the user to the single repository view implemented in one of the earlier exercises. The other button is for deleting the review. Pressing this button should delete the review. Here is what the actions should roughly look like:",
+                "dropCap": false
+              },
+              "clientId": "13728a8d-a895-40b9-ae99-9152f7be95f5",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "aspectRatio": "0.48299878782898115",
+                "blurDataUrl": "",
+                "caption": "",
+                "height": "auto",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/cyLRmXq8OxMzVeH4T2NWFugHLYTGHm.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/cyLRmXq8OxMzVeH4T2NWFugHLYTGHm.png",
+                "width": "735px"
+              },
+              "clientId": "31d63be9-f985-47ac-bf51-e39da34080c1",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "Pressing the delete button should be followed by a confirmation alert. If the user confirms the deletion, the review is deleted. Otherwise, the deletion is discarded. You can implement the confirmation using the&nbsp;<a href=\"https://reactnative.dev/docs/alert\" target=\"_blank\" rel=\"noreferrer noopener\">Alert</a>&nbsp;module. Note that calling the&nbsp;<code>Alert.alert</code>&nbsp;method won't open any window in Expo web preview. Use either Expo mobile app or an emulator to see the what the alert window looks like.",
+                "dropCap": false
+              },
+              "clientId": "6cc79097-7c0b-4b1a-92a9-24905d3197a4",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Here is the confirmation alert that should pop out once the user presses the delete button:",
+                "dropCap": false
+              },
+              "clientId": "abdee5cd-b7bd-484f-b81f-eac7b2c3bf60",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Application preview",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/5RPpyX8M2NmHLrGYekavuKZKjtiyt3.jpg",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/5RPpyX8M2NmHLrGYekavuKZKjtiyt3.jpg"
+              },
+              "clientId": "6cd10902-6cda-4156-9048-29350cea28ac",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            },
+            {
+              "attributes": {
+                "content": "You can delete a review using the <code>deleteReview</code> mutation. This mutation has a single argument, which is the id of the review to be deleted. After the mutation has been performed, the easiest way to update the review list's query is to call the <a href=\"https://www.apollographql.com/docs/react/data/queries/#refetching\" target=\"_blank\" rel=\"noreferrer noopener\">refetch</a> function.",
+                "dropCap": false
+              },
+              "clientId": "2e57736a-e357-4a92-aa12-363850e7fa6d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "d3b5ae99-b7a2-4f04-8ab9-d1ca791073c1",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "ce041b47-5dec-4c57-9e65-8a71f2086e90": {
+    "exercise": {
+      "id": "ce041b47-5dec-4c57-9e65-8a71f2086e90",
+      "created_at": "2026-04-20T12:21:20.820549Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "27. OPTIONAL: Infinite scrolling for the repository's reviews list",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 0,
+      "order_number": 10,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "f8b4d221-5065-4dd8-b388-bfef53563ca9",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "f65fa45b-6174-4cd0-a871-661d2bc24cd2",
+      "exercise_tasks": [
+        {
+          "id": "54dd46f4-3bfc-448d-a79e-bd967b005d04",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "f65fa45b-6174-4cd0-a871-661d2bc24cd2",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "<strong>Note:</strong> This is an optional exercise, and no points are awarded for it.",
+                "dropCap": false
+              },
+              "clientId": "ce46a94b-84bc-43e2-8f4d-dc5dff498a6e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Implement infinite scrolling for the repository's reviews list. The <code>Repository</code> type's <code>reviews</code> field has the <code>first</code> and <code>after</code> arguments similar to the <code>repositories</code> query. <code>ReviewConnection</code> type also has the <code>pageInfo</code> field just like the <code>RepositoryConnection</code> type.",
+                "dropCap": false
+              },
+              "clientId": "a90ab97f-db2c-4231-ba0e-605c08c5afdd",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Here's an example query:",
+                "dropCap": false
+              },
+              "clientId": "1892da8e-2575-4169-85fc-17c01cdf1d77",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>Here's an example query:</p>",
+              "validationIssues": []
+            },
+            {
+              "attributes": {
+                "content": "{\n  repository(id: \"jaredpalmer.formik\") {\n    id\n    fullName\n    reviews(first: 2, after: \"WyIxYjEwZTRkOC01N2VlLTRkMDAtODg4Ni1lNGEwNDlkN2ZmOGYuamFyZWRwYWxtZXIuZm9ybWlrIiwxNTg4NjU2NzUwMDgwXQ==\") {\n      totalCount\n      edges {\n        node {\n          id\n          text\n          rating\n          createdAt\n          repositoryId\n          user {\n            id\n            username\n          }\n        }\n        cursor\n      }\n      pageInfo {\n        endCursor\n        startCursor\n        hasNextPage\n      }\n    }\n  }\n}"
+              },
+              "clientId": "6cfb51cd-145d-4ec2-8403-ec34b9e9aa5a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code",
+              "originalContent": "<pre class=\"wp-block-code\"><code>{\n  repository(id: \"jaredpalmer.formik\") {\n    id\n    fullName\n    reviews(first: 2, after: \"WyIxYjEwZTRkOC01N2VlLTRkMDAtODg4Ni1lNGEwNDlkN2ZmOGYuamFyZWRwYWxtZXIuZm9ybWlrIiwxNTg4NjU2NzUwMDgwXQ==\") {\n      totalCount\n      edges {\n        node {\n          id\n          text\n          rating\n          createdAt\n          repositoryId\n          user {\n            id\n            username\n          }\n        }\n        cursor\n      }\n      pageInfo {\n        endCursor\n        startCursor\n        hasNextPage\n      }\n    }\n  }\n}</code></pre>",
+              "validationIssues": []
+            },
+            {
+              "attributes": {
+                "content": "The cache's field policy can be similar as with the&nbsp;<code>repositories</code>&nbsp;query:",
+                "dropCap": false
+              },
+              "clientId": "a93e1e06-a6f5-4ed2-8297-6bbbd8ee43c5",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>The cache's field policy can be similar as with the&nbsp;<code>repositories</code>&nbsp;query:</p>",
+              "validationIssues": []
+            },
+            {
+              "attributes": {
+                "content": "const cache = new InMemoryCache({\n  typePolicies: {\n    Query: {\n      fields: {\n        repositories: relayStylePagination(),\n      },\n    },\n    // BEGIN HIGHLIGHT\n    Repository: {\n      fields: {\n        reviews: relayStylePagination(),\n      },\n    },\n    // END HIGHLIGHT\n  },\n});"
+              },
+              "clientId": "b1083286-9239-48e1-8fc5-7a7005b53259",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code",
+              "originalContent": "<pre class=\"wp-block-code\"><code>const cache = new InMemoryCache({\n  typePolicies: {\n    Query: {\n      fields: {\n        repositories: relayStylePagination(),\n      },\n    },\n    // BEGIN HIGHLIGHT\n    Repository: {\n      fields: {\n        reviews: relayStylePagination(),\n      },\n    },\n    // END HIGHLIGHT\n  },\n});</code></pre>",
+              "validationIssues": []
+            },
+            {
+              "attributes": {
+                "content": "As with the reviewed repositories list, use a relatively small&nbsp;<code>first</code>&nbsp;argument value while you are trying out the infinite scrolling. You might need to create a few new users and use them to create a few new reviews to make the reviews list long enough to scroll. Set the value of the&nbsp;<code>first</code>&nbsp;argument high enough so that the&nbsp;<code>fetchMore</code>&nbsp;callback isn't called immediately after the view is loaded, but low enough so that you can see that more reviews are fetched once you reach the end of the list. Once everything is working as intended you can use a larger value for the&nbsp;<code>first</code>&nbsp;argument.",
+                "dropCap": false
+              },
+              "clientId": "9d068a9d-844f-466c-9d7d-497c652af32f",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph",
+              "originalContent": "<p>As with the reviewed repositories list, use a relatively small <code>first</code> argument value while you are trying out the infinite scrolling. You might need to create a few new users and use them to create a few new reviews to make the reviews list long enough to scroll. Set the value of the <code>first</code> argument high enough so that the <code>fetchMore</code> callback isn't called immediately after the view is loaded, but low enough so that you can see that more reviews are fetched once you reach the end of the list. Once everything is working as intended you can use a larger value for the <code>first</code> argument.</p>",
+              "validationIssues": []
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "69a6709d-59ac-431e-b18e-b78738fec21c",
+                "order": 0,
+                "title": "Done",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": {
+            "awardPointsEvenIfWrong": false,
+            "body": null,
+            "grantPointsPolicy": "grant_whenever_possible",
+            "items": [
+              {
+                "body": null,
+                "failureMessage": null,
+                "id": "69a6709d-59ac-431e-b18e-b78738fec21c",
+                "order": 0,
+                "successMessage": null,
+                "title": "Done",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "submitMessage": null,
+            "title": null,
+            "version": "2"
+          },
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "f31d53d9-54bb-4410-acec-23f13b69f76d": {
+    "exercise": {
+      "id": "f31d53d9-54bb-4410-acec-23f13b69f76d",
+      "created_at": "2026-04-16T11:35:37.974891Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "28. Publishing the app via EAS Publish",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 11,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "1d23961a-6d67-415c-a549-eb45f855b251",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "e3bcbd7c-946b-4cb9-9bd1-e5ce3c39708e",
+      "exercise_tasks": [
+        {
+          "id": "391c03bd-5f6f-4087-9e5b-4009b7fb1018",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "e3bcbd7c-946b-4cb9-9bd1-e5ce3c39708e",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "<strong><em>If the QR code is missing from the readme, your submissions will be rejected, and you will fail the course.</em></strong>",
+                "level": 2
+              },
+              "clientId": "e5af0016-5a60-4045-ad80-42e087adc88c",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/heading"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "e579453d-fc5b-4f6e-aada-e1bce4a00374",
+                "order": 0,
+                "title": "I have read and understood the above",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 1,
+          "deleted_at": null
+        },
+        {
+          "id": "444fe295-6c9f-4c92-881d-e0d57272df72",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "e3bcbd7c-946b-4cb9-9bd1-e5ce3c39708e",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Publish the final version of your application via EAS Update by following the instructions in the course material.",
+                "dropCap": false,
+                "peer_or_self_review_config": "{\"id\":\"3bc048fc-171c-4a25-8c4f-15ff49ba83c6\",\"exercise_id\":\"27963151-686e-4218-bbc8-1e696e06cb41\",\"course_id\":\"531e25a9-237e-4b9b-9cec-6e4c00bd04e4\",\"processing_strategy\":\"AutomaticallyGradeOrManualReviewByAverage\",\"accepting_threshold\":2.1,\"peer_reviews_to_give\":3,\"peer_reviews_to_receive\":2,\"points_are_all_or_nothing\":true,\"reset_answer_if_zero_points_from_review\":false,\"review_instructions\":[]}",
+                "private_spec": "{\"version\":\"4\",\"awardPointsEvenIfWrong\":false,\"grantPointsPolicy\":\"grant_whenever_possible\",\"title\":null,\"body\":null,\"quizItemDisplayDirection\":\"vertical\",\"items\":[{\"type\":\"checkbox\",\"id\":\"3c30197c-df8b-489c-94b2-26caa839a60d\",\"body\":null,\"order\":0,\"title\":\"Done\",\"feedbackMessages\":[]}],\"feedbackMessages\":[]}"
+              },
+              "clientId": "0275dd49-5fee-4074-8cb4-259e5b42a46e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Then add a <em>README.md</em> file to the root of the repository and include a screenshot of the QR code in it. Make sure that the application opened through the QR code actually works, because the course instructor will inspect your application using the QR code before awarding credit.",
+                "dropCap": false,
+                "peer_or_self_review_config": "{\"id\":\"3bc048fc-171c-4a25-8c4f-15ff49ba83c6\",\"exercise_id\":\"27963151-686e-4218-bbc8-1e696e06cb41\",\"course_id\":\"531e25a9-237e-4b9b-9cec-6e4c00bd04e4\",\"processing_strategy\":\"AutomaticallyGradeOrManualReviewByAverage\",\"accepting_threshold\":2.1,\"peer_reviews_to_give\":3,\"peer_reviews_to_receive\":2,\"points_are_all_or_nothing\":true,\"reset_answer_if_zero_points_from_review\":false,\"review_instructions\":[]}",
+                "private_spec": "{\"version\":\"4\",\"awardPointsEvenIfWrong\":false,\"grantPointsPolicy\":\"grant_whenever_possible\",\"title\":null,\"body\":null,\"quizItemDisplayDirection\":\"vertical\",\"items\":[{\"type\":\"checkbox\",\"id\":\"3c30197c-df8b-489c-94b2-26caa839a60d\",\"body\":null,\"order\":0,\"title\":\"Done\",\"feedbackMessages\":[]}],\"feedbackMessages\":[]}"
+              },
+              "clientId": "2e9ce32f-90fc-4c59-82c4-ba65b84aa63a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "<strong>Note:</strong> Some students have reported issues when trying to open the application via Expo Go on a physical phone using the QR code. However, opening the QR code within an emulator seems to work correctly.",
+                "dropCap": false,
+                "peer_or_self_review_config": "{\"id\":\"3bc048fc-171c-4a25-8c4f-15ff49ba83c6\",\"exercise_id\":\"27963151-686e-4218-bbc8-1e696e06cb41\",\"course_id\":\"531e25a9-237e-4b9b-9cec-6e4c00bd04e4\",\"processing_strategy\":\"AutomaticallyGradeOrManualReviewByAverage\",\"accepting_threshold\":2.1,\"peer_reviews_to_give\":3,\"peer_reviews_to_receive\":2,\"points_are_all_or_nothing\":true,\"reset_answer_if_zero_points_from_review\":false,\"review_instructions\":[]}",
+                "private_spec": "{\"version\":\"4\",\"awardPointsEvenIfWrong\":false,\"grantPointsPolicy\":\"grant_whenever_possible\",\"title\":null,\"body\":null,\"quizItemDisplayDirection\":\"vertical\",\"items\":[{\"type\":\"checkbox\",\"id\":\"3c30197c-df8b-489c-94b2-26caa839a60d\",\"body\":null,\"order\":0,\"title\":\"Done\",\"feedbackMessages\":[]}],\"feedbackMessages\":[]}"
+              },
+              "clientId": "a9706c87-ab5b-4b53-8e0a-02cfbd9fd255",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Your&nbsp;<em>README.md</em>&nbsp;file can start, for example, like this:",
+                "dropCap": false,
+                "peer_or_self_review_config": "{\"id\":\"3bc048fc-171c-4a25-8c4f-15ff49ba83c6\",\"exercise_id\":\"27963151-686e-4218-bbc8-1e696e06cb41\",\"course_id\":\"531e25a9-237e-4b9b-9cec-6e4c00bd04e4\",\"processing_strategy\":\"AutomaticallyGradeOrManualReviewByAverage\",\"accepting_threshold\":2.1,\"peer_reviews_to_give\":3,\"peer_reviews_to_receive\":2,\"points_are_all_or_nothing\":true,\"reset_answer_if_zero_points_from_review\":false,\"review_instructions\":[]}",
+                "private_spec": "{\"version\":\"4\",\"awardPointsEvenIfWrong\":false,\"grantPointsPolicy\":\"grant_whenever_possible\",\"title\":null,\"body\":null,\"quizItemDisplayDirection\":\"vertical\",\"items\":[{\"type\":\"checkbox\",\"id\":\"3c30197c-df8b-489c-94b2-26caa839a60d\",\"body\":null,\"order\":0,\"title\":\"Done\",\"feedbackMessages\":[]}],\"feedbackMessages\":[]}"
+              },
+              "clientId": "d81333c8-03c3-45cd-81f2-136e9c0c40c5",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "alt": "Example content for README.md file",
+                "blurDataUrl": "",
+                "caption": "",
+                "href": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/L3UrSRdPLPQ41xargTxtKwBZRbw1UX.png",
+                "linkDestination": "media",
+                "sizeSlug": "full",
+                "url": "https://courses.mooc.fi/api/v0/files/course/531e25a9-237e-4b9b-9cec-6e4c00bd04e4/images/L3UrSRdPLPQ41xargTxtKwBZRbw1UX.png"
+              },
+              "clientId": "2270c903-708b-4ae2-a762-2ce51e081c1d",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/image"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "7bc4357a-d2d2-4c75-89ba-5555ba4129b9",
+                "order": 0,
+                "title": "Done",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "4"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "27963151-686e-4218-bbc8-1e696e06cb41": {
+    "exercise": {
+      "id": "27963151-686e-4218-bbc8-1e696e06cb41",
+      "created_at": "2026-04-16T13:12:24.727136Z",
+      "updated_at": "2026-09-01T20:46:58.930411Z",
+      "name": "29. Your GitHub repository",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "9ac09682-6350-4971-a482-03d97cc641fa",
+      "chapter_id": "15ec9840-1e4f-4d71-9bda-9c5be0a7479f",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 12,
+      "copied_from": null,
+      "max_tries_per_slide": 3,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "525a602a-93e0-4696-88b6-8b83bdafa0d0",
+      "teacher_reviews_answer_after_locking": true
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "32d9f6c4-859c-45fc-9e0b-120606a127ec",
+      "exercise_tasks": [
+        {
+          "id": "4fbd6058-35fe-4938-a496-e812a7a7a531",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "32d9f6c4-859c-45fc-9e0b-120606a127ec",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "In this exercise, you should only tell us what your exercise repository is.",
+                "dropCap": false
+              },
+              "clientId": "3a5e0ce5-c50f-499f-836e-f29933f29032",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "<strong>Note</strong>&nbsp;that if you are using a private repository, add the GitHub user&nbsp;<em>mluukkai</em>&nbsp;as a collaborator. If the repository can not be accessed, your course is not graded.",
+                "dropCap": false
+              },
+              "clientId": "8bb8a5e2-211f-4cfb-8780-24b5ad006ae4",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "formatRegex": "github.com/.+/.+",
+                "id": "a95ce0b7-f25c-4046-b5ea-7c2ef0aea20e",
+                "order": 0,
+                "title": null,
+                "type": "closed-ended-question"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "270f1d88-5449-4828-875b-d441e0e0dfd6": {
+    "exercise": {
+      "id": "270f1d88-5449-4828-875b-d441e0e0dfd6",
+      "created_at": "2026-04-13T06:50:46.031759Z",
+      "updated_at": "2026-08-12T07:21:30.208215Z",
+      "name": "11. Fetching repositories with Apollo Client",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "179a96c2-b970-49ce-b6be-68ee90ed0f5c",
+      "chapter_id": "81525c64-88f8-4361-bca3-d9839129a83a",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 0,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "8679fe27-82fe-46e2-a3bf-0ca0bac728c1",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "7913cc2b-321e-4939-9db7-aa7d2c6fc441",
+      "exercise_tasks": [
+        {
+          "id": "3b356c2f-29f9-4f41-b015-5800c0862270",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "7913cc2b-321e-4939-9db7-aa7d2c6fc441",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "We want to replace the Fetch API implementation in the&nbsp;<code>useRepositories</code>&nbsp;hook with a GraphQL query. Open the Apollo Sandbox at&nbsp;<a href=\"http://localhost:4000/\" target=\"_blank\" rel=\"noreferrer noopener\">http://localhost:4000</a>&nbsp;and take a look at the documentation next to the operations editor. Look up the&nbsp;<code>repositories</code>&nbsp;query. The query has some arguments, however, all of these are optional so you don't need to specify them. In the Apollo Sandbox form a query for fetching the repositories with the fields you are currently displaying in the application. The result will be paginated and it contains the up to first 30 results by default. For now, you can ignore the pagination entirely.",
+                "dropCap": false
+              },
+              "clientId": "d6f57a68-8af5-4a8c-b010-44267b600c2c",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Once the query is working in the Apollo Sandbox, use it to replace the Fetch API implementation in the <code>useRepositories</code> hook. This can be achieved using the <a href=\"https://www.apollographql.com/docs/react/api/react/useQuery\" target=\"_blank\" rel=\"noreferrer noopener\">useQuery</a> hook. To avoid future caching issues, use the <code>cache-and-network</code> <a href=\"https://www.apollographql.com/docs/react/data/queries/#setting-a-fetch-policy\" target=\"_blank\" rel=\"noreferrer noopener\">fetch policy</a> in the query. It can be used with the <code>useQuery</code> hook like this:",
+                "dropCap": false
+              },
+              "clientId": "8d6d9d31-614f-46b8-b45b-2148acf34097",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "useQuery(MY_QUERY, {\n  fetchPolicy: 'cache-and-network',\n  // Other options\n});"
+              },
+              "clientId": "6c37005b-64a9-48cd-b355-75c154b54dee",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "The&nbsp;<code>gql</code>&nbsp;template literal tag can be imported from the&nbsp;<em>@apollo/client</em>&nbsp;library as instructed earlier. Consider using the structure recommended earlier for the GraphQL related code.",
+                "dropCap": false
+              },
+              "clientId": "33aee455-9e33-499c-9d3a-7c429c3c58d5",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The changes in the&nbsp;<code>useRepositories</code>&nbsp;hook should not affect the&nbsp;<code>RepositoryList</code>&nbsp;component in any way.",
+                "dropCap": false
+              },
+              "clientId": "fe5d0650-2674-4dc2-818c-bd18ad510864",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "c4ee74ec-8ded-4a1d-9bcf-28f0fa3e3ae7",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "4b36d28d-8b62-45b5-9385-95f22b2fabdf": {
+    "exercise": {
+      "id": "4b36d28d-8b62-45b5-9385-95f22b2fabdf",
+      "created_at": "2026-04-13T07:01:28.188342Z",
+      "updated_at": "2026-08-12T07:21:30.208215Z",
+      "name": "12. Environment variables",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "179a96c2-b970-49ce-b6be-68ee90ed0f5c",
+      "chapter_id": "81525c64-88f8-4361-bca3-d9839129a83a",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 1,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "cae2efa7-f20c-4c2d-a484-d56e9c6d6bf9",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "f7e5c1f7-cded-4faa-8cf5-8692da91deaa",
+      "exercise_tasks": [
+        {
+          "id": "d85e132c-aba5-4cf6-9193-bbbbf040cf54",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "f7e5c1f7-cded-4faa-8cf5-8692da91deaa",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Instead of the hardcoded Apollo Server's URL, use an environment variable defined in the <em>.env</em> file when initializing the Apollo Client. You can name the environment variable for example <code>EXPO_PUBLIC_APOLLO_URI</code>.",
+                "dropCap": false
+              },
+              "clientId": "3caedd73-1621-427a-a680-38ed8b244972",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "3d898e6f-09e9-44d1-b064-5f7b920444b9",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "e095af9b-f98e-45df-ba5b-d874e38d9429": {
+    "exercise": {
+      "id": "e095af9b-f98e-45df-ba5b-d874e38d9429",
+      "created_at": "2026-04-13T07:01:28.188342Z",
+      "updated_at": "2026-08-12T07:21:30.208215Z",
+      "name": "13. The sign in form mutation",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "179a96c2-b970-49ce-b6be-68ee90ed0f5c",
+      "chapter_id": "81525c64-88f8-4361-bca3-d9839129a83a",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 2,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "066ee050-552d-4f41-9be5-94f2428dc7c0",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "f073fe75-52dc-469e-852e-009132a812cd",
+      "exercise_tasks": [
+        {
+          "id": "e3c463e0-348e-4302-b4be-9e33145af412",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "f073fe75-52dc-469e-852e-009132a812cd",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "The current implementation of the sign in form doesn't do much with the submitted user's credentials. Let's do something about that in this exercise. First, read the rate-repository-api server's&nbsp;<a href=\"https://github.com/fullstack-hy2020/rate-repository-api#-authentication\" target=\"_blank\" rel=\"noreferrer noopener\">authentication documentation</a>&nbsp;and test the provided queries and mutations in the Apollo Sandbox. If the database doesn't have any users, you can populate the database with some seed data. Instructions for this can be found in the&nbsp;<a href=\"https://github.com/fullstack-hy2020/rate-repository-api#-getting-started\" target=\"_blank\" rel=\"noreferrer noopener\">getting started</a>&nbsp;section of the README.",
+                "dropCap": false
+              },
+              "clientId": "8b55e1a5-1214-4386-a20b-d79d97338f3f",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Once you have figured out how the authentication works, create a file <em>useSignIn.js</em> in the <em>hooks</em> directory. In that file implement a <code>useSignIn</code> hook that sends the <code>authenticate</code> mutation using the <a href=\"https://www.apollographql.com/docs/react/data/mutations\" target=\"_blank\" rel=\"noreferrer noopener\">useMutation</a> hook. Note that the <code>authenticate</code> mutation has a <em>single</em> argument called <code>credentials</code>, which is of type <code>AuthenticateInput</code>. This <a href=\"https://graphql.org/graphql-js/mutations-and-input-types\" target=\"_blank\" rel=\"noreferrer noopener\">input type</a> contains <code>username</code> and <code>password</code> fields.",
+                "dropCap": false
+              },
+              "clientId": "7a205c19-51f3-4aed-b1b7-fbe109ae2bc6",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "The return value of the hook should be a tuple&nbsp;<code>[signIn, result]</code>&nbsp;where&nbsp;<code>result</code>&nbsp;is the mutations result as it is returned by the&nbsp;<code>useMutation</code>&nbsp;hook and&nbsp;<code>signIn</code>&nbsp;a function that runs the mutation with a&nbsp;<code>{ username, password }</code>&nbsp;object argument. Hint: don't pass the mutation function to the return value directly. Instead, return a function that calls the mutation function like this:",
+                "dropCap": false
+              },
+              "clientId": "0f3c702f-f61b-4c27-96c4-cc966f7a7a0a",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "const useSignIn = () =&gt; {\n  const [mutate, result] = useMutation(/* mutation arguments */);\n\n  const signIn = async ({ username, password }) =&gt; {\n    // call the mutate function here with the right arguments\n  };\n\n  return [signIn, result];\n};"
+              },
+              "clientId": "99d6695b-52e2-4549-add5-d9bef319d7d6",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Once the hook is implemented, use it in the&nbsp;<code>SignIn</code>&nbsp;component's&nbsp;<code>onSubmit</code>&nbsp;callback for example like this:",
+                "dropCap": false
+              },
+              "clientId": "c48b53a8-21cd-4e79-b682-06f4d408857f",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "const SignIn = () =&gt; {\n  const [signIn] = useSignIn();\n\n  const onSubmit = async (values) =&gt; {\n    const { username, password } = values;\n\n    try {\n      const { data } = await signIn({ username, password });\n      console.log(data);\n    } catch (e) {\n      console.log(e);\n    }\n  };\n\n  // ...\n};"
+              },
+              "clientId": "9169ada3-6d50-444b-9a79-4c0868a92c45",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "This exercise is completed once you can log the user's&nbsp;<em>authenticate</em>&nbsp;mutations result after the sign in form has been submitted. The mutation result should contain the user's access token.",
+                "dropCap": false
+              },
+              "clientId": "6a367458-c3b9-48d2-b334-4ed81cfb98b0",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "5636097c-4931-4e83-ab1f-3c99c79b5133",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "a95b7a3c-34d1-47eb-9556-b321adf2f266": {
+    "exercise": {
+      "id": "a95b7a3c-34d1-47eb-9556-b321adf2f266",
+      "created_at": "2026-04-13T07:01:28.188342Z",
+      "updated_at": "2026-08-12T07:21:30.208215Z",
+      "name": "14. Storing the access token step1",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "179a96c2-b970-49ce-b6be-68ee90ed0f5c",
+      "chapter_id": "81525c64-88f8-4361-bca3-d9839129a83a",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 3,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "3a4d7f3d-4f97-4435-81e6-502bb61d5603",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "16cf0256-17a3-429e-bbe7-716d6ab3fdef",
+      "exercise_tasks": [
+        {
+          "id": "73aa6b9d-29a0-48fc-82ee-8f9294f61594",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "16cf0256-17a3-429e-bbe7-716d6ab3fdef",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Now that we can obtain the access token we need to store it. Create a file&nbsp;<em>authStorage.js</em>&nbsp;in the&nbsp;<em>utils</em>&nbsp;directory with the following content:",
+                "dropCap": false
+              },
+              "clientId": "284fadcd-a65a-480a-994e-1e09a3677155",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "import AsyncStorage from '@react-native-async-storage/async-storage';\n\nclass AuthStorage {\n  constructor(namespace = 'auth') {\n    this.namespace = namespace;\n  }\n\n  getAccessToken() {\n    // Get the access token for the storage\n  }\n\n  setAccessToken(accessToken) {\n    // Add the access token to the storage\n  }\n\n  removeAccessToken() {\n    // Remove the access token from the storage\n  }\n}\n\nexport default AuthStorage;"
+              },
+              "clientId": "263ee414-5bb4-471d-b447-48fdbf4e6aaf",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "Next, implement the methods <code>AuthStorage.getAccessToken</code>, <code>AuthStorage.setAccessToken</code> and <code>AuthStorage.removeAccessToken</code>. Use the <code>namespace</code> variable to give your keys a namespace like we did in the previous example.",
+                "dropCap": false
+              },
+              "clientId": "7021a783-e4c6-4715-8523-971b71f3de2e",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "930d2985-9704-45e5-8e9c-e1d564d8c60c",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "bf52a8ab-33da-4a35-88e1-791dc95e1d49": {
+    "exercise": {
+      "id": "bf52a8ab-33da-4a35-88e1-791dc95e1d49",
+      "created_at": "2026-04-13T07:07:09.740485Z",
+      "updated_at": "2026-08-12T07:21:30.208215Z",
+      "name": "15. Storing the access token step2",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "179a96c2-b970-49ce-b6be-68ee90ed0f5c",
+      "chapter_id": "81525c64-88f8-4361-bca3-d9839129a83a",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 4,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "5fc82aba-4a7e-4a26-a18a-27ab77064f6f",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "567895dc-241a-4b9b-a288-4cb671635dab",
+      "exercise_tasks": [
+        {
+          "id": "26a6a0fa-4ffe-42df-8f83-2171d73c6e4d",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "567895dc-241a-4b9b-a288-4cb671635dab",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "Improve the&nbsp;<code>useSignIn</code>&nbsp;hook so that it stores the user's access token retrieved from the&nbsp;<em>authenticate</em>&nbsp;mutation. The return value of the hook should not change. The only change you should make to the&nbsp;<code>SignIn</code>&nbsp;component is that you should redirect the user to the reviewed repositories list view after a successful sign in. You can achieve this by using the&nbsp;<a href=\"https://reactrouter.com/api/hooks/useNavigate\" target=\"_blank\" rel=\"noreferrer noopener\">useNavigate</a>&nbsp;hook.",
+                "dropCap": false
+              },
+              "clientId": "f99cf904-9d8d-4173-a0fe-4bb024fac3ef",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "After the&nbsp;<em>authenticate</em>&nbsp;mutation has been executed and you have stored the user's access token to the storage, you should reset the Apollo Client's store. This will clear the Apollo Client's cache and re-execute all active queries. You can do this by using the Apollo Client's&nbsp;<a href=\"https://www.apollographql.com/docs/react/api/core/ApolloClient#resetstore\" target=\"_blank\" rel=\"noreferrer noopener\">resetStore</a>&nbsp;method. You can access the Apollo Client in the&nbsp;<code>useSignIn</code>&nbsp;hook using the&nbsp;<a href=\"https://www.apollographql.com/docs/react/api/react/hooks/#useapolloclient\" target=\"_blank\" rel=\"noreferrer noopener\">useApolloClient</a>&nbsp;hook. Note that the order of the execution is crucial and should be the following:",
+                "dropCap": false
+              },
+              "clientId": "449026d3-8e16-4959-a259-ae3015bf0ff4",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "const { data } = await mutate(/* options */);\nawait authStorage.setAccessToken(/* access token from the data */);\napolloClient.resetStore();"
+              },
+              "clientId": "5b1b4b6b-721d-43c8-ba58-d38c8bcb38cb",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "2bebad12-11c4-4797-ba15-302a1f5538ac",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  },
+  "4a32f05e-efa3-44d0-800c-15d0b9b40810": {
+    "exercise": {
+      "id": "4a32f05e-efa3-44d0-800c-15d0b9b40810",
+      "created_at": "2026-04-13T07:07:09.740485Z",
+      "updated_at": "2026-08-12T07:21:30.208215Z",
+      "name": "16. Sign out",
+      "course_id": "531e25a9-237e-4b9b-9cec-6e4c00bd04e4",
+      "exam_id": null,
+      "page_id": "179a96c2-b970-49ce-b6be-68ee90ed0f5c",
+      "chapter_id": "81525c64-88f8-4361-bca3-d9839129a83a",
+      "deadline": null,
+      "deleted_at": null,
+      "score_maximum": 1,
+      "order_number": 5,
+      "copied_from": null,
+      "max_tries_per_slide": 1,
+      "limit_number_of_tries": true,
+      "needs_peer_review": false,
+      "needs_self_review": false,
+      "use_course_default_peer_or_self_review_config": false,
+      "exercise_language_group_id": "67344dcc-460c-4bf9-9a3d-40dbe66c3d1f",
+      "teacher_reviews_answer_after_locking": false
+    },
+    "can_post_submission": false,
+    "current_exercise_slide": {
+      "id": "581a279b-a8bc-4ddd-8352-f146296a9101",
+      "exercise_tasks": [
+        {
+          "id": "d40ded4f-3a79-428c-aaa9-c92d4a3bba50",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "581a279b-a8bc-4ddd-8352-f146296a9101",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "The final step in completing the sign in feature is to implement a sign out feature. The&nbsp;<code>me</code>&nbsp;query can be used to check the authenticated user's information. If the query's result is&nbsp;<code>null</code>, that means that the user is not authenticated. Open the Apollo Sandbox and run the following query:",
+                "dropCap": false
+              },
+              "clientId": "2faca102-fa76-42fa-9ac0-fad84794b902",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "{\n  me {\n    id\n    username\n  }\n}"
+              },
+              "clientId": "abe61c6f-4b4d-4ee0-9fe5-ae55643e960f",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/code"
+            },
+            {
+              "attributes": {
+                "content": "You will probably end up with the&nbsp;<code>null</code>&nbsp;result. This is because the Apollo Sandbox is not authenticated, meaning that it doesn't send a valid access token with the request. Revise the&nbsp;<a href=\"https://github.com/fullstack-hy2020/rate-repository-api#-authentication\" target=\"_blank\" rel=\"noreferrer noopener\">authentication documentation</a>&nbsp;and retrieve an access token using the&nbsp;<code>authenticate</code>&nbsp;mutation. Use this access token in the&nbsp;<em>Authorization</em>&nbsp;header as instructed in the documentation. Now, run the&nbsp;<code>me</code>&nbsp;query again and you should be able to see the authenticated user's information.",
+                "dropCap": false
+              },
+              "clientId": "dfe5e537-b2b7-42d7-acab-a39bb44d1520",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Open the&nbsp;<code>AppBar</code>&nbsp;component in the&nbsp;<em>AppBar.jsx</em>&nbsp;file where you currently have the tabs \"Repositories\" and \"Sign in\". Change the tabs so that if the user is signed in the tab \"Sign out\" is displayed, otherwise show the \"Sign in\" tab. You can achieve this by using the&nbsp;<code>me</code>&nbsp;query with the&nbsp;<a href=\"https://www.apollographql.com/docs/react/api/react/useQuery\" target=\"_blank\" rel=\"noreferrer noopener\">useQuery</a>&nbsp;hook.",
+                "dropCap": false
+              },
+              "clientId": "2f7b3a5a-ae88-437e-8eb1-a561994af791",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            },
+            {
+              "attributes": {
+                "content": "Pressing the \"Sign out\" tab should remove the user's access token from the storage and reset the Apollo Client's store with the&nbsp;<a href=\"https://www.apollographql.com/docs/react/api/core/ApolloClient#resetstore\" target=\"_blank\" rel=\"noreferrer noopener\">resetStore</a>&nbsp;method. Calling the&nbsp;<code>resetStore</code>&nbsp;method should automatically re-execute all active queries which means that the&nbsp;<code>me</code>&nbsp;query should be re-executed. Note that the order of execution is crucial: access token must be removed from the storage&nbsp;<em>before</em>&nbsp;the Apollo Client's store is reset.",
+                "dropCap": false
+              },
+              "clientId": "5820f0bd-2b72-4908-bd2b-a19420402128",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/paragraph"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "827ca37b-e03f-41ac-bb64-c7ad6a045400",
+                "order": 0,
+                "title": "Done!",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 0,
+          "deleted_at": null
+        }
+      ]
+    },
+    "exercise_status": null,
+    "exercise_slide_submission_counts": {},
+    "peer_or_self_review_config": null,
+    "previous_exercise_slide_submission": null,
+    "user_course_instance_exercise_service_variables": [],
+    "should_show_reset_message": null,
+    "teacher_grading_decision": null
+  }
+}
