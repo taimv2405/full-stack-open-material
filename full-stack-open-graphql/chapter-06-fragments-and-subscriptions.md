@@ -1,7 +1,7 @@
 # Chapter 6: Fragments and subscriptions
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-6
-Exported: 2026-08-29T06:23:34.819Z
+Exported: 2026-09-13T08:06:39.904Z
 
 We are approaching the end of this part. Let's finish by having a look at a few more details about GraphQL.
 
@@ -951,8 +951,12 @@ query {
 
 ## Exercise: 29. Your GitHub repository
 
-## If the tests do not pass, your submission will be rejected, and you will fail the course.
-
 In this exercise, you should only tell us what your exercise repository is.
 
 Note
+
+- If you are using a private repository, add the GitHub user mluukkai as a collaborator. If the repository can not be accessed, your course is not graded.
+
+- All the tests added in the earlier exercises must pass in your GitHub repository. If tests do not pass, your submission will be rejected.
+
+## If the tests do not pass, your submission will be rejected, and you will fail the course.

@@ -1,7 +1,7 @@
 # Chapter 2: GraphQL server
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-2
-Exported: 2026-08-29T06:23:34.819Z
+Exported: 2026-09-13T08:06:39.904Z
 
 REST, familiar to us from the previous parts of the course, has long been the most prevalent way to implement the interfaces servers offer for browsers, and in general the integration between different applications on the web.
 

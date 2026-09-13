@@ -2464,7 +2464,7 @@
     "exercise": {
       "id": "50de5ea5-9e8c-422b-add4-c89529341632",
       "created_at": "2026-04-23T12:56:31.642349Z",
-      "updated_at": "2026-06-09T15:20:13.788009Z",
+      "updated_at": "2026-09-01T19:37:52.699380Z",
       "name": "25. OPTIONAL: Subscriptions - server",
       "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
       "exam_id": null,
@@ -2480,7 +2480,7 @@
       "needs_peer_review": false,
       "needs_self_review": false,
       "use_course_default_peer_or_self_review_config": false,
-      "exercise_language_group_id": "9d8fe8d3-1e5f-4f71-b8e0-482daa5b3578",
+      "exercise_language_group_id": "c8017c0d-3fdc-4b3b-9dbd-e8a3d1c5c4ad",
       "teacher_reviews_answer_after_locking": false
     },
     "can_post_submission": false,
@@ -2569,7 +2569,7 @@
     "exercise": {
       "id": "e169b7a4-b6c8-4ddf-8369-849b997afd73",
       "created_at": "2026-04-23T12:56:31.642349Z",
-      "updated_at": "2026-06-09T15:20:13.788009Z",
+      "updated_at": "2026-09-01T19:37:52.699380Z",
       "name": "26. OPTIONAL: Subscriptions - client, part 1",
       "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
       "exam_id": null,
@@ -2585,7 +2585,7 @@
       "needs_peer_review": false,
       "needs_self_review": false,
       "use_course_default_peer_or_self_review_config": false,
-      "exercise_language_group_id": "4b36ee4e-7306-4140-a1ce-0c8f95c9081a",
+      "exercise_language_group_id": "6de86fe1-e053-466a-be92-f6d416e36c85",
       "teacher_reviews_answer_after_locking": false
     },
     "can_post_submission": false,
@@ -2674,7 +2674,7 @@
     "exercise": {
       "id": "ecbf964c-c6fc-44fc-8ab2-5913bce8f9c1",
       "created_at": "2026-04-23T12:56:31.642349Z",
-      "updated_at": "2026-06-09T15:20:13.788009Z",
+      "updated_at": "2026-09-01T19:37:52.699380Z",
       "name": "27. OPTIONAL: Subscriptions - client, part 2",
       "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
       "exam_id": null,
@@ -2690,7 +2690,7 @@
       "needs_peer_review": false,
       "needs_self_review": false,
       "use_course_default_peer_or_self_review_config": false,
-      "exercise_language_group_id": "9b193e92-af8d-4304-aa03-7627ac7e6e30",
+      "exercise_language_group_id": "1b783720-612e-4533-92b7-12d1b1e67411",
       "teacher_reviews_answer_after_locking": false
     },
     "can_post_submission": false,
@@ -2779,7 +2779,7 @@
     "exercise": {
       "id": "568ebf98-d785-4afd-a78b-aacc9c88dc31",
       "created_at": "2026-04-23T12:56:31.642349Z",
-      "updated_at": "2026-06-09T15:20:13.788009Z",
+      "updated_at": "2026-09-01T19:37:52.699380Z",
       "name": "28. OPTIONAL: n+1",
       "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
       "exam_id": null,
@@ -2795,7 +2795,7 @@
       "needs_peer_review": false,
       "needs_self_review": false,
       "use_course_default_peer_or_self_review_config": false,
-      "exercise_language_group_id": "c967bdbd-f49b-4c52-8793-6ad80b463452",
+      "exercise_language_group_id": "1e041899-624b-47c6-a999-4aa3c7a10c55",
       "teacher_reviews_answer_after_locking": false
     },
     "can_post_submission": false,
@@ -2893,7 +2893,7 @@
     "exercise": {
       "id": "f6926cac-492d-4caf-a97f-5c2c8e776c19",
       "created_at": "2026-04-23T13:08:32.571048Z",
-      "updated_at": "2026-06-09T15:20:13.788009Z",
+      "updated_at": "2026-09-01T19:37:52.699380Z",
       "name": "29. Your GitHub repository",
       "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
       "exam_id": null,
@@ -2909,52 +2909,13 @@
       "needs_peer_review": false,
       "needs_self_review": false,
       "use_course_default_peer_or_self_review_config": false,
-      "exercise_language_group_id": "b3a7f9ed-8e6f-4b6b-90a1-113f7e0a86a7",
-      "teacher_reviews_answer_after_locking": false
+      "exercise_language_group_id": "da08886c-44b4-4df2-b526-ae04ea568276",
+      "teacher_reviews_answer_after_locking": true
     },
     "can_post_submission": false,
     "current_exercise_slide": {
       "id": "4ab279e7-7472-4c91-a1e3-8b29210c1c77",
       "exercise_tasks": [
-        {
-          "id": "4dda06ed-4cd6-415c-911f-d12bad63335e",
-          "exercise_service_slug": "quizzes",
-          "exercise_slide_id": "4ab279e7-7472-4c91-a1e3-8b29210c1c77",
-          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
-          "pseudonumous_user_id": null,
-          "assignment": [
-            {
-              "attributes": {
-                "content": "<strong><em>If the tests do not pass, your submission will be rejected, and you will fail the course.</em></strong>",
-                "level": 2
-              },
-              "clientId": "423fb1df-ba64-4711-b6b5-250b93f4214c",
-              "innerBlocks": [],
-              "isValid": true,
-              "name": "core/heading"
-            }
-          ],
-          "public_spec": {
-            "body": null,
-            "items": [
-              {
-                "body": null,
-                "id": "03c45e19-b72d-48f4-9f57-3fee58da327f",
-                "order": 0,
-                "title": "I have read and understood the above",
-                "type": "checkbox"
-              }
-            ],
-            "quizItemDisplayDirection": "vertical",
-            "title": null,
-            "version": "2"
-          },
-          "model_solution_spec": null,
-          "previous_submission": null,
-          "previous_submission_grading": null,
-          "order_number": 1,
-          "deleted_at": null
-        },
         {
           "id": "431c5205-b06c-4936-80b1-84e00782b6c6",
           "exercise_service_slug": "quizzes",
@@ -3043,6 +3004,45 @@
           "previous_submission": null,
           "previous_submission_grading": null,
           "order_number": 0,
+          "deleted_at": null
+        },
+        {
+          "id": "4dda06ed-4cd6-415c-911f-d12bad63335e",
+          "exercise_service_slug": "quizzes",
+          "exercise_slide_id": "4ab279e7-7472-4c91-a1e3-8b29210c1c77",
+          "exercise_iframe_url": "https://courses.mooc.fi/quizzes/iframe",
+          "pseudonumous_user_id": null,
+          "assignment": [
+            {
+              "attributes": {
+                "content": "<strong><em>If the tests do not pass, your submission will be rejected, and you will fail the course.</em></strong>",
+                "level": 2
+              },
+              "clientId": "423fb1df-ba64-4711-b6b5-250b93f4214c",
+              "innerBlocks": [],
+              "isValid": true,
+              "name": "core/heading"
+            }
+          ],
+          "public_spec": {
+            "body": null,
+            "items": [
+              {
+                "body": null,
+                "id": "03c45e19-b72d-48f4-9f57-3fee58da327f",
+                "order": 0,
+                "title": "I have read and understood the above",
+                "type": "checkbox"
+              }
+            ],
+            "quizItemDisplayDirection": "vertical",
+            "title": null,
+            "version": "2"
+          },
+          "model_solution_spec": null,
+          "previous_submission": null,
+          "previous_submission_grading": null,
+          "order_number": 1,
           "deleted_at": null
         }
       ]
@@ -3612,7 +3612,7 @@
     "exercise": {
       "id": "81d912fb-be09-4d1b-a102-ef7c3ceca799",
       "created_at": "2026-04-23T13:26:50.046211Z",
-      "updated_at": "2026-04-23T13:32:16.464637Z",
+      "updated_at": "2026-09-02T08:29:30.013171Z",
       "name": "0. Warmup",
       "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
       "exam_id": null,
@@ -3628,7 +3628,7 @@
       "needs_peer_review": false,
       "needs_self_review": false,
       "use_course_default_peer_or_self_review_config": false,
-      "exercise_language_group_id": "7e525c2f-ae92-45bc-a3d7-e885f86e991b",
+      "exercise_language_group_id": "1eed6ad3-0bd0-41a4-a584-a7cbd52d1174",
       "teacher_reviews_answer_after_locking": false
     },
     "can_post_submission": false,

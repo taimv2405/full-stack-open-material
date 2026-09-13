@@ -1,7 +1,7 @@
 # Chapter 5: Login and updating the cache
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-5
-Exported: 2026-08-29T06:23:34.819Z
+Exported: 2026-09-13T08:06:39.904Z
 
 The frontend of our application shows the phone directory just fine with the updated server. However, if we want to add new persons, we have to add login functionality to the frontend.
 

@@ -1,7 +1,7 @@
 # Chapter 1: Getting Started
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-1
-Exported: 2026-08-29T06:23:34.819Z
+Exported: 2026-09-13T08:06:39.904Z
 
 In this part, we will explore GraphQL, a modern alternative to REST for implementing server interfaces. We will learn the core concepts of GraphQL, including schemas, queries, mutations, and subscriptions, and build a GraphQL server using Apollo Server. On the frontend, we will connect a React application to the GraphQL backend using Apollo Client, handling data fetching, caching, and state management. We will also add a database and user authentication to the backend, and finish by looking at advanced topics such as optimizing queries.
 
@@ -43,6 +43,20 @@ The Locking a chapter activity looks like this:
 
 After you have completed the exercises and those are graded, you can get the ECTS credits as follows
 
+#### University of Helsinki degree students and exchange students
+
+1. Enroll directly through your Sisu account (Sisu: Structure of studies).
+2. Complete all required exercises.
+
+#### Others
+
+1. Complete all required exercises.
+2. Go to the course front page.
+3. Scroll down until you see an element that says Congratulations!
+4. Click the REGISTER  button.
+5. Fill in the open university (University of Helsinki) enrolment form. Use the same email address that you used to complete the course.
+6. The credits are usually registered in the University of Helsinki’s study register within two days of enrolment.
+
 Registering the credits takes usually two days.
 
 The course certificate is available also at the course front page.
@@ -63,9 +77,21 @@ A practical, learning-first approach to using AI on this course:
 
 Before using AI
 
+- Try on your own first: write a solution or at least sketch your approach.
+- Pinpoint the problem: identify the exact error message, unclear concept, or design trade-off you’re stuck on.
+
 How to use AI wisely
 
+- Explanations: ask for clear explanations of concepts or code (why something works, not just how).
+- Debugging: share the error, the relevant code, and what you’ve already tried; ask for hypotheses and possible fixes.
+- Peer review: request feedback on your solution, edge cases, complexity, and alternatives.
+- Design support: ask to break the problem into parts, propose test cases, and define success metrics.
+
 What to avoid
+
+- Copying complete solutions without understanding them.
+- Overly broad requests (“write the entire assignment”) that short-circuit your learning.
+- Relying on a single answer without verification or tests.
 
 Bottom line: let AI be your explainer, reviewer, and debugging partner—not your substitute for thinking and practice.
 

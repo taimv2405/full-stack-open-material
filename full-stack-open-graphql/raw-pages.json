@@ -3555,7 +3555,7 @@
   {
     "id": "f28b065e-a940-4e8c-a75f-8fdbecb88dc0",
     "created_at": "2026-04-23T08:06:30.806111Z",
-    "updated_at": "2026-06-09T15:20:13.788009Z",
+    "updated_at": "2026-09-01T19:37:52.699380Z",
     "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
     "exam_id": null,
     "chapter_id": "04c4da07-f2a9-4735-b3a0-d3456dec5f3d",
@@ -6721,7 +6721,7 @@
   {
     "id": "f58de0f7-7516-4eae-9174-31e9240e0439",
     "created_at": "2026-04-17T08:50:01.752596Z",
-    "updated_at": "2026-04-23T13:32:16.464637Z",
+    "updated_at": "2026-09-02T08:29:30.013171Z",
     "course_id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
     "exam_id": null,
     "chapter_id": "5e664d4c-7655-4e91-a010-dd7e3ddc9ae1",
@@ -6964,50 +6964,118 @@
           "content": "After you have completed the exercises and those are graded, you can get the ECTS credits as follows",
           "dropCap": false
         },
-        "clientId": "3b7df56d-d6fd-4682-b12e-31ab6171c5f2",
+        "clientId": "5c7c2f78-a4d9-4e60-a949-8a8a8075d6d2",
         "innerBlocks": [],
         "isValid": true,
         "name": "core/paragraph"
       },
       {
         "attributes": {
+          "content": "University of Helsinki degree students and exchange students",
+          "level": 4
+        },
+        "clientId": "b580bdca-1d1d-4380-b4a1-f44ab7c6b898",
+        "innerBlocks": [],
+        "isValid": true,
+        "name": "core/heading"
+      },
+      {
+        "attributes": {
           "ordered": true,
           "values": ""
         },
-        "clientId": "dbef4dec-0817-48fb-92f6-63f6de527257",
+        "clientId": "6faaddcb-6aa2-4724-b494-8b1485ddd7a4",
         "innerBlocks": [
           {
             "attributes": {
-              "content": "Go to the course front page."
+              "content": "Enroll directly through your Sisu account (Sisu: Structure of studies)."
             },
-            "clientId": "4869245a-0b3c-428e-a7ec-8efa8334cea6",
+            "clientId": "afe36945-eca0-4990-9903-282ff685afe5",
             "innerBlocks": [],
             "isValid": true,
             "name": "core/list-item"
           },
           {
             "attributes": {
-              "content": "Scroll down until you see an element that says <em>Congratulations!</em>"
+              "content": "Complete all required exercises."
             },
-            "clientId": "adeff524-41f7-47eb-8dd4-4f944297fc03",
+            "clientId": "f1ed3d0e-e498-4ef4-9849-eba2c2841d42",
+            "innerBlocks": [],
+            "isValid": true,
+            "name": "core/list-item"
+          }
+        ],
+        "isValid": true,
+        "name": "core/list"
+      },
+      {
+        "attributes": {
+          "content": "Others",
+          "level": 4
+        },
+        "clientId": "90f8f177-092a-435e-97fe-0292d18f68a2",
+        "innerBlocks": [],
+        "isValid": true,
+        "name": "core/heading"
+      },
+      {
+        "attributes": {
+          "ordered": true,
+          "start": 1,
+          "values": ""
+        },
+        "clientId": "5091d170-e62c-41e0-b3a2-c5eeb3aa241a",
+        "innerBlocks": [
+          {
+            "attributes": {
+              "content": "Complete all required exercises."
+            },
+            "clientId": "04b59fb0-8942-46bd-a7c8-2cdcee431aea",
             "innerBlocks": [],
             "isValid": true,
             "name": "core/list-item"
           },
           {
             "attributes": {
-              "content": "Click the <em>REGISTER </em>button."
+              "content": "Go to the course front page.  "
             },
-            "clientId": "1b177a45-b288-402a-b78c-77ee98557467",
+            "clientId": "f6152d6a-9279-463e-a1d7-932b4969114a",
             "innerBlocks": [],
             "isValid": true,
             "name": "core/list-item"
           },
           {
             "attributes": {
-              "content": "Fill in the Open University (University of Helsinki) enrollment form. Be sure to enter the email address that you have used to complete the course in the enrolment form field 'Your email address on the MOOC course'."
+              "content": "Scroll down until you see an element that says <em>Congratulations</em>!  "
             },
-            "clientId": "1718fe12-87d6-4224-b1ad-aafb7a482cbe",
+            "clientId": "e3521515-06a0-4134-bdec-0a9a796ba677",
+            "innerBlocks": [],
+            "isValid": true,
+            "name": "core/list-item"
+          },
+          {
+            "attributes": {
+              "content": "Click the <em>REGISTER</em><em> </em> button.  "
+            },
+            "clientId": "fc4fd42b-e59e-4f04-8edc-d1d8b011aed2",
+            "innerBlocks": [],
+            "isValid": true,
+            "name": "core/list-item"
+          },
+          {
+            "attributes": {
+              "content": "Fill in the open university (University of Helsinki) enrolment form. Use the same email address that you used to complete the course."
+            },
+            "clientId": "425ea0b7-aba7-41ac-8b00-939617c1f1e9",
+            "innerBlocks": [],
+            "isValid": true,
+            "name": "core/list-item"
+          },
+          {
+            "attributes": {
+              "content": "The credits are usually registered in the University of Helsinki’s study register within two days of enrolment.  "
+            },
+            "clientId": "2b985fc5-6a02-4c5f-9b5f-8b69f63eeb7f",
             "innerBlocks": [],
             "isValid": true,
             "name": "core/list-item"

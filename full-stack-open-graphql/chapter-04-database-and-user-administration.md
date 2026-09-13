@@ -1,7 +1,7 @@
 # Chapter 4: Database and user administration
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-4
-Exported: 2026-08-29T06:23:34.819Z
+Exported: 2026-09-13T08:06:39.904Z
 
 In this chapter, we’ll start using a database to store data and extend the application with user management. First, however, we’ll refactor the backend code. The current code for the phonebook backend can be found on [GitHub](https://github.com/fullstack-hy2020/graphql-phonebook-backend/tree/part8-3) in the part8-3 branch.
 
@@ -185,6 +185,11 @@ Environment variables are first read from the .env file using the dotenv library
 For now, the contents of index.js are just a stub, but as the application grows it will include more. For example, when we soon switch to using a database for storing data, the database connection must be created before starting the server.
 
 The responsibilities of the application are now clearly separated:
+
+- index.js acts as the main program, whose only responsibility is the startup logic. It ensures that different parts of the application are started in the correct order.
+- The GraphQL schema is defined in the schema.js module. It describes the structure of the API—for example, which queries and mutations are possible through the API and what kinds of fields different objects have.
+- The actual application logic is defined in the resolvers.js module. Its responsibility is, for example, to define what actually happens for different queries, where the data is fetched from, and how it is processed.
+- The code responsible for configuring and starting Apollo Server is defined in a separate module, server.js.
 
 ## Mongoose and Apollo
 
@@ -816,6 +821,11 @@ You can assume that the user will not try to add faulty books or authors, so you
 
 The following things do not have to work just yet:
 
+- `allBooks` query with parameters
+- `bookCount` field of an author object
+- `author` field of a book
+- `editAuthor` mutation
+
 Note: despite the fact that author is now an object within a book, the schema for adding a book can remain same, only the name of the author is given as a parameter
 
 ```
@@ -923,6 +933,10 @@ The resolver's operations are executed only if the `NODE_ENV` environment variab
 The tests are configured to use a separate in-memory database, so they will never delete or modify data in your own database under any circumstances.
 
 Running Tests Locally
+
+- Navigate to the tests-chapter4 folder (you copied the folder to the root of your repository in exercise 1.)
+- Before running tests for the first time, install the dependencies required by the test project using the `npm install` command.
+- Run the tests with the `npm test` command and verify that they pass.
 
 Running Tests in GitHub Actions
 

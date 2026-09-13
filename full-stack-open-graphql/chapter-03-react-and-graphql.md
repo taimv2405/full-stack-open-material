@@ -1,7 +1,7 @@
 # Chapter 3: React and GraphQL
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql/chapter-3
-Exported: 2026-08-29T06:23:34.819Z
+Exported: 2026-09-13T08:06:39.904Z
 
 We will next implement a React app that uses the GraphQL server we created.
 

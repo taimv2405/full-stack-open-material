@@ -69,8 +69,14 @@ const renderBlock = (block, imagePaths, exercises) => {
       return htmlToMarkdown(content)
     case 'core/code':
       return `\`\`\`${attributes.language ?? ''}\n${decodeHtml(content).trim()}\n\`\`\``
-    case 'core/list':
-      return htmlToMarkdown(content)
+    case 'core/list': {
+      const items = (block.innerBlocks ?? []).map((item, index) => {
+        const marker = attributes.ordered ? `${index + 1}.` : '-'
+        const text = htmlToMarkdown(item.attributes?.content ?? '').replace(/\n+/g, ' ')
+        return text ? `${marker} ${text}` : ''
+      }).filter(Boolean)
+      return items.length ? items.join('\n') : htmlToMarkdown(content)
+    }
     case 'core/quote':
       return htmlToMarkdown(content).split('\n').map((line) => `> ${line}`).join('\n')
     case 'core/image': {

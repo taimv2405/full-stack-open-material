@@ -12,4 +12,4 @@ This is an AI-friendly export of the publicly available course material. Markdow
 - [Chapter 6: Fragments and subscriptions](./chapter-06-fragments-and-subscriptions.md)
 
 Source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-graphql
-Exported: 2026-08-29T06:23:34.819Z
+Exported: 2026-09-13T08:06:39.904Z

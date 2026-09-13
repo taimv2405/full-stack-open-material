@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-08-29T06:23:34.819Z",
+  "exported_at": "2026-09-13T08:06:39.904Z",
   "course": {
     "id": "d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8",
     "slug": "full-stack-open-graphql",
@@ -10,7 +10,7 @@
       "title": "Chapter 1: Getting Started",
       "url_path": "/chapter-1",
       "file": "chapter-01-getting-started.md",
-      "updated_at": "2026-04-23T13:32:16.464637Z"
+      "updated_at": "2026-09-02T08:29:30.013171Z"
     },
     {
       "title": "Chapter 2: GraphQL server",
@@ -40,7 +40,7 @@
       "title": "Chapter 6: Fragments and subscriptions",
       "url_path": "/chapter-6",
       "file": "chapter-06-fragments-and-subscriptions.md",
-      "updated_at": "2026-06-09T15:20:13.788009Z"
+      "updated_at": "2026-09-01T19:37:52.699380Z"
     }
   ],
   "images": {
@@ -56,8 +56,8 @@
     "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/CxHusIeojqoTzY0Onr41vPstZQXFHs.png": "assets/image-010.png",
     "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/F3aL68DiSUl67ZLmG1gwwmiBZghdQm.png": "assets/image-011.png",
     "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/FjiXrwIcJ20FMa4F8t34RJRbk3H2hi.png": "assets/image-012.png",
-    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/IWpkbtzPYYZ5fG4SsrwZc8bMSc7iCi.png": "assets/image-013.png",
     "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/IYEDc2GHRSMJS6uGME2IpMn8ItSwEF.png": "assets/image-014.png",
+    "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/IWpkbtzPYYZ5fG4SsrwZc8bMSc7iCi.png": "assets/image-013.png",
     "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/JJSzdEPSc5KL2XCTcvS6iuIRgRHKao.png": "assets/image-015.png",
     "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/JuCJ6z2Y8kN8EE1gV65jVvPXUtfYUo.png": "assets/image-016.png",
     "https://courses.mooc.fi/api/v0/files/course/d96d7ec8-4c2b-43fc-bf46-94ebb7fa4fe8/images/O6QXLmuKLufLpttlI8NhB0sOSSPu9Q.png": "assets/image-017.png",
